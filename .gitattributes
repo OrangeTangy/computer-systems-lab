@@ -1,0 +1,2 @@
+# Preserve original measurement/config bytes so SHA256 remains portable.
+* -text

@@ -1,0 +1,48 @@
+{
+  "build_command": [
+    "gcc",
+    "-O3",
+    "-mavx2",
+    "-ffp-contract=off",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\bandwidth.c",
+    "-o",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\bandwidth.exe"
+  ],
+  "trials": [
+    {
+      "bytes_per_pass": 268435456,
+      "passes": 62,
+      "seconds": 1.0094987,
+      "GB_s": 16.486399,
+      "correct": true
+    },
+    {
+      "bytes_per_pass": 268435456,
+      "passes": 62,
+      "seconds": 1.0053295,
+      "GB_s": 16.55477,
+      "correct": true
+    },
+    {
+      "bytes_per_pass": 268435456,
+      "passes": 64,
+      "seconds": 1.0008058,
+      "GB_s": 17.166037,
+      "correct": true
+    },
+    {
+      "bytes_per_pass": 268435456,
+      "passes": 64,
+      "seconds": 1.0026606,
+      "GB_s": 17.134282,
+      "correct": true
+    },
+    {
+      "bytes_per_pass": 268435456,
+      "passes": 65,
+      "seconds": 1.0023003,
+      "GB_s": 17.40826,
+      "correct": true
+    }
+  ]
+}

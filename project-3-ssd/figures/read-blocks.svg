@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">SSD read: block-size sweep</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">MB/s</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">152</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">305</text>
+<path d="M90 242.00000000000003 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.00000000000003" text-anchor="end" font-size="12">457</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">609</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">762</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">4</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">32</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="665.0" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">256</text>
+<polyline points="90.0,428.41262843869106 320.0,382.2030541081329 435.0,346.444631273448 550.0,179.12563469584308 665.0,309.08805775659573 780.0,248.39664586195437" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 436.12691541040266 V405.3721757254002 M87.0 436.12691541040266 H93.0 M87.0 405.3721757254002 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="428.41262843869106" r="3" fill="#2563eb"/>
+<path d="M320.0 426.1816131647153 V371.40233970396116 M317.0 426.1816131647153 H323.0 M317.0 371.40233970396116 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="382.2030541081329" r="3" fill="#2563eb"/>
+<path d="M435.0 405.53931725348485 V330.2014924082532 M432.0 405.53931725348485 H438.0 M432.0 330.2014924082532 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="346.444631273448" r="3" fill="#2563eb"/>
+<path d="M550.0 211.92418915007852 V175.99620684235748 M547.0 211.92418915007852 H553.0 M547.0 175.99620684235748 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="179.12563469584308" r="3" fill="#2563eb"/>
+<path d="M665.0 339.92175721061733 V145.3571428571429 M662.0 339.92175721061733 H668.0 M662.0 145.3571428571429 H668.0" stroke="#2563eb"/>
+<circle cx="665.0" cy="309.08805775659573" r="3" fill="#2563eb"/>
+<path d="M780.0 314.8357802670121 V221.66512001527943 M777.0 314.8357802670121 H783.0 M777.0 221.66512001527943 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="248.39664586195437" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">read</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Block size (KiB, log2)</text>
+<text x="40" y="540" font-size="12"></text>
+</g></svg>

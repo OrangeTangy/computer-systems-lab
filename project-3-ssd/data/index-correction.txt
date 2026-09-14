@@ -1,0 +1,1 @@
+Supplemental trial 1 had sequence labels reversed relative to execution order. Corrected sequence to JSONL row order, retained sequence_original on changed rows and preserved index-original.jsonl. Timestamps and all measurements unchanged. Runner fixed for future executions.

@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "20260910T010006.816256Z",
+  "profile": "pilot",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_cpus": 16,
+  "cpu_pinned": 0,
+  "compiler": "gcc (Rev6, Built by MSYS2 project) 13.1.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "build_command": [
+    "gcc",
+    "-O3",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-fno-lto",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\memory-profiling\\src\\membench.c",
+    "-o",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\memory-profiling\\build\\membench.exe"
+  ],
+  "source_sha256": "cfcd84361d81aa40b3761954d6a24d8fcbba225c2a4bd691758f23ef0b92c980",
+  "repetitions": 3,
+  "minimum_seconds_per_trial": 0.08,
+  "order_seed": 4320,
+  "frequency_policy": "not controlled; record before final runs",
+  "SMT": "not yet verified",
+  "isolation": "affinity enforced; no exclusive core reservation",
+  "NUMA": "not controlled",
+  "page_policy": "ordinary allocation; actual backing page size not verified",
+  "cpu_model": "12th Gen Intel(R) Core(TM) i5-1240P",
+  "physical_memory_bytes": 16936873984
+}

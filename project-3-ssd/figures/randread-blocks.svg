@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">SSD randread: block-size sweep</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">MB/s</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">102</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">204</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">306</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">408</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">510</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">4</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">32</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="665.0" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">256</text>
+<polyline points="90.0,369.3513616409815 320.0,354.08252197407285 435.0,328.26523310835864 550.0,276.34307814650583 665.0,222.68353053927981 780.0,213.64765336289975" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 399.5017609162318 V369.2480152523919 M87.0 399.5017609162318 H93.0 M87.0 369.2480152523919 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="369.3513616409815" r="3" fill="#2563eb"/>
+<path d="M320.0 354.6411270339007 V308.45443000521925 M317.0 354.6411270339007 H323.0 M317.0 308.45443000521925 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="354.08252197407285" r="3" fill="#2563eb"/>
+<path d="M435.0 342.6384001911443 V223.24359690629936 M432.0 342.6384001911443 H438.0 M432.0 223.24359690629936 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="328.26523310835864" r="3" fill="#2563eb"/>
+<path d="M550.0 305.050004908395 V145.3571428571429 M547.0 305.050004908395 H553.0 M547.0 145.3571428571429 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="276.34307814650583" r="3" fill="#2563eb"/>
+<path d="M665.0 239.9931717727875 V222.07837268484727 M662.0 239.9931717727875 H668.0 M662.0 222.07837268484727 H668.0" stroke="#2563eb"/>
+<circle cx="665.0" cy="222.68353053927981" r="3" fill="#2563eb"/>
+<path d="M780.0 292.85220714609784 V199.1807652333586 M777.0 292.85220714609784 H783.0 M777.0 199.1807652333586 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="213.64765336289975" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">randread</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Block size (KiB, log2)</text>
+<text x="40" y="540" font-size="12"></text>
+</g></svg>

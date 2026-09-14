@@ -1,0 +1,512 @@
+[
+  {
+    "study": "loaded",
+    "workers": 0,
+    "reads": 0,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      112.71944,
+      112.349828,
+      125.898636
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 0,
+    "reads": 50,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      113.188426,
+      111.588192,
+      116.507655
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 0,
+    "reads": 70,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      114.439976,
+      114.403875,
+      119.703267
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      114.922706,
+      114.087628,
+      121.764865
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 1,
+    "reads": 0,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      159.761721,
+      155.508336,
+      176.571114
+    ],
+    "traffic_GB_s": [
+      11.289034,
+      10.535409,
+      11.591214
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 1,
+    "reads": 50,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      175.197921,
+      159.0802,
+      183.142548
+    ],
+    "traffic_GB_s": [
+      7.327545,
+      6.005981,
+      7.343602
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 1,
+    "reads": 70,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      143.52935,
+      132.841566,
+      159.971035
+    ],
+    "traffic_GB_s": [
+      9.299823,
+      8.230743,
+      9.817941
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 1,
+    "reads": 100,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      121.552623,
+      112.435691,
+      127.189104
+    ],
+    "traffic_GB_s": [
+      9.674122,
+      9.535148,
+      10.731687
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 2,
+    "reads": 0,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      201.46507,
+      194.433267,
+      240.943312
+    ],
+    "traffic_GB_s": [
+      16.731382,
+      15.148962,
+      17.137994
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 2,
+    "reads": 50,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      181.907298,
+      181.273142,
+      182.132874
+    ],
+    "traffic_GB_s": [
+      15.336548,
+      14.806013,
+      15.391988
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 2,
+    "reads": 70,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      182.969259,
+      176.19811,
+      185.986802
+    ],
+    "traffic_GB_s": [
+      14.994278,
+      13.965951,
+      15.013013
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 2,
+    "reads": 100,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      137.650162,
+      131.46299,
+      164.41262
+    ],
+    "traffic_GB_s": [
+      18.268412,
+      15.849608,
+      18.911745
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 4,
+    "reads": 0,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      286.170317,
+      270.807571,
+      314.860445
+    ],
+    "traffic_GB_s": [
+      25.51347,
+      24.735434,
+      25.743346
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 4,
+    "reads": 50,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      223.980204,
+      223.600769,
+      224.226125
+    ],
+    "traffic_GB_s": [
+      18.660745,
+      18.338925,
+      18.730616
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 4,
+    "reads": 70,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      241.986747,
+      219.244263,
+      260.201954
+    ],
+    "traffic_GB_s": [
+      17.310447,
+      15.575011,
+      19.060738
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 4,
+    "reads": 100,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      154.186707,
+      153.162449,
+      167.945814
+    ],
+    "traffic_GB_s": [
+      30.230736,
+      27.206786,
+      30.389975
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 6,
+    "reads": 0,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      366.245524,
+      345.765305,
+      403.267343
+    ],
+    "traffic_GB_s": [
+      31.071804,
+      29.760088,
+      31.134162
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 6,
+    "reads": 50,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      251.660364,
+      245.251812,
+      291.222904
+    ],
+    "traffic_GB_s": [
+      20.271943,
+      19.390154,
+      20.473911
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 6,
+    "reads": 70,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      266.6097,
+      239.368406,
+      269.800491
+    ],
+    "traffic_GB_s": [
+      20.577625,
+      19.49392,
+      20.67452
+    ]
+  },
+  {
+    "study": "loaded",
+    "workers": 6,
+    "reads": 100,
+    "nodes": 262144,
+    "stride": 64,
+    "latency_ns": [
+      145.799956,
+      132.929509,
+      239.859871
+    ],
+    "traffic_GB_s": [
+      38.902214,
+      28.713067,
+      40.402139
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 256,
+    "stride": 64,
+    "latency_ns": [
+      1.391595,
+      1.27309,
+      1.392793
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 256,
+    "stride": 4096,
+    "latency_ns": [
+      5.836729,
+      5.630265,
+      6.253858
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 1024,
+    "stride": 64,
+    "latency_ns": [
+      3.988143,
+      3.880568,
+      4.357747
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 1024,
+    "stride": 4096,
+    "latency_ns": [
+      20.673503,
+      18.807376,
+      21.046274
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 4096,
+    "stride": 64,
+    "latency_ns": [
+      4.842383,
+      3.822908,
+      4.847943
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 4096,
+    "stride": 4096,
+    "latency_ns": [
+      62.974494,
+      61.141604,
+      69.54211
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 16384,
+    "stride": 64,
+    "latency_ns": [
+      5.734739,
+      5.436086,
+      6.244797
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 16384,
+    "stride": 4096,
+    "latency_ns": [
+      141.777681,
+      114.646392,
+      153.865095
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 65536,
+    "stride": 64,
+    "latency_ns": [
+      33.927534,
+      32.838699,
+      54.805102
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "study": "pages",
+    "workers": 0,
+    "reads": 100,
+    "nodes": 65536,
+    "stride": 4096,
+    "latency_ns": [
+      129.208628,
+      120.15608,
+      146.15095
+    ],
+    "traffic_GB_s": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]

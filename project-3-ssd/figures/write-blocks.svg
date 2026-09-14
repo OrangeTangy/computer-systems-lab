@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">SSD write: block-size sweep</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">MB/s</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">33.1</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">66.3</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">99.4</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">133</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">166</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">4</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">32</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="665.0" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">256</text>
+<polyline points="90.0,345.45473066463364 320.0,298.10296331128 435.0,313.0250631560727 550.0,369.6714239083577 665.0,319.07148274455903 780.0,341.86215633193046" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 399.6229935570673 V323.79552590928836 M87.0 399.6229935570673 H93.0 M87.0 323.79552590928836 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="345.45473066463364" r="3" fill="#2563eb"/>
+<path d="M320.0 342.32552926228595 V145.3571428571429 M317.0 342.32552926228595 H323.0 M317.0 145.3571428571429 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="298.10296331128" r="3" fill="#2563eb"/>
+<path d="M435.0 344.1178715959867 V306.20390871087284 M432.0 344.1178715959867 H438.0 M432.0 306.20390871087284 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="313.0250631560727" r="3" fill="#2563eb"/>
+<path d="M550.0 416.38677353145175 V340.59071117345127 M547.0 416.38677353145175 H553.0 M547.0 340.59071117345127 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="369.6714239083577" r="3" fill="#2563eb"/>
+<path d="M665.0 370.471596511996 V317.02471513752994 M662.0 370.471596511996 H668.0 M662.0 317.02471513752994 H668.0" stroke="#2563eb"/>
+<circle cx="665.0" cy="319.07148274455903" r="3" fill="#2563eb"/>
+<path d="M780.0 418.7412321097389 V338.73595662754025 M777.0 418.7412321097389 H783.0 M777.0 338.73595662754025 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="341.86215633193046" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">write</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Block size (KiB, log2)</text>
+<text x="40" y="540" font-size="12"></text>
+</g></svg>

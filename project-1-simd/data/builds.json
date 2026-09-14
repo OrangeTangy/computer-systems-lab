@@ -1,0 +1,102 @@
+[
+  {
+    "dtype": "float",
+    "build": "scalar",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-fno-tree-vectorize",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-float-scalar.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\float-scalar.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  },
+  {
+    "dtype": "float",
+    "build": "auto",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-float-auto.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\float-auto.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  },
+  {
+    "dtype": "float",
+    "build": "native",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-march=native",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-float-native.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\float-native.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  },
+  {
+    "dtype": "double",
+    "build": "scalar",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-fno-tree-vectorize",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-double-scalar.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\double-scalar.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  },
+  {
+    "dtype": "double",
+    "build": "auto",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-double-auto.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\double-auto.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  },
+  {
+    "dtype": "double",
+    "build": "native",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-march=native",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\data\\vectorization-double-native.txt",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-1-simd\\build\\double-native.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f"
+  }
+]

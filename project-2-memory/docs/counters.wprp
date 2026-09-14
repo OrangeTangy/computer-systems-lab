@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0" Author="Computer Systems Lab">
+ <Profiles>
+  <SystemCollector Id="Collector" Name="LabCounterCollector"><BufferSize Value="1024"/><Buffers Value="64"/></SystemCollector>
+  <SystemProvider Id="Provider"><Keywords><Keyword Value="ProcessThread"/><Keyword Value="Loader"/><Keyword Value="CSwitch"/></Keywords></SystemProvider>
+  <HardwareCounter Id="Counters" Strict="true"><Counters><Counter Value="LLCMisses"/><Counter Value="InstructionRetired"/><Counter Value="TotalCycles"/></Counters><Events><Event Value="CSwitch"/></Events></HardwareCounter>
+  <Profile Id="LabCounters.Verbose.File" Name="LabCounters" Description="Strict hardware-counter capture for lab experiments" LoggingMode="File" DetailLevel="Verbose">
+   <Collectors><SystemCollectorId Value="Collector"><SystemProviderId Value="Provider"/><HardwareCounterId Value="Counters"/></SystemCollectorId></Collectors>
+  </Profile>
+ </Profiles>
+</WindowsPerformanceRecorder>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">SSD randwrite: block-size sweep</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">MB/s</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">16.4</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">32.7</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">49.1</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">65.4</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">81.8</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">4</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">32</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="665.0" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">256</text>
+<polyline points="90.0,253.8477756806974 320.0,222.02239540047432 435.0,232.5529227130923 550.0,271.466268628908 665.0,292.95622990586617 780.0,232.24518566007785" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 299.59014641989745 V246.89167487608847 M87.0 299.59014641989745 H93.0 M87.0 246.89167487608847 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="253.8477756806974" r="3" fill="#2563eb"/>
+<path d="M320.0 225.21951944991127 V211.197916628462 M317.0 225.21951944991127 H323.0 M317.0 211.197916628462 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="222.02239540047432" r="3" fill="#2563eb"/>
+<path d="M435.0 255.38692490341245 V145.3571428571429 M432.0 255.38692490341245 H438.0 M432.0 145.3571428571429 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="232.5529227130923" r="3" fill="#2563eb"/>
+<path d="M550.0 310.6485001881504 V186.3171471409573 M547.0 310.6485001881504 H553.0 M547.0 186.3171471409573 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="271.466268628908" r="3" fill="#2563eb"/>
+<path d="M665.0 316.25342723493713 V281.080031776514 M662.0 316.25342723493713 H668.0 M662.0 281.080031776514 H668.0" stroke="#2563eb"/>
+<circle cx="665.0" cy="292.95622990586617" r="3" fill="#2563eb"/>
+<path d="M780.0 270.1895459523455 V175.2518138359871 M777.0 270.1895459523455 H783.0 M777.0 175.2518138359871 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="232.24518566007785" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">randwrite</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Block size (KiB, log2)</text>
+<text x="40" y="540" font-size="12"></text>
+</g></svg>

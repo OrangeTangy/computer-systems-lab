@@ -1,0 +1,3402 @@
+[
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.713682,
+      "min": 0.69688,
+      "max": 0.715045,
+      "stdev": 0.01011708289643478
+    },
+    "useful_GiB_s": {
+      "median": 10.439643,
+      "min": 10.419737,
+      "max": 10.691343,
+      "stdev": 0.1513929534203403
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.706195,
+      "min": 0.694113,
+      "max": 0.709298,
+      "stdev": 0.008022754701472564
+    },
+    "useful_GiB_s": {
+      "median": 10.550316,
+      "min": 10.504159,
+      "max": 10.733959,
+      "stdev": 0.12156154826396962
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.714218,
+      "min": 0.689555,
+      "max": 0.73978,
+      "stdev": 0.025113840931512893
+    },
+    "useful_GiB_s": {
+      "median": 10.431801,
+      "min": 10.071348,
+      "max": 10.804912,
+      "stdev": 0.3668002012054153
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.745126,
+      "min": 0.705438,
+      "max": 0.758128,
+      "stdev": 0.027448210166299242
+    },
+    "useful_GiB_s": {
+      "median": 9.999095,
+      "min": 9.827602,
+      "max": 10.561631,
+      "stdev": 0.3839824590581361
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.13709,
+      "min": 1.130376,
+      "max": 1.362955,
+      "stdev": 0.13238395374943793
+    },
+    "useful_GiB_s": {
+      "median": 6.552324,
+      "min": 5.46649,
+      "max": 6.59124,
+      "stdev": 0.6384372186717602
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.148518,
+      "min": 1.123863,
+      "max": 1.225617,
+      "stdev": 0.05308170014546755
+    },
+    "useful_GiB_s": {
+      "median": 6.487123,
+      "min": 6.079046,
+      "max": 6.629441,
+      "stdev": 0.2856909481351017
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.104028,
+      "min": 1.100974,
+      "max": 1.244128,
+      "stdev": 0.0817826434642461
+    },
+    "useful_GiB_s": {
+      "median": 6.748545,
+      "min": 5.988598,
+      "max": 6.767264,
+      "stdev": 0.44425791745448967
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.137134,
+      "min": 1.11127,
+      "max": 1.154735,
+      "stdev": 0.02186301260881801
+    },
+    "useful_GiB_s": {
+      "median": 6.552068,
+      "min": 6.452201,
+      "max": 6.704566,
+      "stdev": 0.12709389633783894
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.157972,
+      "min": 2.122161,
+      "max": 2.318496,
+      "stdev": 0.1045608391655308
+    },
+    "useful_GiB_s": {
+      "median": 3.452584,
+      "min": 3.21354,
+      "max": 3.510846,
+      "stdev": 0.15754753368216623
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.169999,
+      "min": 2.081063,
+      "max": 2.285525,
+      "stdev": 0.1025187610602729
+    },
+    "useful_GiB_s": {
+      "median": 3.43345,
+      "min": 3.259899,
+      "max": 3.58018,
+      "stdev": 0.16032756129353848
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.196585,
+      "min": 2.142247,
+      "max": 2.421921,
+      "stdev": 0.14829389592742315
+    },
+    "useful_GiB_s": {
+      "median": 3.391892,
+      "min": 3.07631,
+      "max": 3.477928,
+      "stdev": 0.21145969274860243
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.051244,
+      "min": 2.050638,
+      "max": 2.087126,
+      "stdev": 0.020893616664745505
+    },
+    "useful_GiB_s": {
+      "median": 3.632225,
+      "min": 3.56978,
+      "max": 3.633298,
+      "stdev": 0.03636634359312639
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.655633,
+      "min": 0.649815,
+      "max": 0.697182,
+      "stdev": 0.025832154426863655
+    },
+    "useful_GiB_s": {
+      "median": 11.363955,
+      "min": 10.686714,
+      "max": 11.465694,
+      "stdev": 0.42344146321185855
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.65969,
+      "min": 0.636382,
+      "max": 0.787885,
+      "stdev": 0.08157857142861309
+    },
+    "useful_GiB_s": {
+      "median": 11.294061,
+      "min": 9.456432,
+      "max": 11.707717,
+      "stdev": 1.1983513521502507
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.670602,
+      "min": 0.64709,
+      "max": 0.674403,
+      "stdev": 0.014794490607429928
+    },
+    "useful_GiB_s": {
+      "median": 11.110292,
+      "min": 11.047676,
+      "max": 11.513976,
+      "stdev": 0.2530866865035247
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.675942,
+      "min": 0.668582,
+      "max": 0.693684,
+      "stdev": 0.012903866139003947
+    },
+    "useful_GiB_s": {
+      "median": 11.022519,
+      "min": 10.740594,
+      "max": 11.143861,
+      "stdev": 0.20689363607016364
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.74427,
+      "min": 0.736788,
+      "max": 0.760872,
+      "stdev": 0.012326433547462136
+    },
+    "useful_GiB_s": {
+      "median": 10.010588,
+      "min": 9.79216,
+      "max": 10.112249,
+      "stdev": 0.16355565720675402
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.774873,
+      "min": 0.767287,
+      "max": 0.789013,
+      "stdev": 0.01102652916077096
+    },
+    "useful_GiB_s": {
+      "median": 9.615223,
+      "min": 9.442914,
+      "max": 9.710292,
+      "stdev": 0.1355356663551459
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.801585,
+      "min": 0.745089,
+      "max": 0.817802,
+      "stdev": 0.03817060272426064
+    },
+    "useful_GiB_s": {
+      "median": 9.294808,
+      "min": 9.110499,
+      "max": 9.999584,
+      "stdev": 0.46924605394931135
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.776778,
+      "min": 0.762935,
+      "max": 0.777506,
+      "stdev": 0.008210487947334985
+    },
+    "useful_GiB_s": {
+      "median": 9.591651,
+      "min": 9.582662,
+      "max": 9.765684,
+      "stdev": 0.10317084511785966
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.105901,
+      "min": 1.090597,
+      "max": 1.123322,
+      "stdev": 0.016373908523420164
+    },
+    "useful_GiB_s": {
+      "median": 6.737113,
+      "min": 6.632632,
+      "max": 6.831653,
+      "stdev": 0.09955187040097913
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.150496,
+      "min": 1.125634,
+      "max": 1.161434,
+      "stdev": 0.018345748317616643
+    },
+    "useful_GiB_s": {
+      "median": 6.475971,
+      "min": 6.414984,
+      "max": 6.61901,
+      "stdev": 0.1047267701895432
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.173254,
+      "min": 1.099758,
+      "max": 1.251204,
+      "stdev": 0.07573391515915001
+    },
+    "useful_GiB_s": {
+      "median": 6.350356,
+      "min": 5.954728,
+      "max": 6.774747,
+      "stdev": 0.4100935656704858
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.213662,
+      "min": 1.182175,
+      "max": 1.260269,
+      "stdev": 0.03929019482008207
+    },
+    "useful_GiB_s": {
+      "median": 6.138927,
+      "min": 5.911899,
+      "max": 6.302434,
+      "stdev": 0.19612659094659576
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.14465,
+      "min": 2.139977,
+      "max": 2.189757,
+      "stdev": 0.027490988759955613
+    },
+    "useful_GiB_s": {
+      "median": 3.474032,
+      "min": 3.402469,
+      "max": 3.481618,
+      "stdev": 0.043671834107732795
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.175664,
+      "min": 2.137882,
+      "max": 2.22889,
+      "stdev": 0.045721881457350365
+    },
+    "useful_GiB_s": {
+      "median": 3.424509,
+      "min": 3.342732,
+      "max": 3.485029,
+      "stdev": 0.07141263233023512
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.154637,
+      "min": 2.085946,
+      "max": 2.181062,
+      "stdev": 0.04909817980672335
+    },
+    "useful_GiB_s": {
+      "median": 3.457928,
+      "min": 3.416033,
+      "max": 3.571799,
+      "stdev": 0.0806069087423652
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.218539,
+      "min": 2.127262,
+      "max": 2.451006,
+      "stdev": 0.16692442119813788
+    },
+    "useful_GiB_s": {
+      "median": 3.358327,
+      "min": 3.039805,
+      "max": 3.502427,
+      "stdev": 0.2367277583244799
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.653226,
+      "min": 0.643099,
+      "max": 0.66098,
+      "stdev": 0.008966705136224806
+    },
+    "useful_GiB_s": {
+      "median": 11.405816,
+      "min": 11.272022,
+      "max": 11.585439,
+      "stdev": 0.1572659490873127
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.664179,
+      "min": 0.651541,
+      "max": 0.689678,
+      "stdev": 0.019426566062997336
+    },
+    "useful_GiB_s": {
+      "median": 11.217729,
+      "min": 10.80298,
+      "max": 11.435314,
+      "stdev": 0.3212491900851011
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.666105,
+      "min": 0.636411,
+      "max": 0.687343,
+      "stdev": 0.025582724978651813
+    },
+    "useful_GiB_s": {
+      "median": 11.185288,
+      "min": 10.839681,
+      "max": 11.707189,
+      "stdev": 0.4367293178300868
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.670325,
+      "min": 0.64682,
+      "max": 0.700137,
+      "stdev": 0.026720600224046896
+    },
+    "useful_GiB_s": {
+      "median": 11.114876,
+      "min": 10.641604,
+      "max": 11.518788,
+      "stdev": 0.439048793716599
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.065699,
+      "min": 1.042218,
+      "max": 1.371226,
+      "stdev": 0.18355034239230755
+    },
+    "useful_GiB_s": {
+      "median": 6.991265,
+      "min": 5.433519,
+      "max": 7.148775,
+      "stdev": 0.9481108537641222
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.768949,
+      "min": 0.75797,
+      "max": 0.795247,
+      "stdev": 0.019155930213209008
+    },
+    "useful_GiB_s": {
+      "median": 9.689307,
+      "min": 9.368885,
+      "max": 9.82965,
+      "stdev": 0.23617465322581366
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.703604,
+      "min": 0.699687,
+      "max": 0.706348,
+      "stdev": 0.0033476694878676583
+    },
+    "useful_GiB_s": {
+      "median": 10.589165,
+      "min": 10.548036,
+      "max": 10.648441,
+      "stdev": 0.05047508104995987
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.765224,
+      "min": 0.740036,
+      "max": 0.781873,
+      "stdev": 0.02106323461231284
+    },
+    "useful_GiB_s": {
+      "median": 9.73647,
+      "min": 9.52914,
+      "max": 10.067864,
+      "stdev": 0.2717324849651461
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.508822,
+      "min": 1.419421,
+      "max": 1.59554,
+      "stdev": 0.0880629060066344
+    },
+    "useful_GiB_s": {
+      "median": 4.938012,
+      "min": 4.669631,
+      "max": 5.249028,
+      "stdev": 0.2899598239486522
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.9836,
+      "min": 0.968903,
+      "max": 1.090775,
+      "stdev": 0.06652727112245026
+    },
+    "useful_GiB_s": {
+      "median": 7.574811,
+      "min": 6.830541,
+      "max": 7.689705,
+      "stdev": 0.46642277728687304
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.930111,
+      "min": 0.900274,
+      "max": 0.941457,
+      "stdev": 0.02127211701578695
+    },
+    "useful_GiB_s": {
+      "median": 8.010425,
+      "min": 7.91388,
+      "max": 8.275907,
+      "stdev": 0.1874678541679437
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.824067,
+      "min": 0.810198,
+      "max": 0.900383,
+      "stdev": 0.048562357236169425
+    },
+    "useful_GiB_s": {
+      "median": 9.041227,
+      "min": 8.274902,
+      "max": 9.195996,
+      "stdev": 0.4932243583167797
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.911444,
+      "min": 1.814289,
+      "max": 1.943592,
+      "stdev": 0.06731994966575654
+    },
+    "useful_GiB_s": {
+      "median": 3.897882,
+      "min": 3.833407,
+      "max": 4.106612,
+      "stdev": 0.14280885275430247
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.213905,
+      "min": 1.19092,
+      "max": 1.257683,
+      "stdev": 0.03391686325413959
+    },
+    "useful_GiB_s": {
+      "median": 6.137698,
+      "min": 5.924051,
+      "max": 6.256157,
+      "stdev": 0.168311205076588
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.207199,
+      "min": 1.184674,
+      "max": 1.298109,
+      "stdev": 0.06005484014631959
+    },
+    "useful_GiB_s": {
+      "median": 6.171793,
+      "min": 5.739565,
+      "max": 6.28914,
+      "stdev": 0.2894316393145942
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.185772,
+      "min": 1.156372,
+      "max": 1.263368,
+      "stdev": 0.05527754702710077
+    },
+    "useful_GiB_s": {
+      "median": 6.283317,
+      "min": 5.897395,
+      "max": 6.443063,
+      "stdev": 0.280537621013653
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.662183,
+      "min": 0.658027,
+      "max": 0.674688,
+      "stdev": 0.008672142007601089
+    },
+    "useful_GiB_s": {
+      "median": 11.251536,
+      "min": 11.043,
+      "max": 11.322611,
+      "stdev": 0.14532792243864723
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.693944,
+      "min": 0.644531,
+      "max": 0.831348,
+      "stdev": 0.09680056411164831
+    },
+    "useful_GiB_s": {
+      "median": 10.736572,
+      "min": 8.962049,
+      "max": 11.559697,
+      "stdev": 1.3275442098763917
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.650315,
+      "min": 0.646766,
+      "max": 0.684216,
+      "stdev": 0.020673556789612555
+    },
+    "useful_GiB_s": {
+      "median": 11.456873,
+      "min": 10.889219,
+      "max": 11.519751,
+      "stdev": 0.34731237371756984
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.666383,
+      "min": 0.645789,
+      "max": 0.692324,
+      "stdev": 0.0233186425491137
+    },
+    "useful_GiB_s": {
+      "median": 11.18062,
+      "min": 10.761693,
+      "max": 11.537168,
+      "stdev": 0.3881554206023665
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.076837,
+      "min": 1.06581,
+      "max": 1.337071,
+      "stdev": 0.15352842277897596
+    },
+    "useful_GiB_s": {
+      "median": 6.918952,
+      "min": 5.572315,
+      "max": 6.990535,
+      "stdev": 0.7989475685819443
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.750323,
+      "min": 0.748002,
+      "max": 0.788617,
+      "stdev": 0.022808608396831263
+    },
+    "useful_GiB_s": {
+      "median": 9.929827,
+      "min": 9.44766,
+      "max": 9.960639,
+      "stdev": 0.2876867073959676
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.729782,
+      "min": 0.685891,
+      "max": 0.813274,
+      "stdev": 0.06470930205413543
+    },
+    "useful_GiB_s": {
+      "median": 10.209326,
+      "min": 9.161217,
+      "max": 10.862629,
+      "stdev": 0.8583064797838821
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.692809,
+      "min": 0.678445,
+      "max": 0.726381,
+      "stdev": 0.024601029029968146
+    },
+    "useful_GiB_s": {
+      "median": 10.754166,
+      "min": 10.257122,
+      "max": 10.981844,
+      "stdev": 0.3706103045212494
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.703134,
+      "min": 1.689799,
+      "max": 2.053174,
+      "stdev": 0.20605307344225654
+    },
+    "useful_GiB_s": {
+      "median": 4.374629,
+      "min": 3.628811,
+      "max": 4.409152,
+      "stdev": 0.4409021816937781
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.993278,
+      "min": 0.977733,
+      "max": 1.061633,
+      "stdev": 0.04463418542253613
+    },
+    "useful_GiB_s": {
+      "median": 7.501002,
+      "min": 7.018039,
+      "max": 7.620258,
+      "stdev": 0.31888947324164413
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.8612,
+      "min": 0.812926,
+      "max": 0.869057,
+      "stdev": 0.030394080251478755
+    },
+    "useful_GiB_s": {
+      "median": 8.65139,
+      "min": 8.573182,
+      "max": 9.165134,
+      "stdev": 0.32157336101943157
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.775599,
+      "min": 0.750546,
+      "max": 0.787729,
+      "stdev": 0.018962090241672534
+    },
+    "useful_GiB_s": {
+      "median": 9.60623,
+      "min": 9.458304,
+      "max": 9.926878,
+      "stdev": 0.2395338649878135
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.398155,
+      "min": 2.320866,
+      "max": 2.784676,
+      "stdev": 0.24849271923002766
+    },
+    "useful_GiB_s": {
+      "median": 3.106797,
+      "min": 2.675564,
+      "max": 3.210258,
+      "stdev": 0.28359705935417123
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.1909,
+      "min": 1.139049,
+      "max": 1.403563,
+      "stdev": 0.1401675984705452
+    },
+    "useful_GiB_s": {
+      "median": 6.256263,
+      "min": 5.308335,
+      "max": 6.541053,
+      "stdev": 0.6454025235990328
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.927276,
+      "min": 0.913622,
+      "max": 0.939159,
+      "stdev": 0.012778730857692102
+    },
+    "useful_GiB_s": {
+      "median": 8.034911,
+      "min": 7.933249,
+      "max": 8.154992,
+      "stdev": 0.11099892405934997
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.871408,
+      "min": 0.846287,
+      "max": 0.892726,
+      "stdev": 0.02324543857046654
+    },
+    "useful_GiB_s": {
+      "median": 8.55005,
+      "min": 8.34588,
+      "max": 8.803848,
+      "stdev": 0.22943172649250923
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.65789,
+      "min": 0.637801,
+      "max": 0.666043,
+      "stdev": 0.014535301246734952
+    },
+    "useful_GiB_s": {
+      "median": 11.324968,
+      "min": 11.186339,
+      "max": 11.681661,
+      "stdev": 0.2555359660184843
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.726411,
+      "min": 0.684751,
+      "max": 0.754633,
+      "stdev": 0.03515567950322299
+    },
+    "useful_GiB_s": {
+      "median": 10.256703,
+      "min": 9.873119,
+      "max": 10.880715,
+      "stdev": 0.5085563489617774
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.690989,
+      "min": 0.644729,
+      "max": 0.692228,
+      "stdev": 0.027072980755727633
+    },
+    "useful_GiB_s": {
+      "median": 10.782484,
+      "min": 10.763184,
+      "max": 11.556145,
+      "stdev": 0.45234776084372685
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.710277,
+      "min": 0.675704,
+      "max": 0.724156,
+      "stdev": 0.024951670865895968
+    },
+    "useful_GiB_s": {
+      "median": 10.489681,
+      "min": 10.288637,
+      "max": 11.026404,
+      "stdev": 0.38139883214163095
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.079204,
+      "min": 1.072223,
+      "max": 1.253472,
+      "stdev": 0.10268825816194044
+    },
+    "useful_GiB_s": {
+      "median": 6.903774,
+      "min": 5.943955,
+      "max": 6.948722,
+      "stdev": 0.5675722508711998
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.824162,
+      "min": 0.768765,
+      "max": 0.849744,
+      "stdev": 0.04139417184016771
+    },
+    "useful_GiB_s": {
+      "median": 9.040188,
+      "min": 8.768031,
+      "max": 9.69162,
+      "stdev": 0.4745962712653776
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.766432,
+      "min": 0.724171,
+      "max": 0.995708,
+      "stdev": 0.14610830381717987
+    },
+    "useful_GiB_s": {
+      "median": 9.721119,
+      "min": 7.482695,
+      "max": 10.288423,
+      "stdev": 1.483491683055891
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.769495,
+      "min": 0.751438,
+      "max": 0.867294,
+      "stdev": 0.06233419658849652
+    },
+    "useful_GiB_s": {
+      "median": 9.682429,
+      "min": 8.590602,
+      "max": 9.915099,
+      "stdev": 0.7071673340209749
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.661606,
+      "min": 1.619802,
+      "max": 2.423714,
+      "stdev": 0.4525539897485529
+    },
+    "useful_GiB_s": {
+      "median": 4.483964,
+      "min": 3.074034,
+      "max": 4.599687,
+      "stdev": 0.8494028779126743
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.041929,
+      "min": 1.012364,
+      "max": 1.10797,
+      "stdev": 0.04894897026836545
+    },
+    "useful_GiB_s": {
+      "median": 7.150754,
+      "min": 6.724532,
+      "max": 7.359585,
+      "stdev": 0.32366852711119964
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.808172,
+      "min": 0.806843,
+      "max": 1.062142,
+      "stdev": 0.14701479888206262
+    },
+    "useful_GiB_s": {
+      "median": 9.219049,
+      "min": 7.014671,
+      "max": 9.234237,
+      "stdev": 1.2771052077898675
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.818294,
+      "min": 0.759301,
+      "max": 1.042482,
+      "stdev": 0.14940543952279645
+    },
+    "useful_GiB_s": {
+      "median": 9.105017,
+      "min": 7.146967,
+      "max": 9.812423,
+      "stdev": 1.3807629979635658
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.770695,
+      "min": 2.446127,
+      "max": 3.396516,
+      "stdev": 0.48308652813376335
+    },
+    "useful_GiB_s": {
+      "median": 2.689065,
+      "min": 2.193595,
+      "max": 3.045868,
+      "stdev": 0.4280124936334607
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.131936,
+      "min": 1.109409,
+      "max": 1.172076,
+      "stdev": 0.031743341081240856
+    },
+    "useful_GiB_s": {
+      "median": 6.582157,
+      "min": 6.35674,
+      "max": 6.715811,
+      "stdev": 0.18147919928832984
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.86688,
+      "min": 0.848891,
+      "max": 0.869932,
+      "stdev": 0.011369861520704677
+    },
+    "useful_GiB_s": {
+      "median": 8.594713,
+      "min": 8.564557,
+      "max": 8.776845,
+      "stdev": 0.11485327212288393
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.922282,
+      "min": 0.847816,
+      "max": 0.95116,
+      "stdev": 0.053321519070634135
+    },
+    "useful_GiB_s": {
+      "median": 8.078419,
+      "min": 7.833156,
+      "max": 8.78797,
+      "stdev": 0.4958639489762622
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.686327,
+      "min": 0.676063,
+      "max": 0.697294,
+      "stdev": 0.010617439631725406
+    },
+    "useful_GiB_s": {
+      "median": 10.855725,
+      "min": 10.684998,
+      "max": 11.02054,
+      "stdev": 0.16777968019499076
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.866961,
+      "min": 0.79029,
+      "max": 0.883108,
+      "stdev": 0.04958889152152254
+    },
+    "useful_GiB_s": {
+      "median": 8.593906,
+      "min": 8.436772,
+      "max": 9.427651,
+      "stdev": 0.5325509383495626
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.973721,
+      "min": 0.821207,
+      "max": 1.157771,
+      "stdev": 0.16852806333664436
+    },
+    "useful_GiB_s": {
+      "median": 7.651659,
+      "min": 6.435282,
+      "max": 9.07272,
+      "stdev": 1.3200420811280982
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.776906,
+      "min": 0.731636,
+      "max": 0.791743,
+      "stdev": 0.03131123578419309
+    },
+    "useful_GiB_s": {
+      "median": 9.590071,
+      "min": 9.410348,
+      "max": 10.183451,
+      "stdev": 0.40457558620897155
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.941731,
+      "min": 1.838691,
+      "max": 2.008998,
+      "stdev": 0.08577739128892492
+    },
+    "useful_GiB_s": {
+      "median": 3.837082,
+      "min": 3.708606,
+      "max": 4.052111,
+      "stdev": 0.17356038259637477
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.139953,
+      "min": 1.996199,
+      "max": 2.170076,
+      "stdev": 0.09292095096908982
+    },
+    "useful_GiB_s": {
+      "median": 3.481656,
+      "min": 3.433327,
+      "max": 3.732384,
+      "stdev": 0.16053831914011488
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.283175,
+      "min": 2.045501,
+      "max": 2.733974,
+      "stdev": 0.34969123056538515
+    },
+    "useful_GiB_s": {
+      "median": 3.263254,
+      "min": 2.725183,
+      "max": 3.642424,
+      "stdev": 0.4609087657411172
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.777254,
+      "min": 1.773844,
+      "max": 1.922439,
+      "stdev": 0.08482411837639894
+    },
+    "useful_GiB_s": {
+      "median": 4.192186,
+      "min": 3.875587,
+      "max": 4.200245,
+      "stdev": 0.18515880177386485
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.794893,
+      "min": 5.137183,
+      "max": 5.830933,
+      "stdev": 0.3905488420586255
+    },
+    "useful_GiB_s": {
+      "median": 1.285715,
+      "min": 1.277768,
+      "max": 1.450324,
+      "stdev": 0.09741222615428378
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.779829,
+      "min": 4.472731,
+      "max": 4.796023,
+      "stdev": 0.18215796464607337
+    },
+    "useful_GiB_s": {
+      "median": 1.558755,
+      "min": 1.553491,
+      "max": 1.665779,
+      "stdev": 0.06336460791325074
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.060872,
+      "min": 4.004502,
+      "max": 4.10104,
+      "stdev": 0.04849506945384619
+    },
+    "useful_GiB_s": {
+      "median": 1.834724,
+      "min": 1.816754,
+      "max": 1.860551,
+      "stdev": 0.02201564609544771
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.44458,
+      "min": 3.478578,
+      "max": 4.817155,
+      "stdev": 0.6908642389015368
+    },
+    "useful_GiB_s": {
+      "median": 1.676329,
+      "min": 1.546677,
+      "max": 2.141847,
+      "stdev": 0.3129813568271012
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.177488,
+      "min": 3.579615,
+      "max": 4.316886,
+      "stdev": 0.39167428091336315
+    },
+    "useful_GiB_s": {
+      "median": 1.783507,
+      "min": 1.725915,
+      "max": 2.081392,
+      "stdev": 0.1907949201009643
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 3.320076,
+      "min": 3.114525,
+      "max": 3.630698,
+      "stdev": 0.25986272222528073
+    },
+    "useful_GiB_s": {
+      "median": 2.244099,
+      "min": 2.052107,
+      "max": 2.392205,
+      "stdev": 0.17052026512216478
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 3.038994,
+      "min": 2.958994,
+      "max": 3.148898,
+      "stdev": 0.09534360530208612
+    },
+    "useful_GiB_s": {
+      "median": 2.45166,
+      "min": 2.366091,
+      "max": 2.517944,
+      "stdev": 0.07613032250249131
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.380392,
+      "min": 2.278615,
+      "max": 2.691444,
+      "stdev": 0.2150735097875454
+    },
+    "useful_GiB_s": {
+      "median": 3.129981,
+      "min": 2.768246,
+      "max": 3.269784,
+      "stdev": 0.25882344512492167
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.836391,
+      "min": 0.786735,
+      "max": 0.99607,
+      "stdev": 0.10938025690376366
+    },
+    "useful_GiB_s": {
+      "median": 8.908011,
+      "min": 7.479977,
+      "max": 9.470259,
+      "stdev": 1.0260463243427822
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.144146,
+      "min": 1.126289,
+      "max": 1.16133,
+      "stdev": 0.017521577107478974
+    },
+    "useful_GiB_s": {
+      "median": 6.511917,
+      "min": 6.41556,
+      "max": 6.615157,
+      "stdev": 0.0998182777668164
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.162383,
+      "min": 1.105152,
+      "max": 1.27398,
+      "stdev": 0.08586051804525754
+    },
+    "useful_GiB_s": {
+      "median": 6.409746,
+      "min": 5.848271,
+      "max": 6.74168,
+      "stdev": 0.4515923673074347
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.012414,
+      "min": 0.956445,
+      "max": 1.256084,
+      "stdev": 0.15931683745605799
+    },
+    "useful_GiB_s": {
+      "median": 7.35922,
+      "min": 5.931592,
+      "max": 7.78987,
+      "stdev": 0.9726919908316298
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.633691,
+      "min": 5.339335,
+      "max": 6.283196,
+      "stdev": 0.4829381925743708
+    },
+    "useful_GiB_s": {
+      "median": 1.322504,
+      "min": 1.185795,
+      "max": 1.395414,
+      "stdev": 0.10641533719503657
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.972583,
+      "min": 5.478607,
+      "max": 6.027506,
+      "stdev": 0.30230198386877966
+    },
+    "useful_GiB_s": {
+      "median": 1.247464,
+      "min": 1.236097,
+      "max": 1.359941,
+      "stdev": 0.0684563371232594
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.2708,
+      "min": 5.268452,
+      "max": 5.51952,
+      "stdev": 0.14428114460316696
+    },
+    "useful_GiB_s": {
+      "median": 1.413558,
+      "min": 1.34986,
+      "max": 1.414188,
+      "stdev": 0.03695926516224765
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.981447,
+      "min": 4.518543,
+      "max": 5.187245,
+      "stdev": 0.34248973094678314
+    },
+    "useful_GiB_s": {
+      "median": 1.495666,
+      "min": 1.436327,
+      "max": 1.64889,
+      "stdev": 0.10968267871911228
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 10.43722,
+      "min": 8.58706,
+      "max": 11.452406,
+      "stdev": 1.452807760849774
+    },
+    "useful_GiB_s": {
+      "median": 0.713847,
+      "min": 0.650569,
+      "max": 0.867652,
+      "stdev": 0.11164311607230128
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 10.048429,
+      "min": 8.543089,
+      "max": 10.360394,
+      "stdev": 0.9717654157811612
+    },
+    "useful_GiB_s": {
+      "median": 0.741467,
+      "min": 0.719141,
+      "max": 0.872118,
+      "stdev": 0.08263382742154285
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 8.21037,
+      "min": 8.112199,
+      "max": 9.042528,
+      "stdev": 0.5111484667631645
+    },
+    "useful_GiB_s": {
+      "median": 0.90746,
+      "min": 0.823949,
+      "max": 0.918442,
+      "stdev": 0.051677878074988054
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 8.265655,
+      "min": 8.138387,
+      "max": 8.509477,
+      "stdev": 0.1885709855766083
+    },
+    "useful_GiB_s": {
+      "median": 0.90139,
+      "min": 0.875563,
+      "max": 0.915486,
+      "stdev": 0.020246716087635896
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 7.627871,
+      "min": 7.353937,
+      "max": 7.882385,
+      "stdev": 0.2642834656374351
+    },
+    "useful_GiB_s": {
+      "median": 0.976758,
+      "min": 0.945219,
+      "max": 1.013142,
+      "stdev": 0.033990287598077165
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 7.259801,
+      "min": 7.03118,
+      "max": 7.777512,
+      "stdev": 0.3823836850132772
+    },
+    "useful_GiB_s": {
+      "median": 1.026279,
+      "min": 0.957965,
+      "max": 1.059649,
+      "stdev": 0.0518330579070925
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 7.497448,
+      "min": 7.49376,
+      "max": 7.584604,
+      "stdev": 0.05141725069792536
+    },
+    "useful_GiB_s": {
+      "median": 0.993749,
+      "min": 0.98233,
+      "max": 0.994238,
+      "stdev": 0.0067383621402632285
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 7.334859,
+      "min": 7.308819,
+      "max": 7.703859,
+      "stdev": 0.22094331218663296
+    },
+    "useful_GiB_s": {
+      "median": 1.015777,
+      "min": 0.967123,
+      "max": 1.019396,
+      "stdev": 0.02919125270236502
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 8,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.867562,
+      "min": 0.827435,
+      "max": 0.972399,
+      "stdev": 0.0748504442137787
+    },
+    "useful_GiB_s": {
+      "median": 8.587953,
+      "min": 7.662062,
+      "max": 9.004434,
+      "stdev": 0.6871066333578315
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 8,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.057639,
+      "min": 1.019629,
+      "max": 1.12812,
+      "stdev": 0.05504941498629517
+    },
+    "useful_GiB_s": {
+      "median": 7.04454,
+      "min": 6.604423,
+      "max": 7.307147,
+      "stdev": 0.35507896546965434
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 8,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.21177,
+      "min": 1.125764,
+      "max": 1.367606,
+      "stdev": 0.12258972489296706
+    },
+    "useful_GiB_s": {
+      "median": 6.148511,
+      "min": 5.447898,
+      "max": 6.618247,
+      "stdev": 0.5889577329579772
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 8,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 0.984106,
+      "min": 0.934839,
+      "max": 1.0265,
+      "stdev": 0.045873426305433083
+    },
+    "useful_GiB_s": {
+      "median": 7.570912,
+      "min": 7.258234,
+      "max": 7.969906,
+      "stdev": 0.3567073448697125
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 6.361953,
+      "min": 6.042539,
+      "max": 6.6003,
+      "stdev": 0.27986065846119457
+    },
+    "useful_GiB_s": {
+      "median": 1.171115,
+      "min": 1.128824,
+      "max": 1.233021,
+      "stdev": 0.05240530559335884
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 6.369487,
+      "min": 5.899349,
+      "max": 6.776834,
+      "stdev": 0.4391167731325386
+    },
+    "useful_GiB_s": {
+      "median": 1.16973,
+      "min": 1.099419,
+      "max": 1.26295,
+      "stdev": 0.08203250685145091
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.563232,
+      "min": 5.526393,
+      "max": 6.282381,
+      "stdev": 0.42623355340040203
+    },
+    "useful_GiB_s": {
+      "median": 1.339254,
+      "min": 1.185949,
+      "max": 1.348182,
+      "stdev": 0.09119729390904831
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.779202,
+      "min": 4.726528,
+      "max": 5.482122,
+      "stdev": 0.42185964678472576
+    },
+    "useful_GiB_s": {
+      "median": 1.558959,
+      "min": 1.359069,
+      "max": 1.576333,
+      "stdev": 0.12073491187445874
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 12.340149,
+      "min": 11.729191,
+      "max": 13.19507,
+      "stdev": 0.7363152446072262
+    },
+    "useful_GiB_s": {
+      "median": 0.603767,
+      "min": 0.564649,
+      "max": 0.635217,
+      "stdev": 0.03535336628950633
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 11.587058,
+      "min": 11.150251,
+      "max": 17.453596,
+      "stdev": 3.519924872534403
+    },
+    "useful_GiB_s": {
+      "median": 0.643009,
+      "min": 0.426879,
+      "max": 0.668198,
+      "stdev": 0.1326533844159281
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 11.537623,
+      "min": 10.246818,
+      "max": 11.564862,
+      "stdev": 0.7532329760308784
+    },
+    "useful_GiB_s": {
+      "median": 0.645764,
+      "min": 0.644243,
+      "max": 0.727112,
+      "stdev": 0.04741146434144382
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 10.084017,
+      "min": 9.937963,
+      "max": 10.457039,
+      "stdev": 0.26768049274461536
+    },
+    "useful_GiB_s": {
+      "median": 0.73885,
+      "min": 0.712494,
+      "max": 0.749709,
+      "stdev": 0.019137715128335817
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 0,
+    "n": 3,
+    "ns_per_op": {
+      "median": 14.10768,
+      "min": 13.202331,
+      "max": 14.916386,
+      "stdev": 0.8574814623129374
+    },
+    "useful_GiB_s": {
+      "median": 0.528122,
+      "min": 0.49949,
+      "max": 0.564338,
+      "stdev": 0.03249782860438526
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 50,
+    "n": 3,
+    "ns_per_op": {
+      "median": 12.234436,
+      "min": 11.266866,
+      "max": 14.607493,
+      "stdev": 1.7188843272734593
+    },
+    "useful_GiB_s": {
+      "median": 0.608984,
+      "min": 0.510052,
+      "max": 0.661282,
+      "stdev": 0.07680400849782086
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 70,
+    "n": 3,
+    "ns_per_op": {
+      "median": 10.732604,
+      "min": 10.679932,
+      "max": 10.948481,
+      "stdev": 0.1423000258339158
+    },
+    "useful_GiB_s": {
+      "median": 0.694201,
+      "min": 0.680513,
+      "max": 0.697624,
+      "stdev": 0.009054138961454754
+    }
+  },
+  {
+    "mode": "bandwidth",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 11.412505,
+      "min": 11.408135,
+      "max": 11.712981,
+      "stdev": 0.17475507011815114
+    },
+    "useful_GiB_s": {
+      "median": 0.652844,
+      "min": 0.636096,
+      "max": 0.653094,
+      "stdev": 0.009742433029450754
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.38353,
+      "min": 1.342678,
+      "max": 1.730003,
+      "stdev": 0.21281176395193319
+    },
+    "useful_GiB_s": {
+      "median": 5.385197,
+      "min": 4.306686,
+      "max": 5.549046,
+      "stdev": 0.6749680043678612
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.381459,
+      "min": 1.299445,
+      "max": 1.400787,
+      "stdev": 0.053805310679647
+    },
+    "useful_GiB_s": {
+      "median": 5.39327,
+      "min": 5.318855,
+      "max": 5.733664,
+      "stdev": 0.22116064068982375
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.42103,
+      "min": 1.337552,
+      "max": 1.66048,
+      "stdev": 0.1676242684140137
+    },
+    "useful_GiB_s": {
+      "median": 5.243086,
+      "min": 4.487005,
+      "max": 5.570309,
+      "stdev": 0.5556199130559787
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.383144,
+      "min": 1.317145,
+      "max": 1.45559,
+      "stdev": 0.06924751372432078
+    },
+    "useful_GiB_s": {
+      "median": 5.386697,
+      "min": 5.118597,
+      "max": 5.656616,
+      "stdev": 0.26901001249086093
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.396885,
+      "min": 1.337298,
+      "max": 1.486444,
+      "stdev": 0.0750732468615374
+    },
+    "useful_GiB_s": {
+      "median": 5.333713,
+      "min": 5.012353,
+      "max": 5.571368,
+      "stdev": 0.28055003084714364
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.437577,
+      "min": 4.01912,
+      "max": 4.476006,
+      "stdev": 0.25341923956361323
+    },
+    "useful_GiB_s": {
+      "median": 1.678975,
+      "min": 1.66456,
+      "max": 1.853784,
+      "stdev": 0.10533415153848887
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.153915,
+      "min": 4.084084,
+      "max": 4.474995,
+      "stdev": 0.2084786739221385
+    },
+    "useful_GiB_s": {
+      "median": 1.793629,
+      "min": 1.664936,
+      "max": 1.824297,
+      "stdev": 0.08455603939991516
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.07251,
+      "min": 3.998127,
+      "max": 4.409641,
+      "stdev": 0.21929201005584587
+    },
+    "useful_GiB_s": {
+      "median": 1.829481,
+      "min": 1.689611,
+      "max": 1.863518,
+      "stdev": 0.09216450773661916
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.249435,
+      "min": 4.16184,
+      "max": 4.471624,
+      "stdev": 0.1596908275397601
+    },
+    "useful_GiB_s": {
+      "median": 1.753311,
+      "min": 1.666191,
+      "max": 1.790213,
+      "stdev": 0.06368294969089716
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.057844,
+      "min": 3.945677,
+      "max": 4.090723,
+      "stdev": 0.076049114224515
+    },
+    "useful_GiB_s": {
+      "median": 1.836093,
+      "min": 1.821336,
+      "max": 1.88829,
+      "stdev": 0.035178435567830464
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.100817,
+      "min": 3.969064,
+      "max": 4.239343,
+      "stdev": 0.1351536431411796
+    },
+    "useful_GiB_s": {
+      "median": 1.816853,
+      "min": 1.757485,
+      "max": 1.877163,
+      "stdev": 0.05983961787979596
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 7.868087,
+      "min": 7.113418,
+      "max": 11.735549,
+      "stdev": 2.4796129604626476
+    },
+    "useful_GiB_s": {
+      "median": 0.946937,
+      "min": 0.634873,
+      "max": 1.047398,
+      "stdev": 0.21511749821977136
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.711322,
+      "min": 5.476475,
+      "max": 5.832999,
+      "stdev": 0.18123086947960435
+    },
+    "useful_GiB_s": {
+      "median": 1.304528,
+      "min": 1.277316,
+      "max": 1.36047,
+      "stdev": 0.04239612408385159
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 5.420516,
+      "min": 5.297052,
+      "max": 5.537145,
+      "stdev": 0.12006271388042718
+    },
+    "useful_GiB_s": {
+      "median": 1.374515,
+      "min": 1.345564,
+      "max": 1.406552,
+      "stdev": 0.030507009888439324
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 135.512848,
+      "min": 127.359314,
+      "max": 137.024434,
+      "stdev": 5.199031216469601
+    },
+    "useful_GiB_s": {
+      "median": 0.054981,
+      "min": 0.054374,
+      "max": 0.0585,
+      "stdev": 0.0022276926029713663
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 49.520052,
+      "min": 43.852288,
+      "max": 79.743671,
+      "stdev": 19.29499964528611
+    },
+    "useful_GiB_s": {
+      "median": 0.150456,
+      "min": 0.093432,
+      "max": 0.169902,
+      "stdev": 0.03974406536830373
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 21.600235,
+      "min": 21.388034,
+      "max": 23.563356,
+      "stdev": 1.1993678285334306
+    },
+    "useful_GiB_s": {
+      "median": 0.344931,
+      "min": 0.316194,
+      "max": 0.348353,
+      "stdev": 0.01766223152190385
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 153.127925,
+      "min": 149.29568,
+      "max": 159.394836,
+      "stdev": 5.098255046815557
+    },
+    "useful_GiB_s": {
+      "median": 0.048656,
+      "min": 0.046743,
+      "max": 0.049905,
+      "stdev": 0.0015925772613387804
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 147.423299,
+      "min": 143.121508,
+      "max": 157.628441,
+      "stdev": 7.450966761818388
+    },
+    "useful_GiB_s": {
+      "median": 0.050539,
+      "min": 0.047267,
+      "max": 0.052058,
+      "stdev": 0.0024483676875284325
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 144.417657,
+      "min": 142.57609,
+      "max": 149.61107,
+      "stdev": 3.648146817322883
+    },
+    "useful_GiB_s": {
+      "median": 0.051591,
+      "min": 0.0498,
+      "max": 0.052257,
+      "stdev": 0.001270700987644222
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 159.666729,
+      "min": 156.988335,
+      "max": 170.414448,
+      "stdev": 7.105722675081044
+    },
+    "useful_GiB_s": {
+      "median": 0.046663,
+      "min": 0.04372,
+      "max": 0.047459,
+      "stdev": 0.001969559426200015
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 163.313675,
+      "min": 159.022331,
+      "max": 167.452812,
+      "stdev": 4.215469493869487
+    },
+    "useful_GiB_s": {
+      "median": 0.045621,
+      "min": 0.044494,
+      "max": 0.046852,
+      "stdev": 0.0011793821828963384
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "random",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 161.838531,
+      "min": 149.398973,
+      "max": 164.239121,
+      "stdev": 7.965921460042225
+    },
+    "useful_GiB_s": {
+      "median": 0.046037,
+      "min": 0.045364,
+      "max": 0.04987,
+      "stdev": 0.0024306670552202993
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.424619,
+      "min": 1.318356,
+      "max": 1.427978,
+      "stdev": 0.06234325803431618
+    },
+    "useful_GiB_s": {
+      "median": 5.229876,
+      "min": 5.217573,
+      "max": 5.651417,
+      "stdev": 0.24700499145631344
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 4096,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.355301,
+      "min": 1.329895,
+      "max": 1.355953,
+      "stdev": 0.014859953476822627
+    },
+    "useful_GiB_s": {
+      "median": 5.497364,
+      "min": 5.494721,
+      "max": 5.602383,
+      "stdev": 0.06140993683707302
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.394625,
+      "min": 1.391077,
+      "max": 1.412329,
+      "stdev": 0.01138469311546576
+    },
+    "useful_GiB_s": {
+      "median": 5.342352,
+      "min": 5.275387,
+      "max": 5.355981,
+      "stdev": 0.04313825390918501
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.4398,
+      "min": 1.392655,
+      "max": 1.452571,
+      "stdev": 0.03155861351517208
+    },
+    "useful_GiB_s": {
+      "median": 5.174733,
+      "min": 5.129235,
+      "max": 5.349912,
+      "stdev": 0.11651615651487969
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16384,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.37503,
+      "min": 1.344204,
+      "max": 1.39231,
+      "stdev": 0.024368791216088932
+    },
+    "useful_GiB_s": {
+      "median": 5.418486,
+      "min": 5.351238,
+      "max": 5.542747,
+      "stdev": 0.09715862177044989
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.42484,
+      "min": 1.337422,
+      "max": 1.847729,
+      "stdev": 0.2729133706551097
+    },
+    "useful_GiB_s": {
+      "median": 5.229066,
+      "min": 4.032292,
+      "max": 5.570852,
+      "stdev": 0.8079039289494763
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.534795,
+      "min": 1.454517,
+      "max": 2.000068,
+      "stdev": 0.29454751043309363
+    },
+    "useful_GiB_s": {
+      "median": 4.854448,
+      "min": 3.725164,
+      "max": 5.122375,
+      "stdev": 0.7415373454863888
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 65536,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.881169,
+      "min": 1.861412,
+      "max": 1.890033,
+      "stdev": 0.014651912196024115
+    },
+    "useful_GiB_s": {
+      "median": 3.960612,
+      "min": 3.942038,
+      "max": 4.00265,
+      "stdev": 0.031053720829126618
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.391237,
+      "min": 1.370919,
+      "max": 1.499673,
+      "stdev": 0.06922039648350285
+    },
+    "useful_GiB_s": {
+      "median": 5.355366,
+      "min": 4.968136,
+      "max": 5.434734,
+      "stdev": 0.2496531079745117
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.602932,
+      "min": 1.455239,
+      "max": 1.735555,
+      "stdev": 0.1402254982958996
+    },
+    "useful_GiB_s": {
+      "median": 4.648096,
+      "min": 4.292909,
+      "max": 5.119832,
+      "stdev": 0.4148281384288357
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 262144,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.581911,
+      "min": 1.559205,
+      "max": 1.833236,
+      "stdev": 0.15208156091496874
+    },
+    "useful_GiB_s": {
+      "median": 4.709859,
+      "min": 4.064169,
+      "max": 4.778449,
+      "stdev": 0.394084610754256
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.565194,
+      "min": 1.494448,
+      "max": 1.612729,
+      "stdev": 0.05951885933886842
+    },
+    "useful_GiB_s": {
+      "median": 4.760165,
+      "min": 4.619859,
+      "max": 4.985507,
+      "stdev": 0.18446465357171649
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.493,
+      "min": 1.460963,
+      "max": 1.572704,
+      "stdev": 0.05754005570904502
+    },
+    "useful_GiB_s": {
+      "median": 4.990343,
+      "min": 4.737434,
+      "max": 5.099772,
+      "stdev": 0.18584334557452745
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 1048576,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 1.695898,
+      "min": 1.694468,
+      "max": 2.608614,
+      "stdev": 0.5273701184291731
+    },
+    "useful_GiB_s": {
+      "median": 4.393296,
+      "min": 2.856145,
+      "max": 4.397002,
+      "stdev": 0.8885463058357359
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 2.473317,
+      "min": 2.403241,
+      "max": 2.720289,
+      "stdev": 0.16654591402172964
+    },
+    "useful_GiB_s": {
+      "median": 3.012384,
+      "min": 2.738893,
+      "max": 3.100222,
+      "stdev": 0.1884460522121207
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.972963,
+      "min": 4.596871,
+      "max": 5.437459,
+      "stdev": 0.4210680689674768
+    },
+    "useful_GiB_s": {
+      "median": 1.498217,
+      "min": 1.370232,
+      "max": 1.620794,
+      "stdev": 0.12529072657756182
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 4194304,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 4.370477,
+      "min": 4.143806,
+      "max": 5.341069,
+      "stdev": 0.6359857524444502
+    },
+    "useful_GiB_s": {
+      "median": 1.704752,
+      "min": 1.39496,
+      "max": 1.798004,
+      "stdev": 0.21099426718278388
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 6.50509,
+      "min": 6.3996,
+      "max": 6.553569,
+      "stdev": 0.07872399729646182
+    },
+    "useful_GiB_s": {
+      "median": 1.145346,
+      "min": 1.136874,
+      "max": 1.164226,
+      "stdev": 0.014002149168371756
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 19.765202,
+      "min": 18.29793,
+      "max": 20.073503,
+      "stdev": 0.9487356592604343
+    },
+    "useful_GiB_s": {
+      "median": 0.376954,
+      "min": 0.371165,
+      "max": 0.407182,
+      "stdev": 0.01934109956370973
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 16777216,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 19.080083,
+      "min": 17.442387,
+      "max": 20.81454,
+      "stdev": 1.6863078568613545
+    },
+    "useful_GiB_s": {
+      "median": 0.39049,
+      "min": 0.357951,
+      "max": 0.427154,
+      "stdev": 0.03462198392640142
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 64,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 6.723626,
+      "min": 6.545146,
+      "max": 7.72439,
+      "stdev": 0.6356099571319922
+    },
+    "useful_GiB_s": {
+      "median": 1.108119,
+      "min": 0.964553,
+      "max": 1.138337,
+      "stdev": 0.09284862459580827
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 256,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 22.256769,
+      "min": 20.754013,
+      "max": 24.393228,
+      "stdev": 1.828780033722026
+    },
+    "useful_GiB_s": {
+      "median": 0.334756,
+      "min": 0.305436,
+      "max": 0.358995,
+      "stdev": 0.02681963833338052
+    }
+  },
+  {
+    "mode": "latency",
+    "pattern": "sequential",
+    "bytes": 67108864,
+    "stride": 1024,
+    "reads_percent": 100,
+    "n": 3,
+    "ns_per_op": {
+      "median": 21.311898,
+      "min": 20.186753,
+      "max": 22.289734,
+      "stdev": 1.05235003684468
+    },
+    "useful_GiB_s": {
+      "median": 0.349597,
+      "min": 0.334261,
+      "max": 0.369083,
+      "stdev": 0.01745216689506875
+    }
+  }
+]

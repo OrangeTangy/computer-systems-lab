@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="245" viewBox="0 0 1080 245">
+<rect width="1080" height="245" rx="18" fill="#0f172a"/>
+<g font-family="Arial,sans-serif">
+<text x="35" y="45" fill="#f8fafc" font-size="25" font-weight="bold">THINK. FETCH. REMEMBER.</text>
+<text x="35" y="74" fill="#cbd5e1" font-size="15">Three experiments that ask why a computer waits.</text>
+<rect x="30" y="98" width="325" height="119" rx="12" fill="#1e3a5f"/>
+<rect x="377" y="98" width="325" height="119" rx="12" fill="#134e4a"/>
+<rect x="724" y="98" width="325" height="119" rx="12" fill="#4c1d55"/>
+<g fill="#fff" font-size="21" font-weight="bold"><text x="50" y="135">01 / SIMD</text><text x="397" y="135">02 / MEMORY</text><text x="744" y="135">03 / SSD</text></g>
+<g fill="#e2e8f0" font-size="15"><text x="50" y="165">Do several sums at once.</text><text x="50" y="191">When does wider math help?</text><text x="397" y="165">Find information nearby or far away.</text><text x="397" y="191">What makes us wait for data?</text><text x="744" y="165">Ask storage for many things.</text><text x="744" y="191">When does the queue get too long?</text></g>
+</g></svg>

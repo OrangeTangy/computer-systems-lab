@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">AXPY (out of place): double SIMD speedup</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">Scalar time / build time</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">0.842</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">1.68</text>
+<path d="M90 241.99999999999997 H780" stroke="#e2e8f0"/>
+<text x="78" y="245.99999999999997" text-anchor="end" font-size="12">2.53</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">3.37</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">4.21</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">1.02e+03</text>
+<text x="262.5" y="463" font-size="12" text-anchor="middle">8.19e+03</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<text x="607.5" y="463" font-size="12" text-anchor="middle">5.24e+05</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">4.19e+06</text>
+<polyline points="90.0,304.83795377947536 262.5,309.14841932058005 435.0,348.4434266243711 607.5,365.1130296659313 780.0,363.32937092362585" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 321.3271430329012 V260.2373917641861 M87.0 321.3271430329012 H93.0 M87.0 260.2373917641861 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="304.83795377947536" r="3" fill="#2563eb"/>
+<path d="M262.5 401.6524305389437 V285.92802119355434 M259.5 401.6524305389437 H265.5 M259.5 285.92802119355434 H265.5" stroke="#2563eb"/>
+<circle cx="262.5" cy="309.14841932058005" r="3" fill="#2563eb"/>
+<path d="M435.0 358.61267025441157 V336.59967174673267 M432.0 358.61267025441157 H438.0 M432.0 336.59967174673267 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="348.4434266243711" r="3" fill="#2563eb"/>
+<path d="M607.5 389.13596303968586 V359.5912838666898 M604.5 389.13596303968586 H610.5 M604.5 359.5912838666898 H610.5" stroke="#2563eb"/>
+<circle cx="607.5" cy="365.1130296659313" r="3" fill="#2563eb"/>
+<path d="M780.0 380.44154982787904 V355.6167373534196 M777.0 380.44154982787904 H783.0 M777.0 355.6167373534196 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="363.32937092362585" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">auto</text>
+<polyline points="90.0,226.74602223350163 262.5,266.9698539211496 435.0,350.64723536005494 607.5,415.9326703611092 780.0,360.9034065678559" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 249.30851024087875 V145.35714285714283 M87.0 249.30851024087875 H93.0 M87.0 145.35714285714283 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="226.74602223350163" r="3" fill="#dc2626"/>
+<path d="M262.5 271.3832301444332 V261.36762652067614 M259.5 271.3832301444332 H265.5 M259.5 261.36762652067614 H265.5" stroke="#dc2626"/>
+<circle cx="262.5" cy="266.9698539211496" r="3" fill="#dc2626"/>
+<path d="M435.0 362.9797184621728 V336.4323211617547 M432.0 362.9797184621728 H438.0 M432.0 336.4323211617547 H438.0" stroke="#dc2626"/>
+<circle cx="435.0" cy="350.64723536005494" r="3" fill="#dc2626"/>
+<path d="M607.5 432.40811964567604 V341.62679207536604 M604.5 432.40811964567604 H610.5 M604.5 341.62679207536604 H610.5" stroke="#dc2626"/>
+<circle cx="607.5" cy="415.9326703611092" r="3" fill="#dc2626"/>
+<path d="M780.0 376.1388609623929 V356.3917908302558 M777.0 376.1388609623929 H783.0 M777.0 356.3917908302558 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="360.9034065678559" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">native</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Elements N (log2)</text>
+<text x="40" y="540" font-size="12">Whiskers are conservative ratios of trial extrema; no pairing assumed.</text>
+</g></svg>

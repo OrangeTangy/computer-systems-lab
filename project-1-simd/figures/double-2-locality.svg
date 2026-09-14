@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">Dot product: double working-set sweep</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">GFLOP/s</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">0.908</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">1.82</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">2.72</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">3.63</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">4.54</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="262.5" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">1.02e+03</text>
+<text x="607.5" y="463" font-size="12" text-anchor="middle">8.19e+03</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<path d="M181.13534379146648 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="185.13534379146648" y="126" font-size="11">L1D</text>
+<path d="M453.5108654560233 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="457.5108654560233" y="126" font-size="11">L2</text>
+<path d="M641.1353437914664 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="645.1353437914664" y="126" font-size="11">LLC</text>
+<polyline points="90.0,181.1772440720232 262.5,189.86467441986383 435.0,194.40646402353173 607.5,215.8181317613001 780.0,277.4527583171588" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 219.62593001142355 V156.9467325593954 M87.0 219.62593001142355 H93.0 M87.0 156.9467325593954 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="181.1772440720232" r="3" fill="#2563eb"/>
+<path d="M262.5 230.83376569253284 V149.36654154539815 M259.5 230.83376569253284 H265.5 M259.5 149.36654154539815 H265.5" stroke="#2563eb"/>
+<circle cx="262.5" cy="189.86467441986383" r="3" fill="#2563eb"/>
+<path d="M435.0 251.82303943623486 V145.3571428571429 M432.0 251.82303943623486 H438.0 M432.0 145.3571428571429 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="194.40646402353173" r="3" fill="#2563eb"/>
+<path d="M607.5 243.5313217406667 V209.49603507902705 M604.5 243.5313217406667 H610.5 M604.5 209.49603507902705 H610.5" stroke="#2563eb"/>
+<circle cx="607.5" cy="215.8181317613001" r="3" fill="#2563eb"/>
+<path d="M780.0 305.4153134255524 V267.7627056677401 M777.0 305.4153134255524 H783.0 M777.0 267.7627056677401 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="277.4527583171588" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">scalar</text>
+<polyline points="90.0,221.85705725478 262.5,195.51159502246495 435.0,225.64900664247548 607.5,215.30144430590778 780.0,270.22858509816024" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 284.684201656537 V220.57809767756578 M87.0 284.684201656537 H93.0 M87.0 220.57809767756578 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="221.85705725478" r="3" fill="#dc2626"/>
+<path d="M262.5 216.05150262549165 V159.629116174726 M259.5 216.05150262549165 H265.5 M259.5 159.629116174726 H265.5" stroke="#dc2626"/>
+<circle cx="262.5" cy="195.51159502246495" r="3" fill="#dc2626"/>
+<path d="M435.0 264.45007531668466 V164.01903296365992 M432.0 264.45007531668466 H438.0 M432.0 164.01903296365992 H438.0" stroke="#dc2626"/>
+<circle cx="435.0" cy="225.64900664247548" r="3" fill="#dc2626"/>
+<path d="M607.5 251.21983754832294 V200.56680052735427 M604.5 251.21983754832294 H610.5 M604.5 200.56680052735427 H610.5" stroke="#dc2626"/>
+<circle cx="607.5" cy="215.30144430590778" r="3" fill="#dc2626"/>
+<path d="M780.0 279.7169646082433 V264.864181373518 M777.0 279.7169646082433 H783.0 M777.0 264.864181373518 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="270.22858509816024" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">auto</text>
+<polyline points="90.0,159.56768365751668 262.5,198.20939129300072 435.0,161.02519739125876 607.5,209.73740307563634 780.0,282.29582170936555" stroke="#059669" fill="none" stroke-width="2"/>
+<path d="M90.0 175.06321823501997 V152.01839065513354 M87.0 175.06321823501997 H93.0 M87.0 152.01839065513354 H93.0" stroke="#059669"/>
+<circle cx="90.0" cy="159.56768365751668" r="3" fill="#059669"/>
+<path d="M262.5 216.64547146052118 V175.16136486014722 M259.5 216.64547146052118 H265.5 M259.5 175.16136486014722 H265.5" stroke="#059669"/>
+<circle cx="262.5" cy="198.20939129300072" r="3" fill="#059669"/>
+<path d="M435.0 171.95197021848503 V153.0073451303976 M432.0 171.95197021848503 H438.0 M432.0 153.0073451303976 H438.0" stroke="#059669"/>
+<circle cx="435.0" cy="161.02519739125876" r="3" fill="#059669"/>
+<path d="M607.5 220.85014558217787 V184.9960202039201 M604.5 220.85014558217787 H610.5 M604.5 184.9960202039201 H610.5" stroke="#059669"/>
+<circle cx="607.5" cy="209.73740307563634" r="3" fill="#059669"/>
+<path d="M780.0 293.79199036473767 V268.9569683425296 M777.0 293.79199036473767 H783.0 M777.0 268.9569683425296 H783.0" stroke="#059669"/>
+<circle cx="780.0" cy="282.29582170936555" r="3" fill="#059669"/>
+<text x="800" y="161" font-size="12" fill="#059669">native</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Useful array footprint (KiB, log2)</text>
+<text x="40" y="540" font-size="12">Capacity markers are reported CPU0 caches, not guarantees that a point resides entirely in that cache.</text>
+</g></svg>

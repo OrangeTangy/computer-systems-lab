@@ -1,0 +1,13 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "notes": [
+    "All measured new kernels ran natively on Windows.",
+    "Three suites run sequentially; assistant file editing/tool queries and normal OS activity may occur during runs.",
+    "No exclusive isolation; Balanced power policy.",
+    "WPR capture failed with access denied; no counter trace exists.",
+    "Storage reliability query failed with CIM access unavailable.",
+    "Approximately 25 GB free before 2 GiB SSD file allocation.",
+    "Supplemental high-QD session separately labeled."
+  ]
+}

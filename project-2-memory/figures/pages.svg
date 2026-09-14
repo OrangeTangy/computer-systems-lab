@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">Matched node count: packed versus scattered pages</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">Dependent-load latency (ns)</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">34.5</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">68.9</text>
+<path d="M90 242.00000000000003 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.00000000000003" text-anchor="end" font-size="12">103</text>
+<path d="M90 176.00000000000006 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.00000000000006" text-anchor="end" font-size="12">138</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">172</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">256</text>
+<text x="262.5" y="463" font-size="12" text-anchor="middle">1.02e+03</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">4.1e+03</text>
+<text x="607.5" y="463" font-size="12" text-anchor="middle">1.64e+04</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<polyline points="90.0,437.3351751624648 262.5,432.36293424305046 435.0,430.72711349835384 607.5,429.0183027935701 780.0,375.0307127580077" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 437.562105459981 V437.33288106098024 M87.0 437.562105459981 H93.0 M87.0 437.33288106098024 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="437.3351751624648" r="3" fill="#2563eb"/>
+<path d="M262.5 432.56893421567025 V431.6551637212734 M259.5 432.56893421567025 H265.5 M259.5 431.6551637212734 H265.5" stroke="#2563eb"/>
+<circle cx="262.5" cy="432.36293424305046" r="3" fill="#2563eb"/>
+<path d="M435.0 432.6793498180059 V430.71646641633885 M432.0 432.6793498180059 H438.0 M432.0 430.71646641633885 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="430.72711349835384" r="3" fill="#2563eb"/>
+<path d="M607.5 429.5902062081443 V428.04157089457397 M604.5 429.5902062081443 H610.5 M604.5 428.04157089457397 H610.5" stroke="#2563eb"/>
+<circle cx="607.5" cy="429.0183027935701" r="3" fill="#2563eb"/>
+<path d="M780.0 377.1157695108544 V335.05136405832843 M777.0 377.1157695108544 H783.0 M777.0 335.05136405832843 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="375.0307127580077" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">64 B spacing</text>
+<polyline points="90.0,428.82299777653554 262.5,400.4114241045285 435.0,319.4074455984594 607.5,168.50384936928958 780.0,192.57286702075888" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 429.21836452854086 V428.02421959778655 M87.0 429.21836452854086 H93.0 M87.0 428.02421959778655 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="428.82299777653554" r="3" fill="#dc2626"/>
+<path d="M262.5 403.98495058284664 V399.6975889588771 M259.5 403.98495058284664 H265.5 M259.5 399.6975889588771 H265.5" stroke="#dc2626"/>
+<circle cx="262.5" cy="400.4114241045285" r="3" fill="#dc2626"/>
+<path d="M435.0 322.9173251226528 V306.83083657055 M432.0 322.9173251226528 H438.0 M432.0 306.83083657055 H438.0" stroke="#dc2626"/>
+<circle cx="435.0" cy="319.4074455984594" r="3" fill="#dc2626"/>
+<path d="M607.5 220.45871612401763 V145.3571428571429 M604.5 220.45871612401763 H610.5 M604.5 145.3571428571429 H610.5" stroke="#dc2626"/>
+<circle cx="607.5" cy="168.50384936928958" r="3" fill="#dc2626"/>
+<path d="M780.0 209.90797871157386 V160.12928934829017 M777.0 209.90797871157386 H783.0 M777.0 160.12928934829017 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="192.57286702075888" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">4096 B spacing</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Nodes (log2)</text>
+<text x="40" y="540" font-size="12">Same touched line count; spacing changes page pressure AND potential cache-set conflicts.</text>
+</g></svg>

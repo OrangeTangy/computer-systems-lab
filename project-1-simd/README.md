@@ -30,6 +30,8 @@ For AXPY/multiply the logical array footprint is `3*N*sizeof(T)` at unit stride;
 
 ## Verify the optimization
 
+Lecture connection: Part 1-1's true dependencies and out-of-order execution explain the ordered dot accumulation; Part 1-2's SIMD/Amdahl discussion explains why lane count is not a promised speedup. See [source pages and interpretation](../docs/LECTURE-CONNECTIONS.md).
+
 The saved compiler reports identify vectorized loops, including 32-byte vectors in the native build (eight floats or four doubles). Reports also include missed paths, so a single “vectorized” line is not proof that all stride variants use those instructions. Targeted assembly evidence is in [VECTOR-EVIDENCE.md](VECTOR-EVIDENCE.md); complete disassembly remains available as raw evidence.
 
 The dot-product experiment is a negative case. The compiler can vectorize multiplication while preserving ordered scalar additions. That is not a fully parallel reduction. Native float32 dot was slower than scalar in the small and large reported examples. Do not rewrite the result as “AVX2 must always win.”

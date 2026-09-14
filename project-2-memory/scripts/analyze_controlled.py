@@ -1,0 +1,21 @@
+import pathlib,json,statistics,collections,sys
+R=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(R.parent/'common'));from charts import plot
+rows=[json.loads(s) for s in (R/'data/controlled/raw.jsonl').read_text().splitlines()]
+assert len(rows)==85 and all(r['correct'] for r in rows)
+groups=collections.defaultdict(list)
+for r in rows:groups[r['workers'],r['read_percent'],r['delay_us']].append(r)
+def stat(rs,key):
+ v=[r[key] for r in rs];return [statistics.median(v),min(v),max(v)]
+summary=[];series=[]
+for read in [0,50,70,100]:
+ points=[]
+ for delay in [100,20,5,0]:
+  rs=groups[3,read,delay];lat=stat(rs,'latency_ns');bw=stat(rs,'traffic_GB_s');points.append((bw[0],*lat));summary.append(dict(read_percent=read,workers=3,delay_us=delay,latency_ns=lat,traffic_GB_s=bw,start_lag_us=stat(rs,'start_lag_us'),end_overhang_us=stat(rs,'end_overhang_us')))
+ series.append((f'{read}% reads',points))
+plot(R/'figures/controlled-load.svg','Fixed P-core placement: offered memory load','Useful traffic GB/s','Probe latency (ns)',series,notes='Three fixed P-core workers. Increasing offered load = decreasing inter-chunk delay. Five trials.')
+baseline=stat(groups[0,100,0],'latency_ns');lines=['# Controlled memory follow-up','', 'This dataset supplements, rather than overwrites, the original mixed-core measurements. It tests a methodological improvement prompted by the lecture discussion of placement and shared resources.','', '## Method','', 'Probe CPU 0 and worker CPUs 2, 4, 6 are on four distinct P-cores, verified with the native Windows physical-core masks. Three workers each use 128 MiB. Read percentage and delay are swept while worker placement and count stay fixed. Each trial runs for at least 0.5 seconds; five trials per condition are interleaved with a fixed random seed. The separate baseline has no workers.','', 'Workers check the stop signal between 128 KiB chunks instead of 128 MiB passes. Start lag and end overhang are measured. The traffic denominator spans probe start to latest worker completion; the probe has its own measured interval. Finite OS scheduling delays remain, so this is improved alignment rather than an assertion of perfectly identical windows.','',f'Idle probe median: **{baseline[0]:.2f} ns/load**, trial range {baseline[1]:.2f}–{baseline[2]:.2f}.','', '| Read % | Delay us/chunk | Median GB/s | Median ns/load | Start lag median us | End overhang median us |','|---|---|---|---|---|---|']
+for r in summary:lines.append(f'| {r["read_percent"]} | {r["delay_us"]} | {r["traffic_GB_s"][0]:.2f} | {r["latency_ns"][0]:.2f} | {r["start_lag_us"][0]:.1f} | {r["end_overhang_us"][0]:.1f} |')
+endmax=max(r['end_overhang_us'] for r in rows);startmax=max(r['start_lag_us'] for r in rows)
+lines+=['','![Controlled load curve](figures/controlled-load.svg)','',f'Maximum observed start lag was {startmax:.1f} us and end overhang {endmax:.1f} us. Compare these with approximately 500,000 us per trial rather than silently treating synchronization as exact.','', '## Interpretation and remaining evidence','', 'If decreasing the delay produces more throughput and increased latency, that is consistent with growing shared-resource pressure. If the curve does not plateau, the sampled intensity range does not establish saturation. The delay loop itself consumes worker execution resources, and the scalar traffic kernel has instruction overhead. Neither useful bandwidth nor this curve alone proves DRAM-bus saturation.','', 'This is multicore traffic, not an SMT experiment: sibling logical CPUs are deliberately avoided. A separate probe is still a different request population from the streamers, so Little\'s Law cannot yield exact streamer occupancy by combining them. Counter attribution remains pending the administrator capture.','', '## Reproduce','', '`python project-2-memory/scripts/run_controlled.py`, followed by `python project-2-memory/scripts/analyze_controlled.py`, from the repository root. Native core masks must already be recorded in `common/core-masks.json`. The source/environment hashes and raw trial order are retained under `data/controlled/`.']
+(R/'CONTROLLED-RESULTS.md').write_text('\n'.join(lines),encoding='utf-8');(R/'data/controlled/summary.json').write_text(json.dumps(summary,indent=2))
+print(f'85 controlled trials: idle {baseline[0]:.2f} ns, max end overhang {endmax:.1f} us')

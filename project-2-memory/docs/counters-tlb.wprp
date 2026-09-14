@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0" Author="Computer Systems Lab">
+ <Profiles>
+  <SystemCollector Id="Collector" Name="LabCounterCollector"><BufferSize Value="1024"/><Buffers Value="64"/></SystemCollector>
+  <SystemProvider Id="Provider"><Keywords><Keyword Value="ProcessThread"/><Keyword Value="Loader"/><Keyword Value="CSwitch"/></Keywords></SystemProvider>
+  <MicroArchitecturalConfig Id="ADLP"><ProfileSources Architecture="INTEL" Family="6" Model="154" Description="Alder Lake P-core"><ProfileSource Name="LabDTLBWalkCompleted" Event="0x12" Unit="0x0E" Interval="0x10000" Persist="false"/></ProfileSources></MicroArchitecturalConfig>
+  <HardwareCounter Id="Counters" Strict="true"><MicroArchitecturalConfigId Value="ADLP"/><Counters><Counter Value="LLCMisses"/><Counter Value="LabDTLBWalkCompleted"/><Counter Value="InstructionRetired"/><Counter Value="TotalCycles"/></Counters><Events><Event Value="CSwitch"/></Events></HardwareCounter>
+  <Profile Id="LabCountersTLB.Verbose.File" Name="LabCountersTLB" Description="Strict hardware-counter capture for lab experiments" LoggingMode="File" DetailLevel="Verbose">
+   <Collectors><SystemCollectorId Value="Collector"><SystemProviderId Value="Provider"/><HardwareCounterId Value="Counters"/></SystemCollectorId></Collectors>
+  </Profile>
+ </Profiles>
+</WindowsPerformanceRecorder>
+

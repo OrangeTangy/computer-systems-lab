@@ -12,6 +12,8 @@ Read/write ratios describe 8-byte application operations. Ordinary cached stores
 
 ## Measurements
 
+**Lecture-driven follow-up:** [Controlled results](CONTROLLED-RESULTS.md) add five repetitions per condition with three fixed P-core workers and measured synchronization lag/overhang. This addresses two weaknesses of the original run. The original data below is preserved as a distinct session. See [lecture connections](../docs/LECTURE-CONNECTIONS.md) for the distinction between ILP, SIMD, SMT and multicore traffic.
+
 The original September 10 pilot contains 510 trials and is retained under `data/raw/pilot-*`. Its plots and initial interpretation remain in `docs/PILOT-README.md` and `data/processed/`. The September 14 extension adds 90 trials: 20 load/mix conditions and 10 matched-node page-spacing conditions, each repeated three times. [Extended results](EXTENDED-RESULTS.md) contain the measured tables.
 
 ![Loaded latency](figures/loaded.svg)

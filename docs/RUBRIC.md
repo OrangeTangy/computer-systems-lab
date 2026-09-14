@@ -2,6 +2,8 @@
 
 This maps the assignment's categories to evidence and explicitly identifies remaining requirements. A populated repository is not proof of full credit. Point values are copied from the assignment, not estimated scores.
 
+**Lecture integration update:** [Lecture connections](LECTURE-CONNECTIONS.md) map all three supplied decks to code and observations. The [controlled memory follow-up](../project-2-memory/CONTROLLED-RESULTS.md) adds 85 trials on fixed P-cores and measures timing-window mismatch. Administrator counter collection is prepared but must be validated before the missing-counter rows can change. Use [submission gates](SUBMISSION-GATES.md) to decide what remains; no perfect-score claim is made.
+
 ## Common requirements
 
 | Requirement | Evidence/status |
@@ -38,7 +40,7 @@ The measured read-bandwidth proxy is exceeded by some main-suite kernel rates wh
 | Pattern/granularity/RW sweeps | 35 | Sequential/random, 64/256/1024 B, four R/W mixes; loaded probe per mix; useful bytes distinguished from physical traffic |
 | Throughput-latency knee | 35 | 0/1/2/4/6 worker sweep, concurrent probe; diminishing returns in some mixes, no universal saturation claim; mixed P/E worker types confound a pure concurrency comparison |
 | Working-set/cache/TLB analysis | 35 | Cache topology and matched-node page-spacing sweep; **hardware cache/TLB correlations missing**, huge pages unavailable under current privilege |
-| Experimental rigor | 25 | Affinity, repetitions, raw data, seeds, environment; finite probe/worker window mismatch disclosed |
+| Experimental rigor | 25 | Original controls plus five-repeat controlled follow-up on fixed P-cores; chunk stop checks and measured lag/overhang improve timing alignment |
 | AI-use transparency and pitfall analysis | 15 | Disclosure, predictable-chain pitfall and unsupported TLB-attribution warning |
 | Report quality | 15 | Detailed report, tables, plots, unresolved explanations retained |
 

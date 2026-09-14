@@ -46,6 +46,8 @@ python project-1-simd/scripts/run.py
 python project-1-simd/scripts/roofline.py
 python project-2-memory/scripts/run.py --profile pilot --cpu 0
 python project-2-memory/scripts/run_extended.py
+python project-2-memory/scripts/run_controlled.py
+python project-2-memory/scripts/analyze_controlled.py
 python project-3-ssd/scripts/run.py --fio C:/path/to/fio.exe
 python project-3-ssd/scripts/extend_queue.py C:/path/to/fio.exe
 python common/analyze_all.py
@@ -79,6 +81,12 @@ project-3-ssd/           file-only fio runner, saved configs, original fio JSON,
 - CPU benchmarks are pinned, but the Balanced power policy and background OS activity remain part of the environment. No exclusive core isolation is claimed.
 
 ## The deeper explanation — start here after the pictures
+
+### How this connects to our lectures
+
+The three supplied *Thread 1-1* lecture decks explain why these experiments behave as they do: true dependencies limit the dot product; vector lanes do not guarantee proportional speedup; SMT and multicore execution share different resources; Amdahl's law exposes unchanged work; and latency hiding can increase throughput without shortening an individual wait. GPU SIMT, divergence, occupancy and coalescing provide useful comparisons, but this repository does not claim GPU measurements.
+
+Read the [page-by-page lecture connections](docs/LECTURE-CONNECTIONS.md), including a sandwich-making explanation for younger readers and a map from each concept to our code and measured evidence. The lecture's engineering loop—measure, identify the bottleneck, change a mechanism, examine costs, measure again—also motivated the [controlled memory follow-up](project-2-memory/CONTROLLED-RESULTS.md).
 
 ### Project 1: one instruction, several numbers
 

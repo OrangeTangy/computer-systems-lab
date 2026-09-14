@@ -34,6 +34,8 @@ Read [measured results](RESULTS.md), inspect [original configurations](configs/)
 
 ## How to interpret the curve
 
+Lecture connection: the shared-resource and latency-hiding discussions help explain why more requests can raise throughput while response time worsens. This is a queueing analogy, not an assertion that SSD queue depth equals SMT threads or GPU warps. See [lecture connections](../docs/LECTURE-CONNECTIONS.md).
+
 Throughput and mean total I/O latency come from the same fio run. For a mixed workload, the combined mean is weighted by read/write completion counts. Percentiles are kept separate because averaging read and write percentiles would not produce a valid combined percentile.
 
 The operational knee is the first tested QD reaching at least 90% of the maximum observed median IOPS. If that occurs at the largest tested QD, the experiment has not established a plateau. Report the complete curve and investigate further before calling it the device's saturation point. Requested queue depth is not proof of useful parallelism; inspect the achieved-depth distribution.

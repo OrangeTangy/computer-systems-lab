@@ -4,3 +4,4 @@
 *.exe
 *.dll
 *.msi
+**/data/counter-captures/

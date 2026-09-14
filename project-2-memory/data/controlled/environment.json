@@ -1,0 +1,30 @@
+{
+  "utc": "2026-09-14T21:48:13.749246+00:00",
+  "compiler_command": [
+    "gcc",
+    "-O3",
+    "-Wall",
+    "-Wextra",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-2-memory\\src\\loaded_controlled.c",
+    "-o",
+    "C:\\Users\\raide\\Documents\\Codex\\2026-09-09\\files-mentioned-by-the-user-ecse4320\\outputs\\computer-systems-lab\\project-2-memory\\build\\loaded_controlled.exe"
+  ],
+  "source_sha256": "9e53691f7dbcbd9fd98d33dcdb91ccb02f04f5cc9d548957128a271b6e896353",
+  "probe_cpu": 0,
+  "worker_cpus": [
+    2,
+    4,
+    6
+  ],
+  "distinct_physical_core_masks": [
+    3,
+    12,
+    48,
+    192
+  ],
+  "repetitions": 5,
+  "minimum_probe_seconds": 0.5,
+  "chunk_bytes": 131072,
+  "power_policy": "unchanged Balanced",
+  "isolation": "affinity, not exclusive reservation"
+}

@@ -1,0 +1,26 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20261014180657
+Username: DESKTOP-V909RP0\usr
+RunAs User: DESKTOP-V909RP0\usr
+Configuration Name: 
+Machine: DESKTOP-V909RP0 (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File .\common\collect-ssd-thermal.ps1 -Session ryzen-20261014 -Fio C:\Users\usr\Documents\Codex\2026-10-14\tak\work\tools\fio\fio.exe
+Process ID: 16008
+PSVersion: 5.1.26100.9444
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9444
+BuildVersion: 10.0.26100.9444
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Idle baseline 60 s...
+Sustained write running...
+Recovery 180 s...
+Done: 185 temperature samples; disposable file removed.
+**********************
+Windows PowerShell transcript end
+End time: 20261014181325
+**********************

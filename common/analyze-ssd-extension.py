@@ -27,6 +27,30 @@ mbs=[(t,v*1024/1e6) for t,v in bw]  # fio bandwidth logs are KiB/s
 # The sustained trace alternates between two states; split at the midpoint of its range.
 split=(max(v for _,v in mbs)+min(v for _,v in mbs))/2;high=[v for _,v in mbs if v>=split];low=[v for _,v in mbs if v<split]
 slc_rate,tlc_rate=statistics.median(high),statistics.median(low)
+def thermal_section():
+ """Temperature logged every ~2 s (Administrator run of collect-ssd-thermal.ps1) against 1 s write throughput."""
+ T=S/'ssd-thermal'
+ if not (T/'temperature.csv').exists():return []
+ import csv
+ te=json.loads((T/'environment.json').read_text(encoding='utf-8-sig'));assert te.get('test_file_removed')
+ with (T/'temperature.csv').open(encoding='utf-8-sig') as f:temps=[(float(r['t']),int(r['temperature_c']),r['phase']) for r in csv.DictReader(f)]
+ w0=te['write_start_s'];tbw=[(t,v*1024/1e6) for t,v in readlog(T/'logs'/'thermal_bw.1.log')]
+ def temp_at(t):return min(temps,key=lambda s:abs(s[0]-(t+w0)))[1]  # nearest sample on the write-time axis
+ tsplit=(max(v for _,v in tbw)+min(v for _,v in tbw))/2;fast=[(t,v) for t,v in tbw if v>=tsplit];slow=[(t,v) for t,v in tbw if v<tsplit]
+ first_slow=min(t for t,_ in slow);first_gib=sum(v for t,v in fast if t<first_slow)*1e6/2**30
+ hot=max(temp_at(t) for t,_ in tbw);hot_rate=statistics.median(v for t,v in tbw if temp_at(t)==hot)
+ xs=[v for _,v in tbw];ys=[temp_at(t) for t,_ in tbw];mx,my=statistics.mean(xs),statistics.mean(ys)
+ corr=sum((x-mx)*(y-my) for x,y in zip(xs,ys))/(sum((x-mx)**2 for x in xs)*sum((y-my)**2 for y in ys))**.5
+ idle=[c for t,c,ph in temps if ph=='idle-before'];after=[c for t,c,ph in temps if ph=='idle-after']
+ wj=parse(json.loads((T/'raw'/'thermal-write.json').read_text())['jobs'][0])
+ plot(F/'ssd-thermal-temp.svg','SSD temperature: idle, 30 GiB write, recovery','Seconds since start','Drive temperature (C)',[(ph,[(t,c,c,c) for t,c,p in temps if p==ph]) for ph in ['idle-before','write','idle-after']],notes='Windows storage reliability counter (Administrator), sampled about every 2 s.',subtitle='Measured Windows results | single run')
+ plot(F/'ssd-thermal-bw.svg','Same run: 1 s write throughput','Seconds since write start','MB/s',[('128 KiB sequential write, QD32',[(t,v,v,v) for t,v in tbw])],notes=f'Write started {w0:.0f} s after the temperature log.',subtitle='Measured Windows results | single run, 1 s averages')
+ return ['## Temperature: is the slowdown thermal?','',
+ f'A separate Administrator run of [`collect-ssd-thermal.ps1`](../../common/collect-ssd-thermal.ps1) logged the drive temperature about every 2 s through 60 s idle, a {te["size_gib"]} GiB 128 KiB sequential write at QD32 ({wj["MB_s"]:.0f} MB/s average), and 180 s of recovery. [Prediction](ssd-thermal/HYPOTHESES.md), [samples](ssd-thermal/temperature.csv), [run log](ssd-thermal/run-log.txt).','',
+ '![Temperature](figures/ssd-thermal-temp.svg)','![Throughput in the same run](figures/ssd-thermal-bw.svg)','',
+ f'Temperature rose from {statistics.median(idle):.0f} C at idle to a peak of {hot} C during the write and settled at {min(after)}-{max(after)} C afterwards. Throughput again alternated between about {statistics.median(v for _,v in fast):.0f} MB/s and {statistics.median(v for _,v in slow):.0f} MB/s, but **the drive was writing at {hot_rate:.0f} MB/s while it was hottest**, and the slow phase occurred at lower temperatures than the fast phase that followed it. The correlation between 1 s throughput and temperature is {corr:+.2f}. Thermal throttling would make the hottest seconds the slowest, so it is excluded at these temperatures. The slow phases are SLC-cache exhaustion, as predicted.','',
+ f'**Cache size depends on device state.** On this rested drive the first fast phase wrote {first_gib:.1f} GiB before slowing; in the sustained run that followed the write-heavy matrix, fast phases wrote about 2 GiB each. The SLC cache is dynamic: its usable size depends on free space and on how much of it the controller has already folded into TLC. A "cache size" measured once is not a property of the drive alone.','',
+ 'Small temperature bumps during the recovery period, with no host I/O from this test, may be background folding by the controller; this is not established.','']
 rows=[]
 for i in index:r=dict(i);r.update(parse(job(i['name'])));rows.append(r)
 (X/'processed.json').write_text(json.dumps(rows,indent=1))
@@ -102,6 +126,7 @@ f'**Prediction check:** a cliff was predicted. The measured repeating sawtooth s
 '| Phase | MB/s | Mean us | p99 us | p99.9 us |','|---|---:|---:|---:|---:|',
 *[f'| {n} | {j["MB_s"]:.0f} | {j["lat_us"]:.0f} | {j["write_p99"]:.0f} | {j["write_p99.9"]:.0f} |' for n,j in [('Whole sustained run',sj),('20 s burst right after',pj),('20 s burst after 120 s idle',ij)]],'',
 f'**Recovery:** after 120 s idle the burst runs at {ij["MB_s"]:.0f} MB/s versus {pj["MB_s"]:.0f} MB/s immediately after the sustained write. '+('Idle time let the controller migrate SLC contents to TLC and free cache space, so short tests on a rested drive see burst speeds that a long workload does not.' if ij['MB_s']>1.2*pj['MB_s'] else 'Two minutes of idle time did not restore burst speed in this run; background folding may need longer, or the burst file region (2 GiB, overwritten) is handled differently from new data.'),'',
-f'**Why this matters for the other results:** every matrix run wrote at most a few GiB with idle gaps, so all write numbers above and in the QD study are burst (SLC-cache) numbers, not steady state. Temperature could not be recorded: Windows reliability counters require elevation on this host (`smart_before` in [environment.json](ssd-extension/environment.json) retains the refusal), so a thermal-throttling explanation cannot be confirmed or excluded.','',
+f'**Why this matters for the other results:** every matrix run wrote at most a few GiB with idle gaps, so all write numbers above and in the QD study are burst (SLC-cache) numbers, not steady state. Temperature could not be read during this (non-elevated) collection (`smart_before` in [environment.json](ssd-extension/environment.json) retains the refusal); a separate Administrator run below logs it and rules out thermal throttling.','',
+*thermal_section(),
 '## Limits','','- Three 5 s trials per matrix condition; one sustained run. Ranges are min/max, not confidence intervals.','- 2 GiB LBA range on a partly used system drive; the full-drive random-write steady state (after preconditioning the whole device) was not measured, to avoid filling the system volume.','- QD32 is the SATA NCQ limit; deeper host queues only add waiting time in Windows (see the QD study).']
 (S/'SSD-EXTENSION.md').write_text('\n'.join(L)+'\n',encoding='utf-8');print('SSD extension report written',len(rows))

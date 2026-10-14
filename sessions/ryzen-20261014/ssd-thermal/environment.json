@@ -1,0 +1,16 @@
+{
+    "start_local":  "2026-10-14T18:06:57.2120580-04:00",
+    "fio":  "fio-3.43",
+    "size_gib":  30,
+    "idle_before_s":  60,
+    "idle_after_s":  180,
+    "disk":  {
+                 "FriendlyName":  "ADATA SU650",
+                 "BusType":  "SATA",
+                 "MediaType":  "SSD",
+                 "Size":  512110190592
+             },
+    "write_start_s":  61.42,
+    "write_end_s":  205.86,
+    "test_file_removed":  true
+}

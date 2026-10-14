@@ -94,7 +94,20 @@ One sequential 128 KiB write at QD32 to a new 40 GiB file, logged every second, 
 
 **Recovery:** after 120 s idle the burst runs at 312 MB/s versus 201 MB/s immediately after the sustained write. Idle time let the controller migrate SLC contents to TLC and free cache space, so short tests on a rested drive see burst speeds that a long workload does not.
 
-**Why this matters for the other results:** every matrix run wrote at most a few GiB with idle gaps, so all write numbers above and in the QD study are burst (SLC-cache) numbers, not steady state. Temperature could not be recorded: Windows reliability counters require elevation on this host (`smart_before` in [environment.json](ssd-extension/environment.json) retains the refusal), so a thermal-throttling explanation cannot be confirmed or excluded.
+**Why this matters for the other results:** every matrix run wrote at most a few GiB with idle gaps, so all write numbers above and in the QD study are burst (SLC-cache) numbers, not steady state. Temperature could not be read during this (non-elevated) collection (`smart_before` in [environment.json](ssd-extension/environment.json) retains the refusal); a separate Administrator run below logs it and rules out thermal throttling.
+
+## Temperature: is the slowdown thermal?
+
+A separate Administrator run of [`collect-ssd-thermal.ps1`](../../common/collect-ssd-thermal.ps1) logged the drive temperature about every 2 s through 60 s idle, a 30 GiB 128 KiB sequential write at QD32 (225 MB/s average), and 180 s of recovery. [Prediction](ssd-thermal/HYPOTHESES.md), [samples](ssd-thermal/temperature.csv), [run log](ssd-thermal/run-log.txt).
+
+![Temperature](figures/ssd-thermal-temp.svg)
+![Throughput in the same run](figures/ssd-thermal-bw.svg)
+
+Temperature rose from 38 C at idle to a peak of 48 C during the write and settled at 41-46 C afterwards. Throughput again alternated between about 321 MB/s and 77 MB/s, but **the drive was writing at 321 MB/s while it was hottest**, and the slow phase occurred at lower temperatures than the fast phase that followed it. The correlation between 1 s throughput and temperature is +0.04. Thermal throttling would make the hottest seconds the slowest, so it is excluded at these temperatures. The slow phases are SLC-cache exhaustion, as predicted.
+
+**Cache size depends on device state.** On this rested drive the first fast phase wrote 7.2 GiB before slowing; in the sustained run that followed the write-heavy matrix, fast phases wrote about 2 GiB each. The SLC cache is dynamic: its usable size depends on free space and on how much of it the controller has already folded into TLC. A "cache size" measured once is not a property of the drive alone.
+
+Small temperature bumps during the recovery period, with no host I/O from this test, may be background folding by the controller; this is not established.
 
 ## Limits
 

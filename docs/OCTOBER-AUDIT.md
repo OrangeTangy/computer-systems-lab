@@ -51,7 +51,7 @@ Data types: float32/float64 throughout, **int32 added** in the extension. Kernel
 | Safety and zero-queue baselines | 30 | Disposable files only, refuse-existing and free-space checks, exact-file deletion; direct I/O, aligned; four QD1 baselines with p50/p95/p99/p99.9 |
 | Block-size and pattern sweeps | 35 | Intel: six sizes × patterns; **Ryzen: 4–256 KiB × random/sequential × read/write at QD32** |
 | Read/write and queue-depth analysis | 40 | **QD1–256 in one interleaved session (knee QD64)**; Little's-Law L per run (equals QD to 16, lower beyond: achieved < requested depth); R/W mixes 100/70/50/0 on both drives; SATA NCQ depth (32) explains why deeper host queues add latency without throughput |
-| Tail latency and device state | 25 | p50–p99.9 per run; **sustained 40 GiB write with 1 s logs (SLC cache), post-burst and after-idle recovery**; temperature unavailable without elevation (refusal retained) |
+| Tail latency and device state | 25 | p50–p99.9 per run; **sustained 40 GiB write with 1 s logs (SLC cache), post-burst and after-idle recovery**; **temperature logged through a 30 GiB write (38 → 48 °C, full speed while hottest, r = +0.04): throttling excluded, slow phases are SLC exhaustion** |
 | Reproducibility and data hygiene | 25 | Configs, raw JSON, indexes, seeds, processed JSON, scripts, repeated trials, environment |
 | AI transparency and pitfall | 15 | Buffered vs direct on both drives; burst-vs-steady-state; requested vs achieved QD |
 | Report quality | 15 | Figures, tables, limitations |

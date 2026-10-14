@@ -126,7 +126,7 @@ lines += ['## Companion reports for this session','',
 '- [SIMD extension](SIMD-EXTENSION.md): int32 versus float32/float64, a three-point stencil, and a gather-indexed loop (negative case) with a forced hardware-gather control.',
 '- [SSD extension](SSD-EXTENSION.md): block-size sweep, read/write mix, data pattern, buffered versus direct I/O (cold and warm cache), and a 40 GiB sustained write showing the SLC-cache sawtooth.',
 '- [Optional GPU comparison](GPU.md): kernel-only versus end-to-end AXPY on a GTX 1660 Ti.','',
-'Large-page allocation on this host returned error 1314 (privilege not held), so no large-page speedup is claimed.','',
+'- [Large pages](LARGE-PAGES.md): 4 KiB versus 2 MiB pages for the same chains (the main timing session had no lock-pages privilege; it was granted afterwards), plus the same study on a busy machine as a benchmark pitfall.','',
 '## Student review','',
 'The original [rubric audit](../../docs/RUBRIC.md) and [submission gates](../../docs/SUBMISSION-GATES.md) distinguish conditional features from required evidence. The student must independently review, test and understand the work before submission. AI assistance is described in [the disclosure](../../docs/AI-USE.md); no independent student checks are inferred from AI-executed runs.']
 (P/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8');(P/'summary.json').write_text(json.dumps(processed,indent=2));print(processed)

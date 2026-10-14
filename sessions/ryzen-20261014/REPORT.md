@@ -243,7 +243,7 @@ Percentiles above are medians of per-run percentiles, not percentiles of a poole
 - [SSD extension](SSD-EXTENSION.md): block-size sweep, read/write mix, data pattern, buffered versus direct I/O (cold and warm cache), and a 40 GiB sustained write showing the SLC-cache sawtooth.
 - [Optional GPU comparison](GPU.md): kernel-only versus end-to-end AXPY on a GTX 1660 Ti.
 
-Large-page allocation on this host returned error 1314 (privilege not held), so no large-page speedup is claimed.
+- [Large pages](LARGE-PAGES.md): 4 KiB versus 2 MiB pages for the same chains (the main timing session had no lock-pages privilege; it was granted afterwards), plus the same study on a busy machine as a benchmark pitfall.
 
 ## Student review
 

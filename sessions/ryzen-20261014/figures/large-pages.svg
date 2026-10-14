@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">Dependent random chain: 4 KiB vs 2 MiB pages</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">ns / dependent load</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">30.5</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">61.1</text>
+<path d="M90 242.00000000000003 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.00000000000003" text-anchor="end" font-size="12">91.6</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">122</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">153</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">4.1e+03</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">1.64e+04</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">2.62e+05</text>
+<polyline points="90.0,409.9964943027541 320.0,218.91088596656087 550.0,169.56273579079738 780.0,147.55535605463047" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 410.13097537922795 V408.8744020816053 M87.0 410.13097537922795 H93.0 M87.0 408.8744020816053 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="409.9964943027541" r="3" fill="#2563eb"/>
+<path d="M320.0 224.09252206094152 V182.0412386164117 M317.0 224.09252206094152 H323.0 M317.0 182.0412386164117 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="218.91088596656087" r="3" fill="#2563eb"/>
+<path d="M550.0 170.82037044550856 V162.77184457163315 M547.0 170.82037044550856 H553.0 M547.0 162.77184457163315 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="169.56273579079738" r="3" fill="#2563eb"/>
+<path d="M780.0 149.02127825512446 V145.3571428571429 M777.0 149.02127825512446 H783.0 M777.0 145.3571428571429 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="147.55535605463047" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">base pages</text>
+<polyline points="90.0,414.0147922399244 320.0,223.15297245090267 550.0,191.55057228982093 780.0,181.1544391021598" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 414.084688332506 V413.76326790293024 M87.0 414.084688332506 H93.0 M87.0 413.76326790293024 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="414.0147922399244" r="3" fill="#dc2626"/>
+<path d="M320.0 233.08121360752423 V219.68613274372396 M317.0 233.08121360752423 H323.0 M317.0 219.68613274372396 H323.0" stroke="#dc2626"/>
+<circle cx="320.0" cy="223.15297245090267" r="3" fill="#dc2626"/>
+<path d="M550.0 194.45985366577827 V188.25402959720125 M547.0 194.45985366577827 H553.0 M547.0 188.25402959720125 H553.0" stroke="#dc2626"/>
+<circle cx="550.0" cy="191.55057228982093" r="3" fill="#dc2626"/>
+<path d="M780.0 183.56356621785903 V179.2539549418035 M777.0 183.56356621785903 H783.0 M777.0 179.2539549418035 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="181.1544391021598" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">large pages</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Footprint (KiB, log2)</text>
+<text x="40" y="540" font-size="12">64 B node spacing, CPU0, 5 trials (whiskers min-max).</text>
+</g></svg>

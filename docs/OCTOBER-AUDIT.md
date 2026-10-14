@@ -42,7 +42,7 @@ Data types: float32/float64 throughout, **int32 added** in the extension. Kernel
 | AI transparency and pitfall | 15 | AI note; predictable-chain pitfall; timing-only TLB attribution rejected until counters existed |
 | Report quality | 15 | Figures, tables, limitations |
 
-**Not available:** huge pages (Windows `SeLockMemoryPrivilege` not held; allocation returned error 1314). The assignment asks for huge pages "where available"; the base-page TLB effect is measured with counters instead.
+**Huge pages:** [LARGE-PAGES.md](../sessions/ryzen-20261014/LARGE-PAGES.md) compares 4 KiB and 2 MiB pages for the same chains (2 MiB pages save 8–12% at 64–256 MiB and narrow the scattered-page gap), and shows the same study on a busy machine as an additional benchmark pitfall.
 
 ## Project 3 — SSD (185)
 
@@ -66,4 +66,4 @@ CPU vs GPU AXPY on a GTX 1660 Ti with kernel-only and end-to-end (pageable and p
 
 1. Fill in the **Independent student work** section of [AI-USE.md](AI-USE.md) with checks you actually performed.
 2. Be able to explain: why the ordered dot product does not speed up; useful bytes versus bus traffic; why probe latency and worker throughput cannot be combined in Little's Law; how the counter order was identified; why QD beyond 32 adds only latency on SATA; what the SLC-cache cliff means for every short write benchmark.
-3. Optionally, for huge pages: grant "Lock pages in memory" to your account (Local Security Policy), sign out and in, and rerun the page-locality study. This is a security-setting change, so it was not made automatically.
+3. You granted "Lock pages in memory" to your account for the large-page study. You can remove it afterwards by restoring the policy you exported before the change (`secedit /configure /db C:\restore.sdb /cfg C:\secpol-backup.inf /areas USER_RIGHTS` in an Administrator shell, then sign out and in); the committed results do not depend on keeping it.

@@ -1,0 +1,20 @@
+{
+  "start_utc": "2026-10-14T21:53:04.712710+00:00",
+  "compiler": "gcc.EXE (GCC) 16.2.0",
+  "command": [
+    "gcc.EXE",
+    "-std=c11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "membench.c",
+    "-o",
+    "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\large-pages\\build\\membench.exe"
+  ],
+  "source_sha256": "350ad6420ba87d396282358e17d602ebb006fa2ff0698e3c1c4cd15f4384a241",
+  "trials": 5,
+  "seconds": 1.0,
+  "cpu": 0,
+  "seed": 4320,
+  "finished_utc": "2026-10-14T21:54:28.980705+00:00"
+}

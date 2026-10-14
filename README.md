@@ -16,7 +16,7 @@ Our goal is to discover what makes the computer wait, and to measure it fairly. 
 2. **Does it matter where our information is and how we ask for it?** That is the memory project.
 3. **How many requests should we send to storage at once?** That is the SSD project.
 
-> **Evidence status:** This repository contains executable experiments and real measurements for all three projects. Hardware cache/TLB counters were captured natively on the Ryzen host and are analyzed in [COUNTERS.md](sessions/ryzen-20261014/COUNTERS.md); they were unavailable on the original Intel/WSL platform. Windows large-page allocation failed for missing privilege, so no huge-page comparison is claimed. See the [rubric audit](docs/OCTOBER-AUDIT.md) before submission.
+> **Evidence status:** This repository contains executable experiments and real measurements for all three projects. Hardware cache/TLB counters were captured natively on the Ryzen host and are analyzed in [COUNTERS.md](sessions/ryzen-20261014/COUNTERS.md); they were unavailable on the original Intel/WSL platform. After granting the "Lock pages in memory" right, 4 KiB and 2 MiB pages were compared directly ([LARGE-PAGES.md](sessions/ryzen-20261014/LARGE-PAGES.md)). See the [rubric audit](docs/OCTOBER-AUDIT.md) before submission.
 
 ## Explore the projects
 

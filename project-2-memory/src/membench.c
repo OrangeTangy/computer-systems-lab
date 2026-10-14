@@ -9,9 +9,23 @@
 #include <malloc.h>
 static double now(void) { LARGE_INTEGER t,f; QueryPerformanceCounter(&t); QueryPerformanceFrequency(&f); return (double)t.QuadPart/f.QuadPart; }
 static int pin(int cpu) { return cpu>=0 && cpu<64 && SetThreadAffinityMask(GetCurrentThread(), (DWORD_PTR)1<<cpu)!=0; }
-static void *allocbuf(size_t n) { return _aligned_malloc(n,4096); }
-#define release _aligned_free
+static int large_pages;
+/* Large pages need SeLockMemoryPrivilege assigned to the account and enabled in the token. */
+static int enable_lock_memory(void) {
+    HANDLE token; TOKEN_PRIVILEGES tp={1,{{{0,0},SE_PRIVILEGE_ENABLED}}};
+    if(!OpenProcessToken(GetCurrentProcess(),TOKEN_ADJUST_PRIVILEGES|TOKEN_QUERY,&token))return 0;
+    int ok=LookupPrivilegeValueA(NULL,"SeLockMemoryPrivilege",&tp.Privileges[0].Luid) &&
+           AdjustTokenPrivileges(token,FALSE,&tp,0,NULL,NULL) && GetLastError()==ERROR_SUCCESS;
+    CloseHandle(token); return ok;
+}
+static void *allocbuf(size_t n) {
+    if(!large_pages) return _aligned_malloc(n,4096);
+    size_t page=GetLargePageMinimum(); if(!page)return NULL;
+    return VirtualAlloc(NULL,(n+page-1)/page*page,MEM_RESERVE|MEM_COMMIT|MEM_LARGE_PAGES,PAGE_READWRITE);
+}
+static void release(void *p) { if(large_pages) VirtualFree(p,0,MEM_RELEASE); else _aligned_free(p); }
 #else
+static const int large_pages=0;
 #include <time.h>
 #include <sched.h>
 static double now(void) { struct timespec t; clock_gettime(CLOCK_MONOTONIC_RAW,&t); return t.tv_sec+t.tv_nsec*1e-9; }
@@ -39,7 +53,15 @@ __attribute__((noinline)) static uint64_t stream(unsigned char *a,size_t nodes,s
     return s;
 }
 int main(int argc,char **argv) {
-    if(argc!=9) { fprintf(stderr,"usage: membench latency|bandwidth bytes stride sequential|random reads_percent seconds cpu seed\n"); return 2; }
+    if(argc!=9 && !(argc==10 && !strcmp(argv[9],"large"))) { fprintf(stderr,"usage: membench latency|bandwidth bytes stride sequential|random reads_percent seconds cpu seed [large]\n"); return 2; }
+    if(argc==10) {
+#ifdef _WIN32
+        large_pages=1;
+        if(!enable_lock_memory()) { fprintf(stderr,"SeLockMemoryPrivilege not held (error %lu)\n",GetLastError()); return 6; }
+#else
+        fprintf(stderr,"large pages are only implemented for Windows\n"); return 2;
+#endif
+    }
     const char *mode=argv[1],*pattern=argv[4];
     size_t bytes=strtoull(argv[2],NULL,10),stride=strtoull(argv[3],NULL,10);
     int reads=atoi(argv[5]),cpu=atoi(argv[7]); double duration=atof(argv[6]);
@@ -52,7 +74,13 @@ int main(int argc,char **argv) {
     }
     if(!pin(cpu)) { fprintf(stderr,"CPU affinity failed for cpu %d\n",cpu); return 3; }
     size_t nodes=bytes/stride;
-    unsigned char *a=allocbuf(bytes); if(!a)return 4;
+    unsigned char *a=allocbuf(bytes);
+    if(!a) {
+#ifdef _WIN32
+        if(large_pages)fprintf(stderr,"large-page allocation failed (error %lu)\n",GetLastError());
+#endif
+        return 4;
+    }
     memset(a,0,bytes); /* first-touch all pages outside timed region */
     size_t start=0,p=0; uint64_t checksum=0,operations=0; int correct=1;
     if(latency) {
@@ -99,6 +127,7 @@ int main(int argc,char **argv) {
     printf("{");
 #endif
     if(latency) { size_t expected=chase(a,start,operations%nodes); correct=(expected==p); }
+    printf("\"pages\":\"%s\",",large_pages?"large":"base");
     printf("\"mode\":\"%s\",\"pattern\":\"%s\",\"bytes\":%zu,\"stride\":%zu,\"nodes\":%zu,\"reads_percent\":%d,\"cpu\":%d,\"pinned\":true,\"seed\":%" PRIu64 ",\"elapsed_s\":%.9f,\"operations\":%" PRIu64 ",\"ns_per_op\":%.6f,\"useful_GiB_s\":%.6f,\"correct\":%s,\"checksum\":%" PRIu64 "}\n",
         mode,pattern,bytes,stride,nodes,reads,cpu,seed,elapsed,operations,elapsed*1e9/operations,operations*8.0/elapsed/1073741824.0,correct?"true":"false",latency?(uint64_t)p:checksum);
     release(a);return correct?0:5;

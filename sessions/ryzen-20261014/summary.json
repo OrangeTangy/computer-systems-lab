@@ -1,0 +1,9 @@
+{
+  "simd_groups": 168,
+  "memory_groups": 42,
+  "simd_trials": 840,
+  "latency_trials": 210,
+  "bandwidth_trials": 10,
+  "load_trials": 105,
+  "ssd_trials": 65
+}

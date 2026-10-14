@@ -1,0 +1,7 @@
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\common\followup-bandwidth.c: In function 'main':
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\common\followup-bandwidth.c:13:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   13 |  if(argc!=2)return 2;size_t n=strtoull(argv[1],0,10);if(!n||n%8)return 2;
+      |  ^~
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\common\followup-bandwidth.c:13:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   13 |  if(argc!=2)return 2;size_t n=strtoull(argv[1],0,10);if(!n||n%8)return 2;
+      |                      ^~~~~~

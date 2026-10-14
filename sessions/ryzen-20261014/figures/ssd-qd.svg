@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">SATA SSD: sampled queue-depth knee</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">IOPS</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">1.8e+04</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">3.59e+04</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">5.39e+04</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">7.19e+04</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">8.98e+04</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">1</text>
+<text x="176.25" y="463" font-size="12" text-anchor="middle">2</text>
+<text x="262.5" y="463" font-size="12" text-anchor="middle">4</text>
+<text x="348.75" y="463" font-size="12" text-anchor="middle">8</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="521.25" y="463" font-size="12" text-anchor="middle">32</text>
+<text x="607.5" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="693.75" y="463" font-size="12" text-anchor="middle">128</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">256</text>
+<polyline points="90.0,414.66196543915254 176.25,403.04689343211834 262.5,354.10327669859316 348.75,292.3176178592407 435.0,278.2809330128359 521.25,217.16165853398508 607.5,208.16730648546456 693.75,209.40823612371847 780.0,190.9111108832136" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 420.6932214413685 V412.22418892618555 M87.0 420.6932214413685 H93.0 M87.0 412.22418892618555 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="414.66196543915254" r="3" fill="#2563eb"/>
+<path d="M176.25 405.48981293330775 V389.2093157085307 M173.25 405.48981293330775 H179.25 M173.25 389.2093157085307 H179.25" stroke="#2563eb"/>
+<circle cx="176.25" cy="403.04689343211834" r="3" fill="#2563eb"/>
+<path d="M262.5 432.4465308813056 V350.00798848298336 M259.5 432.4465308813056 H265.5 M259.5 350.00798848298336 H265.5" stroke="#2563eb"/>
+<circle cx="262.5" cy="354.10327669859316" r="3" fill="#2563eb"/>
+<path d="M348.75 331.8738112868334 V278.6255132384364 M345.75 331.8738112868334 H351.75 M345.75 278.6255132384364 H351.75" stroke="#2563eb"/>
+<circle cx="348.75" cy="292.3176178592407" r="3" fill="#2563eb"/>
+<path d="M435.0 299.2978193270401 V217.17635278604916 M432.0 299.2978193270401 H438.0 M432.0 217.17635278604916 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="278.2809330128359" r="3" fill="#2563eb"/>
+<path d="M521.25 253.9149232664463 V205.557607215999 M518.25 253.9149232664463 H524.25 M518.25 205.557607215999 H524.25" stroke="#2563eb"/>
+<circle cx="521.25" cy="217.16165853398508" r="3" fill="#2563eb"/>
+<path d="M607.5 252.76065975882 V204.76558699667498 M604.5 252.76065975882 H610.5 M604.5 204.76558699667498 H610.5" stroke="#2563eb"/>
+<circle cx="607.5" cy="208.16730648546456" r="3" fill="#2563eb"/>
+<path d="M693.75 253.37313518832056 V193.01826671371532 M690.75 253.37313518832056 H696.75 M690.75 193.01826671371532 H696.75" stroke="#2563eb"/>
+<circle cx="693.75" cy="209.40823612371847" r="3" fill="#2563eb"/>
+<path d="M780.0 271.21643696057833 V145.3571428571429 M777.0 271.21643696057833 H783.0 M777.0 145.3571428571429 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="190.9111108832136" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">Random read 4 KiB</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Requested queue depth (log2)</text>
+<text x="40" y="540" font-size="12">Five trials per QD; whiskers are min/max. Operational threshold = 90% observed maximum.</text>
+</g></svg>

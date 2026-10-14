@@ -2,16 +2,18 @@ import pathlib,subprocess,json,statistics,sys
 R=pathlib.Path(__file__).resolve().parents[1];exe=R/'build/bandwidth.exe';exe.parent.mkdir(exist_ok=True)
 cmd=['gcc','-O3','-mavx2','-ffp-contract=off',str(R/'src/bandwidth.c'),'-o',str(exe)]
 if '--reuse' in sys.argv:
- rows=json.loads((R/'data/bandwidth.json').read_text())['trials']
+ saved=json.loads((R/'data/bandwidth.json').read_text());rows=saved['trials'];cmd=saved['build_command']
 else:
  subprocess.run(cmd,check=True)
  rows=[json.loads(subprocess.check_output([str(exe)],text=True)) for _ in range(5)]
-(R/'data/bandwidth.json').write_text(json.dumps({'build_command':cmd,'trials':rows},indent=2));B=statistics.median(r['GB_s'] for r in rows)
+if '--reuse' not in sys.argv:
+ (R/'data/bandwidth.json').write_text(json.dumps({'build_command':cmd,'trials':rows},indent=2))
+B=statistics.median(r['GB_s'] for r in rows)
 text=f'''# Quantitative roofline interpretation
 
-Five independent native executions read a 256 MiB array with four AVX2 accumulators on logical CPU 0. Every scan is consumed and an initial exact sum is validated. The footprint exceeds the reported 12 MiB LLC. Median useful read bandwidth: **{B:.2f} GB/s** (trial range {min(r['GB_s'] for r in rows):.2f}–{max(r['GB_s'] for r in rows):.2f} GB/s). This is effective sustained single-thread read bandwidth, not a memory-controller counter or socket maximum.
+Five independent native executions read a 256 MiB array with four AVX2 accumulators on logical CPU 0. Every scan is consumed and an initial exact sum is validated. The footprint exceeds the reported 12 MiB LLC. Median useful read bandwidth: **{B:.2f} GB/s** (trial range {min(r['GB_s'] for r in rows):.2f}â€“{max(r['GB_s'] for r in rows):.2f} GB/s). This is effective sustained single-thread read bandwidth, not a memory-controller counter or socket maximum.
 
-| Float32 kernel | Useful intensity (FLOP/byte) | B × intensity (GFLOP/s) |
+| Float32 kernel | Useful intensity (FLOP/byte) | B Ã— intensity (GFLOP/s) |
 |---|---:|---:|
 | AXPY | 2/12 | {B/6:.2f} |
 | Multiply | 1/12 | {B/12:.2f} |
@@ -21,7 +23,7 @@ For out-of-place AXPY/multiply with ordinary cached stores, write allocation may
 
 ## Compute ceiling and clock sensitivity
 
-For a P-core model with two 256-bit FMA issue slots, FP32 peak is 2 instructions/cycle × 8 lanes × 2 FLOPs/FMA = **32 FLOPs/cycle**. At illustrative 1, 2, 3 and 4 GHz this is 32, 64, 96 and 128 GFLOP/s. These are estimates, not measured clocks. Our main suite disables FMA contraction, so this FMA-capable hardware ceiling is deliberately optimistic and not an expected achieved rate. Separate multiply/add can impose a tighter instruction-throughput ceiling (approximately 16 FP32 FLOPs/cycle under a two-vector-op/cycle model).
+For a P-core model with two 256-bit FMA issue slots, FP32 peak is 2 instructions/cycle Ã— 8 lanes Ã— 2 FLOPs/FMA = **32 FLOPs/cycle**. At illustrative 1, 2, 3 and 4 GHz this is 32, 64, 96 and 128 GFLOP/s. These are estimates, not measured clocks. Our main suite disables FMA contraction, so this FMA-capable hardware ceiling is deliberately optimistic and not an expected achieved rate. Separate multiply/add can impose a tighter instruction-throughput ceiling (approximately 16 FP32 FLOPs/cycle under a two-vector-op/cycle model).
 
 The [Intel optimization manual](https://cdrdv2-public.intel.com/814198/248966-Optimization-Reference-Manual-V1-049.pdf) describes Golden Cove execution resources; use the AVX2 client case, not a server AVX-512 peak. Native CPUID reports a P-core and AVX2 is exercised by the executable.
 

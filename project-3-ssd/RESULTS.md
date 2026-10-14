@@ -89,6 +89,7 @@ Operational knee: first tested QD reaching 90% of maximum observed median IOPS =
 | range | 2048 | 1 | 28271 | 273.97 |
 | pitfall | 64 | 0 | 110352 | 45.4 |
 | pitfall | 64 | 1 | 33714 | 218.86 |
+
 ## Interpretation and variability
 
 The tested-range maximum median is 81,604 IOPS. The 90% operational threshold first occurs at QD128. QD128/256 were collected as a follow-up after a new file prefill, so a change at that boundary can reflect device-state drift as well as queue depth. A noisy or non-monotonic curve is not a clean saturation proof.

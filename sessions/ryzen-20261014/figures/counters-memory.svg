@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">Zen 3 counters per dependent load</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">Events per load</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">0.236</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">0.472</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">0.708</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">0.943</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">1.18</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">256</text>
+<text x="550.0" y="463" font-size="12" text-anchor="middle">4.1e+03</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<path d="M147.5 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="151.5" y="126" font-size="11">L1D</text>
+<path d="M377.5 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="381.5" y="126" font-size="11">L2</text>
+<path d="M607.5 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="611.5" y="126" font-size="11">DTLB</text>
+<path d="M665.0 110 V440" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="669.0" y="126" font-size="11">L3</text>
+<polyline points="90.0,439.9192189442381 320.0,439.6053416812963 550.0,224.84978245283068 780.0,155.53252595383304" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 439.9254068764778 V439.90815171020415 M87.0 439.9254068764778 H93.0 M87.0 439.90815171020415 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="439.9192189442381" r="3" fill="#2563eb"/>
+<path d="M320.0 439.78874680953913 V439.1807227789741 M317.0 439.78874680953913 H323.0 M317.0 439.1807227789741 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="439.6053416812963" r="3" fill="#2563eb"/>
+<path d="M550.0 225.033179540636 V224.56950498289243 M547.0 225.033179540636 H553.0 M547.0 224.56950498289243 H553.0" stroke="#2563eb"/>
+<circle cx="550.0" cy="224.84978245283068" r="3" fill="#2563eb"/>
+<path d="M780.0 155.99142583557193 V145.3571428571429 M777.0 155.99142583557193 H783.0 M777.0 145.3571428571429 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="155.53252595383304" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">L1 DTLB misses</text>
+<polyline points="90.0,439.9874918883271 320.0,439.95108636031887 550.0,439.66679929205816 780.0,265.6113505410487" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 439.98857983442673 V439.98591036140476 M87.0 439.98857983442673 H93.0 M87.0 439.98591036140476 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="439.9874918883271" r="3" fill="#dc2626"/>
+<path d="M320.0 439.97921596130806 V439.9443574377906 M317.0 439.97921596130806 H323.0 M317.0 439.9443574377906 H323.0" stroke="#dc2626"/>
+<circle cx="320.0" cy="439.95108636031887" r="3" fill="#dc2626"/>
+<path d="M550.0 439.6768927253909 V439.62604276600433 M547.0 439.6768927253909 H553.0 M547.0 439.62604276600433 H553.0" stroke="#dc2626"/>
+<circle cx="550.0" cy="439.66679929205816" r="3" fill="#dc2626"/>
+<path d="M780.0 267.96200727648824 V260.9963464838181 M777.0 267.96200727648824 H783.0 M777.0 260.9963464838181 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="265.6113505410487" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">L2 DTLB misses</text>
+<polyline points="90.0,439.9770214552173 320.0,439.9144135194439 550.0,436.93111627196043 780.0,169.6118127440161" stroke="#059669" fill="none" stroke-width="2"/>
+<path d="M90.0 439.9819638524832 V439.9729796019087 M87.0 439.9819638524832 H93.0 M87.0 439.9729796019087 H93.0" stroke="#059669"/>
+<circle cx="90.0" cy="439.9770214552173" r="3" fill="#059669"/>
+<path d="M320.0 439.9728289531371 V439.9021134960117 M317.0 439.9728289531371 H323.0 M317.0 439.9021134960117 H323.0" stroke="#059669"/>
+<circle cx="320.0" cy="439.9144135194439" r="3" fill="#059669"/>
+<path d="M550.0 437.8738132580341 V436.787349153775 M547.0 437.8738132580341 H553.0 M547.0 436.787349153775 H553.0" stroke="#059669"/>
+<circle cx="550.0" cy="436.93111627196043" r="3" fill="#059669"/>
+<path d="M780.0 170.08454623258092 V162.11823365355792 M777.0 170.08454623258092 H783.0 M777.0 162.11823365355792 H783.0" stroke="#059669"/>
+<circle cx="780.0" cy="169.6118127440161" r="3" fill="#059669"/>
+<text x="800" y="161" font-size="12" fill="#059669">Demand DRAM fills</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Footprint (KiB, log2)</text>
+<text x="40" y="540" font-size="12">Random 64 B chains, CPU0, 3 runs (whiskers min-max). Lines: L1D 32K, L2 512K, L2 DTLB reach 8M, L3 16M.</text>
+</g></svg>

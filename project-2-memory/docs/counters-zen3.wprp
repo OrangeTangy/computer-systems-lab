@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0" Author="Computer Systems Lab">
+ <Profiles>
+  <SystemCollector Id="Collector" Name="LabCounterCollector"><BufferSize Value="1024"/><Buffers Value="64"/></SystemCollector>
+  <SystemProvider Id="Provider"><Keywords><Keyword Value="ProcessThread"/><Keyword Value="Loader"/><Keyword Value="CSwitch"/></Keywords></SystemProvider>
+  <MicroArchitecturalConfig Id="Zen3"><ProfileSources Architecture="AMD" Family="25" Model="80" Description="Ryzen 5500 Zen 3">
+   <ProfileSource Name="LabL1DTLBMiss" Event="0x45" Unit="0xFF" Interval="0x10000" Persist="false"/>
+   <ProfileSource Name="LabL2DTLBMiss" Event="0x45" Unit="0xF0" Interval="0x10000" Persist="false"/>
+   <ProfileSource Name="LabDemandDRAMFill" Event="0x43" Unit="0x08" Interval="0x10000" Persist="false"/>
+  </ProfileSources></MicroArchitecturalConfig>
+  <HardwareCounter Id="Counters" Strict="true"><MicroArchitecturalConfigId Value="Zen3"/><Counters><Counter Value="LabL1DTLBMiss"/><Counter Value="LabL2DTLBMiss"/><Counter Value="LabDemandDRAMFill"/><Counter Value="InstructionRetired"/><Counter Value="TotalCycles"/></Counters><Events><Event Value="CSwitch"/></Events></HardwareCounter>
+  <Profile Id="LabCountersZen3.Verbose.File" Name="LabCountersZen3" Description="Ryzen 5500 cache/TLB and cycles; validate attribution before use" LoggingMode="File" DetailLevel="Verbose">
+   <Collectors><SystemCollectorId Value="Collector"><SystemProviderId Value="Provider"/><HardwareCounterId Value="Counters"/></SystemCollectorId></Collectors>
+  </Profile>
+ </Profiles>
+</WindowsPerformanceRecorder>

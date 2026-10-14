@@ -1,0 +1,76 @@
+{
+    "cpu":  "AMD64 Family 25 Model 80 Stepping 0",
+    "simdBuilds":  [
+                       {
+                           "Variant":  "scalar",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-float-scalar.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=float",
+                                         "-fno-tree-vectorize"
+                                     ],
+                           "Type":  "float"
+                       },
+                       {
+                           "Variant":  "auto",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-float-auto.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=float"
+                                     ],
+                           "Type":  "float"
+                       },
+                       {
+                           "Variant":  "native",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-float-native.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=float",
+                                         "-march=native"
+                                     ],
+                           "Type":  "float"
+                       },
+                       {
+                           "Variant":  "scalar",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-double-scalar.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=double",
+                                         "-fno-tree-vectorize"
+                                     ],
+                           "Type":  "double"
+                       },
+                       {
+                           "Variant":  "auto",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-double-auto.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=double"
+                                     ],
+                           "Type":  "double"
+                       },
+                       {
+                           "Variant":  "native",
+                           "Exe":  "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\build\\simd-double-native.exe",
+                           "Flags":  [
+                                         "-O3",
+                                         "-ffp-contract=off",
+                                         "-DTYPE=double",
+                                         "-march=native"
+                                     ],
+                           "Type":  "double"
+                       }
+                   ],
+    "compiler":  [
+                     "gcc.exe (GCC) 16.2.0",
+                     "Copyright (C) 2026 Free Software Foundation, Inc.",
+                     "This is free software; see the source for copying conditions.  There is NO",
+                     "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+                     ""
+                 ]
+}

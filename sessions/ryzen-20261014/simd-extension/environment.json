@@ -1,0 +1,372 @@
+{
+  "start_utc": "2026-10-14T21:39:36.306086+00:00",
+  "compiler": "gcc.EXE (GCC) 16.2.0",
+  "source_sha256": "0f5900ae080242b92e1a9fbe021b8cf8cc7fcae333b5b8bcf937d0e3eea6718d",
+  "trials": 5,
+  "builds": [
+    {
+      "dtype": "int32",
+      "variant": "scalar",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=int32_t",
+        "-fno-tree-vectorize",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\int32-scalar-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-int32-scalar.exe"
+      ],
+      "binary_sha256": "be0c146190adfa73fd1b2c4bdb88a657c77ed695df61ef48bd8459009d524562",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "int32",
+      "variant": "auto",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=int32_t",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\int32-auto-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-int32-auto.exe"
+      ],
+      "binary_sha256": "09955c19133e2b28489ef38be368620bef6963889f3b2167d348cc4ec39ef2e4",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 30,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "int32",
+      "variant": "native",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=int32_t",
+        "-march=native",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\int32-native-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-int32-native.exe"
+      ],
+      "binary_sha256": "a7654e5f651081cdf06a0f0b310909fd5b8f11fe19d6470bc100425eab266ec6",
+      "kernels": {
+        "axpy": {
+          "ymm": 9,
+          "xmm": 9,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 0,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 12,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "float",
+      "variant": "scalar",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=float",
+        "-fno-tree-vectorize",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\float-scalar-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-float-scalar.exe"
+      ],
+      "binary_sha256": "1766a4ad7c6cfc8fabef2c9c6c805b38845d4d89fe607050a9dc0b1801d2854b",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 6,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 64,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 3,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "float",
+      "variant": "auto",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=float",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\float-auto-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-float-auto.exe"
+      ],
+      "binary_sha256": "dd707cac15550818717bc2b8687ac3217c7bab62f6155a1615ca1fe5a1966de7",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 30,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 54,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 26,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "float",
+      "variant": "native",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=float",
+        "-march=native",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\float-native-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-float-native.exe"
+      ],
+      "binary_sha256": "298ce3ccb9b2d2a2716189d783085f460e6c4ed444ea03780dd1c59ec0edb634",
+      "kernels": {
+        "axpy": {
+          "ymm": 8,
+          "xmm": 21,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 19,
+          "xmm": 58,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 28,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "double",
+      "variant": "scalar",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=double",
+        "-fno-tree-vectorize",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\double-scalar-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-double-scalar.exe"
+      ],
+      "binary_sha256": "2fe5fa1061db3eccf7e11ee433e1a8f5d784f7489e708352e5f9bde2503faf1e",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 6,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 64,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 3,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "double",
+      "variant": "auto",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=double",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\double-auto-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-double-auto.exe"
+      ],
+      "binary_sha256": "1473239fad25de46ce563ff180b9f689d616dbd8b46a43547c5e879960ab5266",
+      "kernels": {
+        "axpy": {
+          "ymm": 0,
+          "xmm": 14,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 0,
+          "xmm": 36,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 24,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "double",
+      "variant": "native",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=double",
+        "-march=native",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\double-native-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-double-native.exe"
+      ],
+      "binary_sha256": "7a219311a6d0e6629fd003f1efb17f7f65a4bb2142c237607c986f6dad029c28",
+      "kernels": {
+        "axpy": {
+          "ymm": 8,
+          "xmm": 16,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 19,
+          "xmm": 28,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 10,
+          "xmm": 38,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "float",
+      "variant": "native-nogather",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=float",
+        "-march=native",
+        "-mtune-ctrl=^use_gather_2parts,^use_gather_4parts,^use_gather_8parts",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\float-native-nogather-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-float-native-nogather.exe"
+      ],
+      "binary_sha256": "298ce3ccb9b2d2a2716189d783085f460e6c4ed444ea03780dd1c59ec0edb634",
+      "kernels": {
+        "axpy": {
+          "ymm": 8,
+          "xmm": 21,
+          "gather": 0
+        },
+        "stencil": {
+          "ymm": 19,
+          "xmm": 58,
+          "gather": 0
+        },
+        "gather": {
+          "ymm": 0,
+          "xmm": 28,
+          "gather": 0
+        }
+      }
+    },
+    {
+      "dtype": "float",
+      "variant": "native-forcegather",
+      "command": [
+        "gcc.EXE",
+        "-std=c11",
+        "-O3",
+        "-ffp-contract=off",
+        "-DTYPE=float",
+        "-march=native",
+        "-mtune-ctrl=use_gather_2parts,use_gather_4parts,use_gather_8parts",
+        "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\evidence\\float-native-forcegather-vector.txt",
+        "simd_ext.c",
+        "-o",
+        "C:\\Users\\usr\\Documents\\GitHub\\computer-systems-lab\\sessions\\ryzen-20261014\\simd-extension\\build\\ext-float-native-forcegather.exe"
+      ],
+      "binary_sha256": "7326c32fb1e0bd5ee690fbbf7bf6442134a76fd4d8b27cf2d626c9ddb22efb5e",
+      "kernels": {
+        "gather": {
+          "ymm": 14,
+          "xmm": 19,
+          "gather": 2
+        }
+      }
+    }
+  ],
+  "finished_utc": "2026-10-14T21:41:52.398815+00:00"
+}

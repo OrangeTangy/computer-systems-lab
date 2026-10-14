@@ -31,10 +31,13 @@ int main(int argc,char **argv){
  else for(size_t i=0;i<n;i++){double ref=kind==0?1.25*(double)x[i*stride]+y[i*stride]:(double)x[i*stride]*y[i*stride];double e=fabs(z[i*stride]-ref);if(e>err)err=e;}
  double tolerance=sizeof(real)==4?1e-5*(1+absolute):1e-12*(1+absolute);
  if(err>tolerance){fprintf(stderr,"reference mismatch %g > %g\n",err,tolerance);return 5;}
+ LARGE_INTEGER region_start,region_end,region_frequency;QueryPerformanceFrequency(&region_frequency);QueryPerformanceCounter(&region_start);
  unsigned aux;_mm_lfence();uint64_t ticks0=__rdtscp(&aux);_mm_lfence();double t=now(),elapsed;size_t reps=0;
  do{__asm__ __volatile__("":::"memory");answer=kernel(z,x,y,n,stride,kind);sink=kind==2?answer:z[(reps%n)*stride];reps++;elapsed=now()-t;}while(elapsed<seconds);
  _mm_lfence();uint64_t ticks1=__rdtscp(&aux);_mm_lfence();
+ QueryPerformanceCounter(&region_end);
+ printf("{\"thread_id\":%lu,\"qpc_start\":%lld,\"qpc_end\":%lld,\"qpc_frequency\":%lld,",GetCurrentThreadId(),(long long)region_start.QuadPart,(long long)region_end.QuadPart,(long long)region_frequency.QuadPart);
  double elements=(double)n*reps,bytes_per=kind==2?2*sizeof(real):3*sizeof(real);
- printf("{\"n\":%zu,\"stride\":%zu,\"offset_elements\":%zu,\"kind\":%d,\"dtype_bytes\":%zu,\"seconds\":%.9f,\"reps\":%zu,\"ns_element\":%.6f,\"gflops\":%.6f,\"useful_GB_s\":%.6f,\"tsc_ticks_element\":%.6f,\"max_error\":%.12g,\"tolerance\":%.12g,\"correct\":true}\n",n,stride,offset,kind,sizeof(real),elapsed,reps,elapsed*1e9/elements,elements*(kind==1?1:2)/elapsed/1e9,elements*bytes_per/elapsed/1e9,(ticks1-ticks0)/elements,err,tolerance);
+ printf("\"n\":%zu,\"stride\":%zu,\"offset_elements\":%zu,\"kind\":%d,\"dtype_bytes\":%zu,\"seconds\":%.9f,\"reps\":%zu,\"ns_element\":%.6f,\"gflops\":%.6f,\"useful_GB_s\":%.6f,\"tsc_ticks_element\":%.6f,\"max_error\":%.12g,\"tolerance\":%.12g,\"correct\":true}\n",n,stride,offset,kind,sizeof(real),elapsed,reps,elapsed*1e9/elements,elements*(kind==1?1:2)/elapsed/1e9,elements*bytes_per/elapsed/1e9,(ticks1-ticks0)/elements,err,tolerance);
  _aligned_free(xb);_aligned_free(yb);_aligned_free(zb);return 0;
 }

@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-14T20:56:15.020835+00:00",
+  "command": [
+    "gcc",
+    "-O3",
+    "-mavx2",
+    "-Wall",
+    "-Wextra",
+    "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\common\\loaded-followup.c",
+    "-o",
+    "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\loaded.exe"
+  ],
+  "source_sha256": "bfec53828e92f7591b00711e5d045652b1d248e1a6b8727b2ab330f5b195ccca",
+  "probe_cpu": 0,
+  "worker_cpus": [
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "probe_bytes": 67108864,
+  "worker_bytes_each": 134217728,
+  "worker_operations": "AVX2 32-byte read/write operations; percentages describe useful operations, not DRAM bus bytes",
+  "timer_seconds": 1,
+  "trial_count_per_condition": 5,
+  "frequency": "unchanged policy",
+  "isolation": "affinity, no exclusive reservation"
+}

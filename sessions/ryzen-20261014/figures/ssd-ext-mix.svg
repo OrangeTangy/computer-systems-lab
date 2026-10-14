@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">4 KiB random read/write mix (QD32)</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">Total IOPS</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">1.37e+04</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">2.74e+04</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">4.11e+04</text>
+<path d="M90 176.00000000000006 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.00000000000006" text-anchor="end" font-size="12">5.48e+04</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">6.85e+04</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">0</text>
+<text x="228.0" y="463" font-size="12" text-anchor="middle">20</text>
+<text x="366.0" y="463" font-size="12" text-anchor="middle">40</text>
+<text x="504.0" y="463" font-size="12" text-anchor="middle">60</text>
+<text x="642.0" y="463" font-size="12" text-anchor="middle">80</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">100</text>
+<polyline points="90.0,189.17683256145966 435.0,207.56764053573923 573.0,173.2503739895322 780.0,159.03772304789874" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 268.3125737557748 V173.12699526322388 M87.0 268.3125737557748 H93.0 M87.0 173.12699526322388 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="189.17683256145966" r="3" fill="#2563eb"/>
+<path d="M435.0 212.34504403137217 V168.78946191720166 M432.0 212.34504403137217 H438.0 M432.0 168.78946191720166 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="207.56764053573923" r="3" fill="#2563eb"/>
+<path d="M573.0 199.8490923943563 V162.62534507345498 M570.0 199.8490923943563 H576.0 M570.0 162.62534507345498 H576.0" stroke="#2563eb"/>
+<circle cx="573.0" cy="173.2503739895322" r="3" fill="#2563eb"/>
+<path d="M780.0 197.02391234066704 V145.3571428571429 M777.0 197.02391234066704 H783.0 M777.0 145.3571428571429 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="159.03772304789874" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">Total IOPS</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Read percentage</text>
+<text x="40" y="540" font-size="12">3 trials per mix; whiskers min-max.</text>
+</g></svg>

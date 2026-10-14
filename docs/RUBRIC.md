@@ -1,5 +1,7 @@
 # Rubric audit — evidence, not a self-assigned grade
 
+> **October revision:** This is the historical audit. Read the [current evidence update](OCTOBER-AUDIT.md) and [new measured report](../sessions/ryzen-20261014/REPORT.md) alongside it.
+
 This maps the assignment's categories to evidence and explicitly identifies remaining requirements. A populated repository is not proof of full credit. Point values are copied from the assignment, not estimated scores.
 
 **Lecture integration update:** [Lecture connections](LECTURE-CONNECTIONS.md) map all three supplied decks to code and observations. The [controlled memory follow-up](../project-2-memory/CONTROLLED-RESULTS.md) adds 85 trials on fixed P-cores and measures timing-window mismatch. Administrator counter collection is prepared but must be validated before the missing-counter rows can change. Use [submission gates](SUBMISSION-GATES.md) to decide what remains; no perfect-score claim is made.

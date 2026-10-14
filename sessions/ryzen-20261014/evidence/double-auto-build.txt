@@ -1,0 +1,7 @@
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c: In function 'main':
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:2: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+   22 |  if(argc!=6)return 2;size_t n=strtoull(argv[1],0,10),stride=atoi(argv[2]),offset=atoi(argv[3]);int kind=atoi(argv[4]);double seconds=atof(argv[5]);
+      |  ^~
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+   22 |  if(argc!=6)return 2;size_t n=strtoull(argv[1],0,10),stride=atoi(argv[2]),offset=atoi(argv[3]);int kind=atoi(argv[4]);double seconds=atof(argv[5]);
+      |                      ^~~~~~

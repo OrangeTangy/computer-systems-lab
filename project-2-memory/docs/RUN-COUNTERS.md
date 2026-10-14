@@ -6,8 +6,10 @@ The script is ready, but no successful elevated trace has yet been received or v
 2. Run these commands on the current computer:
 
 ```powershell
-$collector = 'C:\Users\raide\Documents\Codex\2026-09-09\files-mentioned-by-the-user-ecse4320\outputs\computer-systems-lab\project-2-memory\scripts\collect-counters.ps1'
+# From the root of this checkout, with GCC on PATH:
+$collector = Join-Path (Get-Location) 'project-2-memory/scripts/collect-counters.ps1'
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File $collector -Profile Cache
+# TLB profile below is Intel Alder Lake model 154 only:
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File $collector -Profile TLB
 ```
 

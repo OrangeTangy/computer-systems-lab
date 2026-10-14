@@ -1,0 +1,36 @@
+{
+ "axpy": {
+  "instructions": 67,
+  "ymm": 9,
+  "xmm": 9,
+  "gather": 0,
+  "sample": [
+   "vmovdqu (%rdx,%rax,1),%ymm1",
+   "vpslld $0x1,%ymm1,%ymm0",
+   "vpaddd %ymm1,%ymm0,%ymm0",
+   "vpaddd (%r8,%rax,1),%ymm0,%ymm0",
+   "vmovdqu %ymm0,(%rcx,%rax,1)"
+  ]
+ },
+ "stencil": {
+  "instructions": 0,
+  "ymm": 0,
+  "xmm": 0,
+  "gather": 0,
+  "sample": []
+ },
+ "gather": {
+  "instructions": 70,
+  "ymm": 0,
+  "xmm": 12,
+  "gather": 0,
+  "sample": [
+   "je     1400016c0 <gather+0xe0>",
+   "jne    140001610 <gather+0x30>",
+   "je     1400016ab <gather+0xcb>",
+   "jae    1400016ab <gather+0xcb>",
+   "jae    1400016ab <gather+0xcb>",
+   "jmp    14000167e <gather+0x9e>"
+  ]
+ }
+}

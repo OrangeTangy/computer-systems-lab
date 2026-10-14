@@ -1,0 +1,2 @@
+frequency=10000000 events_lost=0 buffers_lost=0
+ProcessTrace=0 events=5526363 cswitch_with_pmc=249891

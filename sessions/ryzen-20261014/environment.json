@@ -1,0 +1,459 @@
+{
+  "utc": "2026-10-14T20:51:33.011938+00:00",
+  "cpu": "AMD Ryzen 5 5500                               ",
+  "os": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "compiler": "gcc (GCC) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "topology": {
+    "logical_cpus": 12,
+    "page_size": 4096,
+    "large_page_minimum": 2097152,
+    "cores": [
+      {
+        "cpu": 0,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 1,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 2,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 3,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 4,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 5,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 6,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 7,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 8,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 9,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 10,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      },
+      {
+        "cpu": 11,
+        "core_type_hex": "0",
+        "caches": [
+          {
+            "level": 1,
+            "type": 1,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 1,
+            "type": 2,
+            "bytes": 32768,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 2,
+            "type": 3,
+            "bytes": 524288,
+            "line": 64,
+            "max_sharing_ids": 2
+          },
+          {
+            "level": 3,
+            "type": 3,
+            "bytes": 16777216,
+            "line": 64,
+            "max_sharing_ids": 12
+          }
+        ]
+      }
+    ],
+    "huge_page_allocation_ok": false,
+    "huge_page_error": 1314
+  },
+  "cores": {
+    "physical_cores": [
+      {
+        "logical_cpu_mask": 3,
+        "smt": true
+      },
+      {
+        "logical_cpu_mask": 12,
+        "smt": true
+      },
+      {
+        "logical_cpu_mask": 48,
+        "smt": true
+      },
+      {
+        "logical_cpu_mask": 192,
+        "smt": true
+      },
+      {
+        "logical_cpu_mask": 768,
+        "smt": true
+      },
+      {
+        "logical_cpu_mask": 3072,
+        "smt": true
+      }
+    ]
+  },
+  "policy": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+  "repetitions": 5,
+  "cpu_pinned": 0,
+  "isolation": "affinity only; no exclusive reservation",
+  "frequency": "not fixed; no measured core-clock claim",
+  "numa": "default first touch on pinned thread; no explicit NUMA binding",
+  "page_policy": "ordinary 4 KiB allocation; large-page availability recorded by topology probe"
+}

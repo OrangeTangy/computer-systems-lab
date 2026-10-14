@@ -1,0 +1,72 @@
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:16:29: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:16:29: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:16:29: missed: couldn't vectorize loop
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:16:60: missed: not vectorized: no vectype for stmt: _4 = *_3;
+ scalar_type: const real
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:17:34: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:17:34: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:17:34: missed: couldn't vectorize loop
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:17:54: missed: not vectorized: no vectype for stmt: _13 = *_12;
+ scalar_type: const real
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:18:23: optimized: loop vectorized using 32 byte vectors and unroll factor 8
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:18:23: optimized: epilogue loop vectorized using 16 byte vectors and unroll factor 4
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:18:23: missed: couldn't vectorize loop
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:18:36: missed: not vectorized: no vectype for stmt: _21 = *_20;
+ scalar_type: const real
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: vectorized 3 loops in function.
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Analysis failed with vector mode V8SF
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** The result for vector mode V32QI would be the same
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Re-trying analysis with vector mode V16QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Analysis failed with vector mode V16QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Re-trying analysis with vector mode V8QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Analysis failed with vector mode V8QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Re-trying analysis with vector mode V4QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:14:39: note: ***** Analysis failed with vector mode V4QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:13:43: missed: statement clobbers memory: QueryPerformanceCounter (&t);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:13:71: missed: statement clobbers memory: QueryPerformanceFrequency (&f);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:13:126: note: ***** Analysis failed with vector mode V4DI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:13:126: note: ***** Skipping vector mode V32QI, which would repeat the analysis for V4DI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:27:18: missed: couldn't vectorize loop
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:27:41: missed: not vectorized: no vectype for stmt: *_27 = _28;
+ scalar_type: real
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: vectorized 0 loops in function.
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:31: missed: statement clobbers memory: n_113 = strtoull (_1, 0B, 10);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:61: missed: statement clobbers memory: _3 = atoi (_2);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:82: missed: statement clobbers memory: _5 = atoi (_4);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:105: missed: statement clobbers memory: kind_119 = atoi (_6);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:22:134: missed: statement clobbers memory: seconds_121 = atof (_7);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:24:6: missed: statement clobbers memory: _12 = GetCurrentThread ();
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:24:6: missed: statement clobbers memory: _13 = SetThreadAffinityMask (_12, 1);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:25:43: missed: statement clobbers memory: xb_126 = _aligned_malloc (_16, 64);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:25:86: missed: statement clobbers memory: yb_128 = _aligned_malloc (_16, 64);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:25:129: missed: statement clobbers memory: zb_130 = _aligned_malloc (_16, 64);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:29:14: missed: statement clobbers memory: answer_135 = kernel (z_133, x_131, y_132, n_113, stride_115, kind_119);
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/emmintrin.h:1557:3: missed: statement clobbers memory: __builtin_ia32_lfence ();
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/ia32intrin.h:124:10: missed: statement clobbers memory: _168 = __builtin_ia32_rdtscp (&aux);
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/emmintrin.h:1557:3: missed: statement clobbers memory: __builtin_ia32_lfence ();
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:34:81: missed: statement clobbers memory: t_143 = now ();
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:5: missed: statement clobbers memory: __asm__ __volatile__("" :  :  : "memory");
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:48: missed: statement clobbers memory: kernel (z_133, x_131, y_132, n_113, stride_115, kind_119);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:80: missed: not vectorized: volatile type: sink ={v} _78;
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:130: missed: statement clobbers memory: _79 = now ();
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:5: missed: statement clobbers memory: __asm__ __volatile__("" :  :  : "memory");
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:48: missed: statement clobbers memory: answer_279 = kernel (z_133, x_131, y_132, n_113, stride_115, kind_119);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:80: missed: not vectorized: volatile type: sink ={v} _272;
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:35:130: missed: statement clobbers memory: _268 = now ();
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/emmintrin.h:1557:3: missed: statement clobbers memory: __builtin_ia32_lfence ();
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/ia32intrin.h:124:10: missed: statement clobbers memory: _169 = __builtin_ia32_rdtscp (&aux);
+C:/Users/usr/Documents/Codex/2026-10-14/tak/work/tools/w64devkit/lib/gcc/x86_64-w64-mingw32/16.2.0/include/emmintrin.h:1557:3: missed: statement clobbers memory: __builtin_ia32_lfence ();
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:38:2: missed: statement clobbers memory: printf ("{\"n\":%zu,\"stride\":%zu,\"offset_elements\":%zu,\"kind\":%d,\"dtype_bytes\":%zu,\"seconds\":%.9f,\"reps\":%zu,\"ns_element\":%.6f,\"gflops\":%.6f,\"useful_GB_s\":%.6f,\"tsc_ticks_element\":%.6f,\"max_error\":%.12g,\"tolerance\":%.12g,\"correct\":true}\n", n_113, stride_115, offset_117, kind_119, 4, elapsed_286, reps_288, _92, _90, _185, _293, err_98, tolerance_141);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:39:2: missed: statement clobbers memory: _aligned_free (xb_126);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:39:20: missed: statement clobbers memory: _aligned_free (yb_128);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:39:38: missed: statement clobbers memory: _aligned_free (zb_130);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:33:20: missed: statement clobbers memory: _73 = __acrt_iob_func (2);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:33:20: missed: statement clobbers memory: fprintf (_73, "reference mismatch %g > %g\n", err_98, tolerance_141);
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Analysis failed with vector mode V4DI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** The result for vector mode V32QI would be the same
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Re-trying analysis with vector mode V16QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Analysis failed with vector mode V16QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Re-trying analysis with vector mode V8QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Analysis failed with vector mode V8QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Re-trying analysis with vector mode V4QI
+C:\Users\usr\Documents\Codex\2026-10-14\tak\work\computer-systems-lab\project-1-simd\src\simd.c:21:5: note: ***** Analysis failed with vector mode V4QI

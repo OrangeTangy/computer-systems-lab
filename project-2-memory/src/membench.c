@@ -81,6 +81,10 @@ int main(int argc,char **argv) {
     if(!correct){fprintf(stderr,"correctness failed\n");release(a);return 5;}
     /* Batch at least 65536 loads to amortize timer calls for small footprints. */
     size_t batch=nodes<65536?65536:nodes;
+    #ifdef _WIN32
+    LARGE_INTEGER region_start,region_end,region_frequency;
+    QueryPerformanceFrequency(&region_frequency);QueryPerformanceCounter(&region_start);
+#endif
     double begin=now(),elapsed; uint64_t passes=0;
     do {
         BARRIER();
@@ -88,8 +92,14 @@ int main(int argc,char **argv) {
         else {checksum=stream(a,nodes,stride,reads/10,7+(passes&1));sink=checksum;operations+=nodes;}
         passes++; elapsed=now()-begin;
     }while(elapsed<duration);
+    #ifdef _WIN32
+    QueryPerformanceCounter(&region_end);
+    printf("{\"thread_id\":%lu,\"qpc_start\":%lld,\"qpc_end\":%lld,\"qpc_frequency\":%lld,",GetCurrentThreadId(),(long long)region_start.QuadPart,(long long)region_end.QuadPart,(long long)region_frequency.QuadPart);
+#else
+    printf("{");
+#endif
     if(latency) { size_t expected=chase(a,start,operations%nodes); correct=(expected==p); }
-    printf("{\"mode\":\"%s\",\"pattern\":\"%s\",\"bytes\":%zu,\"stride\":%zu,\"nodes\":%zu,\"reads_percent\":%d,\"cpu\":%d,\"pinned\":true,\"seed\":%" PRIu64 ",\"elapsed_s\":%.9f,\"operations\":%" PRIu64 ",\"ns_per_op\":%.6f,\"useful_GiB_s\":%.6f,\"correct\":%s,\"checksum\":%" PRIu64 "}\n",
+    printf("\"mode\":\"%s\",\"pattern\":\"%s\",\"bytes\":%zu,\"stride\":%zu,\"nodes\":%zu,\"reads_percent\":%d,\"cpu\":%d,\"pinned\":true,\"seed\":%" PRIu64 ",\"elapsed_s\":%.9f,\"operations\":%" PRIu64 ",\"ns_per_op\":%.6f,\"useful_GiB_s\":%.6f,\"correct\":%s,\"checksum\":%" PRIu64 "}\n",
         mode,pattern,bytes,stride,nodes,reads,cpu,seed,elapsed,operations,elapsed*1e9/operations,operations*8.0/elapsed/1073741824.0,correct?"true":"false",latency?(uint64_t)p:checksum);
     release(a);return correct?0:5;
 }

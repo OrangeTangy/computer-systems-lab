@@ -1,0 +1,11 @@
+{
+ "gather": {
+  "ymm": 14,
+  "xmm": 19,
+  "gather": 2,
+  "sample": [
+   "vgatherdps %ymm2,(%r11,%ymm4,4),%ymm0",
+   "vgatherdps %xmm3,(%r11,%xmm1,4),%xmm0"
+  ]
+ }
+}

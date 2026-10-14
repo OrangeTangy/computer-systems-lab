@@ -1,5 +1,7 @@
 # What must be true before claiming full rubric coverage
 
+> **October revision:** This is the historical audit. Read the [current evidence update](OCTOBER-AUDIT.md) and [new measured report](../sessions/ryzen-20261014/REPORT.md) alongside it.
+
 This is a completion checklist, not a prediction of the instructor's grade. Lecture integration improves architectural interpretation; it does not replace measurements.
 
 | Gate | Current evidence | What closes it |

@@ -1,0 +1,30 @@
+{
+ "axpy": {
+  "instructions": 54,
+  "ymm": 0,
+  "xmm": 30,
+  "gather": 0,
+  "sample": []
+ },
+ "stencil": {
+  "instructions": 72,
+  "ymm": 0,
+  "xmm": 54,
+  "gather": 0,
+  "sample": []
+ },
+ "gather": {
+  "instructions": 71,
+  "ymm": 0,
+  "xmm": 26,
+  "gather": 0,
+  "sample": [
+   "je     1400017e8 <gather+0xe8>",
+   "jne    140001730 <gather+0x30>",
+   "je     1400017dd <gather+0xdd>",
+   "jae    1400017dd <gather+0xdd>",
+   "jae    1400017dd <gather+0xdd>",
+   "jmp    1400017a6 <gather+0xa6>"
+  ]
+ }
+}

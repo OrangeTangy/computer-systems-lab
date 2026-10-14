@@ -1,0 +1,175 @@
+[
+  {
+    "name": "topology",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\common\\topology.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\topology.exe"
+    ],
+    "source_sha256": "8b6e07dc7d2abdd53bddc050e2db760866d68f76db7110fadae78ed65e1fae5f",
+    "binary_sha256": "f0e62167caf89bda70d4b18e4fb4ac5f11dc1dc371247fbed4de65c727aa9702"
+  },
+  {
+    "name": "core-masks",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\common\\core_masks.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\core-masks.exe"
+    ],
+    "source_sha256": "2ab74615f4faf2ed78bbd31495b4fa21e305e44ed135c6600540145cc167a0c1",
+    "binary_sha256": "f449309602eb529e20319a451ba485419ee7940fbd6e3ec7efe4cd9a7969e367"
+  },
+  {
+    "name": "float-scalar",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-fno-tree-vectorize",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\float-scalar-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\float-scalar.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "315b042afd980527e96dab643056e20f01f966e899967778752499f4cc6f81f1"
+  },
+  {
+    "name": "float-auto",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\float-auto-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\float-auto.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "3fa0958977454c02170ea23a9d4348f02547186785f54bac937fcb094dd115d7"
+  },
+  {
+    "name": "float-native",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-ffp-contract=off",
+      "-DTYPE=float",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\float-native-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\float-native.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "ed54e3a06d5f973216beca350d56385179e84b25789f98534dc7e6bf197e6f1c"
+  },
+  {
+    "name": "double-scalar",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-fno-tree-vectorize",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\double-scalar-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\double-scalar.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "84e2c8d607795b31fd19a778d34d5fa14a09964dcd4971623196b5dbe15c28f3"
+  },
+  {
+    "name": "double-auto",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\double-auto-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\double-auto.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "a18d9cb3b8663f89ad643a42c94dc26588a671ee952a94df86dfab992f0fe557"
+  },
+  {
+    "name": "double-native",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-march=native",
+      "-ffp-contract=off",
+      "-DTYPE=double",
+      "-fopt-info-vec-all=C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\evidence\\double-native-vector.txt",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-1-simd\\src\\simd.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\double-native.exe"
+    ],
+    "source_sha256": "c7acfe39c98d8000104c8e76ce46f241eac06d809a83987f607187f935ddfb0f",
+    "binary_sha256": "2326f0aa669dae67e4f8c01f290abbb4d8ea300663f02add1a58533fe5c280f9"
+  },
+  {
+    "name": "bandwidth",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "-mavx2",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\common\\followup-bandwidth.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\bandwidth.exe"
+    ],
+    "source_sha256": "3328300a3825824504eeb67f7ba60c0c6b0f9873e16c3e54e2f255bf82a91f97",
+    "binary_sha256": "87457206a36c270f663309730e95578ec5e4ab5ad51b341bcbb76273f4d11284"
+  },
+  {
+    "name": "memory",
+    "command": [
+      "gcc",
+      "-std=c11",
+      "-O3",
+      "-Wall",
+      "-Wextra",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\project-2-memory\\src\\membench.c",
+      "-o",
+      "C:\\Users\\usr\\Documents\\Codex\\2026-10-14\\tak\\work\\computer-systems-lab\\sessions\\ryzen-20261014\\build\\memory.exe"
+    ],
+    "source_sha256": "cfcd84361d81aa40b3761954d6a24d8fcbba225c2a4bd691758f23ef0b92c980",
+    "binary_sha256": "2a962b56303c4a5bd6e1e151cd92a26d52675dd40e5b2689acd53926c9b84e74"
+  }
+]

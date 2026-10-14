@@ -1,0 +1,7 @@
+
+	The value of <Counter> element is not supported on the system.
+
+
+	Profile Id: 
+	
+	Error code: 0xc5580628

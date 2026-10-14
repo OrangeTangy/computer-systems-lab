@@ -1,0 +1,25 @@
+{
+ "axpy": {
+  "instructions": 13,
+  "ymm": 0,
+  "xmm": 6,
+  "gather": 0,
+  "sample": []
+ },
+ "stencil": {
+  "instructions": 64,
+  "ymm": 0,
+  "xmm": 64,
+  "gather": 0,
+  "sample": []
+ },
+ "gather": {
+  "instructions": 14,
+  "ymm": 0,
+  "xmm": 3,
+  "gather": 0,
+  "sample": [
+   "jne    140001620 <gather+0x20>"
+  ]
+ }
+}

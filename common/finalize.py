@@ -19,9 +19,10 @@ if log.exists():
   v=line.split(',');points.append((float(v[0])/1000,float(v[1])*1024/1e6))
  plot(P/'figures/device-state.svg','SSD short sequential-write observation','Elapsed time (s)','MB/s',[('One-second windows',[(x,y,y,y) for x,y in points])],notes='Single 12-second observation; no variability whiskers or steady-state claim.',subtitle='Measured bandwidth per logging window within one run; not repeated-trial medians')
  notes.append(f'The one-second write-bandwidth samples ranged from {min(y for x,y in points):.2f} to {max(y for x,y in points):.2f} MB/s over this short observation. No temperature or SLC-exhaustion evidence is available. The log alone cannot identify the cause of rate changes.')
-(P/'RESULTS.md').write_text((P/'RESULTS.md').read_text()+'\n'.join(notes))
+report=(P/'RESULTS.md').read_text(encoding='utf-8').split('\n## Interpretation and variability')[0].rstrip()
+(P/'RESULTS.md').write_text(report+'\n'+'\n'.join(notes),encoding='utf-8')
 readme=R/'README.md';text=readme.read_text(encoding='utf-8');text=text.replace('| SSD results | More requests can help until the line gets too long | See the generated [same-run throughput/latency table](project-3-ssd/RESULTS.md); distinguish the measured range from sustained device limits |',f'| SSD queue sweep: maximum tested median **{peak:,.0f} IOPS**, 90% threshold at **QD{knee}** | More requests can help until the line gets too long | The curve is variable and high-QD points are a supplemental session; [see the actual table](project-3-ssd/RESULTS.md) |');readme.write_text(text,encoding='utf-8')
-files={str(p.relative_to(R)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest() for p in R.rglob('*') if p.is_file() and not any(part in ['.git','build','__pycache__','scratch','counter-captures'] for part in p.relative_to(R).parts) and p.name!='sha256.json'}
-(R/'common/sha256.json').write_text(json.dumps(files,indent=2))
-(R/'common/collection-notes.json').write_text(json.dumps({'platform':platform.platform(),'python':platform.python_version(),'notes':['All measured new kernels ran natively on Windows.','Three suites run sequentially; assistant file editing/tool queries and normal OS activity may occur during runs.','No exclusive isolation; Balanced power policy.','WPR capture failed with access denied; no counter trace exists.','Storage reliability query failed with CIM access unavailable.','Approximately 25 GB free before 2 GiB SSD file allocation.','Supplemental high-QD session separately labeled.']},indent=2))
+# Analysis must not rewrite historical collection provenance.
+import subprocess,sys
+subprocess.run([sys.executable,str(R/'common/refresh_manifest.py')],check=True)
 print(f'SSD maximum median {peak:.0f} IOPS; operational knee QD{knee}.')

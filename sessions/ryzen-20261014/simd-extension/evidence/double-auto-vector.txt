@@ -1,0 +1,57 @@
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:20:133: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:20:39: note: vectorized 1 loops in function.
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:20:163: note: ***** Analysis failed with vector mode V2DF
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:20:163: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:21:115: optimized: loop vectorized using 16 byte vectors and unroll factor 2
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:21:39: note: vectorized 1 loops in function.
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:21:178: note: ***** Analysis failed with vector mode V2DF
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:21:178: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DF
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:163: optimized: loop vectorized using 16 byte vectors and unroll factor 4
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:39: note: vectorized 1 loops in function.
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** Analysis failed with vector mode V2DF
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** The result for vector mode V16QI would be the same
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** Re-trying analysis with vector mode V8QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** Analysis failed with vector mode V8QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** Re-trying analysis with vector mode V4QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:22:176: note: ***** Analysis failed with vector mode V4QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:19:43: missed: statement clobbers memory: QueryPerformanceCounter (&t);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:19:71: missed: statement clobbers memory: QueryPerformanceFrequency (&f);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:19:126: note: ***** Analysis failed with vector mode V2DI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:19:126: note: ***** Skipping vector mode V16QI, which would repeat the analysis for V2DI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:32:18: missed: couldn't vectorize loop
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:32:30: missed: not vectorized: no vectype for stmt: *_27 = _28;
+ scalar_type: real
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:24:5: note: vectorized 0 loops in function.
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:26:11: missed: statement clobbers memory: n_122 = strtoull (_1, 0B, 10);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:26:43: missed: statement clobbers memory: kind_124 = atoi (_3);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:26:70: missed: statement clobbers memory: random_index_126 = atoi (_5);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:26:99: missed: statement clobbers memory: seconds_128 = atof (_6);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:28:6: missed: statement clobbers memory: _11 = GetCurrentThread ();
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:28:6: missed: statement clobbers memory: _12 = SetThreadAffinityMask (_11, 1);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:29:10: missed: statement clobbers memory: x_132 = _aligned_malloc (_13, 64);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:29:48: missed: statement clobbers memory: y_134 = _aligned_malloc (_13, 64);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:29:86: missed: statement clobbers memory: z_136 = _aligned_malloc (_13, 64);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:29:134: missed: statement clobbers memory: idx_138 = _aligned_malloc (_15, 64);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:152: missed: statement clobbers memory: gather (z_136, x_132, y_134, idx_138, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:132: missed: statement clobbers memory: stencil (z_136, x_132, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:102: missed: statement clobbers memory: axpy (z_136, x_132, y_134, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:38:11: missed: statement clobbers memory: t_149 = now ();
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:39:5: missed: statement clobbers memory: __asm__ __volatile__("" :  :  : "memory");
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:152: missed: statement clobbers memory: gather (z_136, x_132, y_134, idx_138, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:132: missed: statement clobbers memory: stencil (z_136, x_132, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:23:102: missed: statement clobbers memory: axpy (z_136, x_132, y_134, n_122);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:39:67: missed: not vectorized: volatile type: sink ={v} _91;
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:39:107: missed: statement clobbers memory: _92 = now ();
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:42:2: missed: statement clobbers memory: printf ("{\"n\":%zu,\"kind\":%d,\"random_index\":%d,\"dtype_bytes\":%zu,\"integer\":%s,\"seconds\":%.9f,\"reps\":%zu,\"ns_element\":%.6f,\"gops\":%.6f,\"useful_GB_s\":%.6f,\"max_error\":%.12g,\"correct\":true}\n", n_122, kind_124, random_index_126, 8, "false", elapsed_291, reps_292, _102, _100, _97, _296);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:44:2: missed: statement clobbers memory: _aligned_free (x_132);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:44:19: missed: statement clobbers memory: _aligned_free (y_134);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:44:36: missed: statement clobbers memory: _aligned_free (z_136);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:44:53: missed: statement clobbers memory: _aligned_free (idx_138);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:37:20: missed: statement clobbers memory: _85 = __acrt_iob_func (2);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:37:20: missed: statement clobbers memory: fprintf (_85, "reference mismatch %g > %g\n", _296, 9.9999999999999997988664762925561536725284350613e-13);
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** Analysis failed with vector mode V2DI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** The result for vector mode V16QI would be the same
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** Re-trying analysis with vector mode V8QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** Analysis failed with vector mode V8QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** Re-trying analysis with vector mode V4QI
+C:\Users\usr\Documents\GitHub\computer-systems-lab\project-1-simd\src\simd_ext.c:30:15: note: ***** Analysis failed with vector mode V4QI

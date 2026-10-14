@@ -1,0 +1,1 @@
+{"thread_id":14908,"qpc_start":1032386440910,"qpc_end":1032417077158,"qpc_frequency":10000000,"mode":"latency","pattern":"random","bytes":67108864,"stride":64,"nodes":1048576,"reads_percent":100,"cpu":0,"pinned":true,"seed":4321,"elapsed_s":3.063624500,"operations":25165824,"ns_per_op":121.737500,"useful_GiB_s":0.061202,"correct":true,"checksum":2269120}

@@ -1,0 +1,43 @@
+{
+ "axpy": {
+  "instructions": 48,
+  "ymm": 8,
+  "xmm": 16,
+  "gather": 0,
+  "sample": [
+   "vbroadcastsd 0x9c0f(%rip),%ymm2        # 14000b0d8 <.rdata+0xd8>",
+   "vmovapd %ymm2,%ymm1",
+   "vmulpd (%rdx,%rax,1),%ymm1,%ymm0",
+   "vaddpd (%r8,%rax,1),%ymm0,%ymm0",
+   "vmovupd %ymm0,(%rcx,%rax,1)"
+  ]
+ },
+ "stencil": {
+  "instructions": 63,
+  "ymm": 19,
+  "xmm": 28,
+  "gather": 0,
+  "sample": [
+   "vbroadcastsd 0x9b3f(%rip),%ymm5        # 14000b0e8 <.rdata+0xe8>",
+   "vbroadcastsd 0x9b2e(%rip),%ymm4        # 14000b0e0 <.rdata+0xe0>",
+   "vmovapd %ymm4,%ymm1",
+   "vmovapd %ymm5,%ymm3",
+   "vmulpd 0x8(%rdx,%rax,1),%ymm3,%ymm2",
+   "vmulpd (%rdx,%rax,1),%ymm1,%ymm0"
+  ]
+ },
+ "gather": {
+  "instructions": 116,
+  "ymm": 10,
+  "xmm": 38,
+  "gather": 0,
+  "sample": [
+   "jbe    1400018a0 <gather+0x1d0>",
+   "vinsertf128 $0x1,%xmm1,%ymm0,%ymm0",
+   "vmulpd 0x20(%r8,%rcx,2),%ymm0,%ymm0",
+   "vinsertf128 $0x1,%xmm2,%ymm1,%ymm1",
+   "vmulpd (%r8,%rcx,2),%ymm1,%ymm1",
+   "vmovupd %ymm0,0x20(%r10,%rcx,2)"
+  ]
+ }
+}

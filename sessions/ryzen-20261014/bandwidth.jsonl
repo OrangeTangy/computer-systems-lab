@@ -1,0 +1,10 @@
+{"n": 16777216, "seconds": 0.3000449, "passes": 25, "useful_GB_s": 16.774705, "correct": true, "trial": 2, "sequence": 0}
+{"n": 4194304, "seconds": 0.3022578, "passes": 110, "useful_GB_s": 18.317083, "correct": true, "trial": 2, "sequence": 1}
+{"n": 4194304, "seconds": 0.3006394, "passes": 109, "useful_GB_s": 18.248272, "correct": true, "trial": 0, "sequence": 2}
+{"n": 4194304, "seconds": 0.3018297, "passes": 110, "useful_GB_s": 18.343063, "correct": true, "trial": 3, "sequence": 3}
+{"n": 4194304, "seconds": 0.3025831, "passes": 108, "useful_GB_s": 17.964711, "correct": true, "trial": 4, "sequence": 4}
+{"n": 4194304, "seconds": 0.30111, "passes": 109, "useful_GB_s": 18.219752, "correct": true, "trial": 1, "sequence": 5}
+{"n": 16777216, "seconds": 0.3006465, "passes": 25, "useful_GB_s": 16.741139, "correct": true, "trial": 4, "sequence": 6}
+{"n": 16777216, "seconds": 0.3065598, "passes": 23, "useful_GB_s": 15.104758, "correct": true, "trial": 1, "sequence": 7}
+{"n": 16777216, "seconds": 0.3048777, "passes": 24, "useful_GB_s": 15.848447, "correct": true, "trial": 3, "sequence": 8}
+{"n": 16777216, "seconds": 0.3068027, "passes": 24, "useful_GB_s": 15.749008, "correct": true, "trial": 0, "sequence": 9}

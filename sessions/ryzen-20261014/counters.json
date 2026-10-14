@@ -1,0 +1,3334 @@
+{
+  "recording_order": [
+    "InstructionRetired",
+    "LabDemandDRAMFill",
+    "LabL1DTLBMiss",
+    "LabL2DTLBMiss",
+    "TotalCycles"
+  ],
+  "order_evidence": [
+    "TotalCycles = column 4: the only counter whose rate stays between 2 and 5.5 G/s with <6% spread across all 54 workloads (memory chains and SIMD alike); a clock is workload-independent.",
+    "InstructionRetired = column 0: largest non-clock count per L1-resident load, and per-element counts for each SIMD build are size-independent (within 10% between N=1,024 and N=16,777,216) because the same loop body executes.",
+    "LabL1DTLBMiss = column 2: the 4 MiB chain touches 1,024 pages, more than the 64-entry L1 DTLB but fewer than the 2,048-entry L2 DTLB and with data resident in the 16 MiB L3, so it is the only remaining counter that is high there.",
+    "LabL2DTLBMiss = column 3: high for the scattered chain (16,384 pages, beyond the 8 MiB L2 DTLB reach) and near zero for the 4 MiB chain; it never exceeds column 2 in any memory run, as required because unit mask 0xF0 is a subset of 0xFF.",
+    "LabDemandDRAMFill = column 1: about one event per load for the 64 MiB chain, but low for the scattered chain, whose 1 MiB of touched lines fits in cache even though its pages do not fit the TLB, and near zero in L1."
+  ],
+  "qpc_frequency": 10000000,
+  "event_loss": 0,
+  "min_scheduled_fraction_of_window": 0.843773238540892,
+  "scope": "CPU0 context-switch intervals of the exact benchmark thread inside its QPC timing window",
+  "records": [
+    {
+      "tag": "L1-candidate-0",
+      "group": "L1-candidate",
+      "ops": 3019374592,
+      "scheduled_s": 2.9682613,
+      "window_s": 3.0000526,
+      "interior": 290,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 14888,
+        "qpc_start": 1032049360607,
+        "qpc_end": 1032079361133,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 16384,
+        "stride": 64,
+        "nodes": 256,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0000523,
+        "operations": 3019374592,
+        "ns_per_op": 0.993601,
+        "useful_GiB_s": 7.498567,
+        "correct": true,
+        "checksum": 11008
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 12183841918,
+          "upper": 12248212876,
+          "per_op_lower": 4.035220389772691,
+          "per_op_upper": 4.05653969151503
+        },
+        "LabDemandDRAMFill": {
+          "lower": 247921,
+          "upper": 253054,
+          "per_op_lower": 8.211005042464105e-05,
+          "per_op_upper": 8.38100713540084e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 804803,
+          "upper": 810600,
+          "per_op_lower": 0.00026654625833189764,
+          "per_op_upper": 0.0002684661923524592
+        },
+        "LabL2DTLBMiss": {
+          "lower": 134953,
+          "upper": 136295,
+          "per_op_lower": 4.469567981315251e-05,
+          "per_op_upper": 4.514014271734323e-05
+        },
+        "TotalCycles": {
+          "lower": 12542904717,
+          "upper": 12610547656,
+          "per_op_lower": 4.154139983237959,
+          "per_op_upper": 4.176542946811682
+        }
+      }
+    },
+    {
+      "tag": "L2-candidate-0",
+      "group": "L2-candidate",
+      "ops": 965672960,
+      "scheduled_s": 2.9820116,
+      "window_s": 3.0000638,
+      "interior": 282,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 25920,
+        "qpc_start": 1032080186692,
+        "qpc_end": 1032110187330,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 262144,
+        "stride": 64,
+        "nodes": 4096,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0000637,
+        "operations": 965672960,
+        "ns_per_op": 3.106708,
+        "useful_GiB_s": 2.398224,
+        "correct": true,
+        "checksum": 121024
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 4052527630,
+          "upper": 4063383599,
+          "per_op_lower": 4.196583934585887,
+          "per_op_upper": 4.207825803675812
+        },
+        "LabDemandDRAMFill": {
+          "lower": 295331,
+          "upper": 302427,
+          "per_op_lower": 0.00030582921157904224,
+          "per_op_upper": 0.00031317745502576776
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1361837,
+          "upper": 1374248,
+          "per_op_lower": 0.001410246591144066,
+          "per_op_upper": 0.001423098768344927
+        },
+        "LabL2DTLBMiss": {
+          "lower": 168785,
+          "upper": 172709,
+          "per_op_lower": 0.00017478484641425602,
+          "per_op_upper": 0.00017884833391213523
+        },
+        "TotalCycles": {
+          "lower": 12595763623,
+          "upper": 12621867763,
+          "per_op_lower": 13.043508666743657,
+          "per_op_upper": 13.070540737725533
+        }
+      }
+    },
+    {
+      "tag": "LLC-candidate-0",
+      "group": "LLC-candidate",
+      "ops": 214040576,
+      "scheduled_s": 2.9674323,
+      "window_s": 3.0011601,
+      "interior": 308,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 12348,
+        "qpc_start": 1032110740783,
+        "qpc_end": 1032140752384,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 4194304,
+        "stride": 64,
+        "nodes": 65536,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0011595,
+        "operations": 214040576,
+        "ns_per_op": 14.021451,
+        "useful_GiB_s": 0.53137,
+        "correct": true,
+        "checksum": 3917632
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1037831786,
+          "upper": 1050395643,
+          "per_op_lower": 4.848761881485499,
+          "per_op_upper": 4.907460363963887
+        },
+        "LabDemandDRAMFill": {
+          "lower": 2457160,
+          "upper": 2587136,
+          "per_op_lower": 0.011479879403800521,
+          "per_op_upper": 0.012087128750765463
+        },
+        "LabL1DTLBMiss": {
+          "lower": 164555233,
+          "upper": 165677288,
+          "per_op_lower": 0.7688039159453579,
+          "per_op_upper": 0.7740461696384148
+        },
+        "LabL2DTLBMiss": {
+          "lower": 286017,
+          "upper": 291796,
+          "per_op_lower": 0.001336274669714961,
+          "per_op_upper": 0.0013632742232949327
+        },
+        "TotalCycles": {
+          "lower": 12531613871,
+          "upper": 12638090515,
+          "per_op_lower": 58.54784221380529,
+          "per_op_upper": 59.04530230286803
+        }
+      }
+    },
+    {
+      "tag": "DRAM-candidate-0",
+      "group": "DRAM-candidate",
+      "ops": 23068672,
+      "scheduled_s": 2.9600764,
+      "window_s": 3.0156481,
+      "interior": 530,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 29252,
+        "qpc_start": 1032154174719,
+        "qpc_end": 1032184331200,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 64,
+        "nodes": 1048576,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0156476,
+        "operations": 23068672,
+        "ns_per_op": 130.724803,
+        "useful_GiB_s": 0.056994,
+        "correct": true,
+        "checksum": 43259904
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 441332002,
+          "upper": 461158534,
+          "per_op_lower": 19.13122705979781,
+          "per_op_upper": 19.99068407578902
+        },
+        "LabDemandDRAMFill": {
+          "lower": 22906379,
+          "upper": 23146762,
+          "per_op_lower": 0.9929647879167036,
+          "per_op_upper": 1.0033851103349165
+        },
+        "LabL1DTLBMiss": {
+          "lower": 24288031,
+          "upper": 24533550,
+          "per_op_lower": 1.0528577891263096,
+          "per_op_upper": 1.0635007511485706
+        },
+        "LabL2DTLBMiss": {
+          "lower": 14755648,
+          "upper": 14903041,
+          "per_op_lower": 0.6396401145241477,
+          "per_op_upper": 0.6460294290022417
+        },
+        "TotalCycles": {
+          "lower": 12479985143,
+          "upper": 12614359264,
+          "per_op_lower": 540.9927863641219,
+          "per_op_upper": 546.8177476362748
+        }
+      }
+    },
+    {
+      "tag": "packed-pages-0",
+      "group": "packed-pages",
+      "ops": 287113216,
+      "scheduled_s": 2.9751703,
+      "window_s": 3.0002827,
+      "interior": 279,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 8296,
+        "qpc_start": 1032191412369,
+        "qpc_end": 1032221415196,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 1048576,
+        "stride": 64,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0002826,
+        "operations": 287113216,
+        "ns_per_op": 10.449824,
+        "useful_GiB_s": 0.712986,
+        "correct": true,
+        "checksum": 829184
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1413126325,
+          "upper": 1423230418,
+          "per_op_lower": 4.921843531577453,
+          "per_op_upper": 4.957035547956107
+        },
+        "LabDemandDRAMFill": {
+          "lower": 469574,
+          "upper": 478680,
+          "per_op_lower": 0.0016355011675951551,
+          "per_op_upper": 0.0016672168793511754
+        },
+        "LabL1DTLBMiss": {
+          "lower": 56477722,
+          "upper": 56704978,
+          "per_op_lower": 0.19670888991748817,
+          "per_op_upper": 0.19750041043042757
+        },
+        "LabL2DTLBMiss": {
+          "lower": 224842,
+          "upper": 229201,
+          "per_op_lower": 0.0007831126798426444,
+          "per_op_upper": 0.0007982948440799047
+        },
+        "TotalCycles": {
+          "lower": 12557119678,
+          "upper": 12610384435,
+          "per_op_lower": 43.735777310926714,
+          "per_op_upper": 43.921295615315735
+        }
+      }
+    },
+    {
+      "tag": "scattered-pages-0",
+      "group": "scattered-pages",
+      "ops": 127795200,
+      "scheduled_s": 2.9592215,
+      "window_s": 3.0007445,
+      "interior": 412,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 16392,
+        "qpc_start": 1032232012427,
+        "qpc_end": 1032262019872,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 4096,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4320,
+        "elapsed_s": 3.0007444,
+        "operations": 127795200,
+        "ns_per_op": 23.480885,
+        "useful_GiB_s": 0.317304,
+        "correct": true,
+        "checksum": 53067776
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 685692867,
+          "upper": 709104672,
+          "per_op_lower": 5.365560420109675,
+          "per_op_upper": 5.548758263221154
+        },
+        "LabDemandDRAMFill": {
+          "lower": 5058909,
+          "upper": 5092549,
+          "per_op_lower": 0.039586064265324516,
+          "per_op_upper": 0.03984929793920272
+        },
+        "LabL1DTLBMiss": {
+          "lower": 127147175,
+          "upper": 127307099,
+          "per_op_lower": 0.9949291913937299,
+          "per_op_upper": 0.9961805998973358
+        },
+        "LabL2DTLBMiss": {
+          "lower": 84613025,
+          "upper": 84729883,
+          "per_op_lower": 0.662098615597456,
+          "per_op_upper": 0.6630130317883614
+        },
+        "TotalCycles": {
+          "lower": 12488964118,
+          "upper": 12536342018,
+          "per_op_lower": 97.72639440291967,
+          "per_op_upper": 98.09712741949619
+        }
+      }
+    },
+    {
+      "tag": "L1-candidate-1",
+      "group": "L1-candidate",
+      "ops": 3040083968,
+      "scheduled_s": 2.9767096,
+      "window_s": 3.0000052,
+      "interior": 311,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 30076,
+        "qpc_start": 1032272314282,
+        "qpc_end": 1032302314334,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 16384,
+        "stride": 64,
+        "nodes": 256,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.000005,
+        "operations": 3040083968,
+        "ns_per_op": 0.986816,
+        "useful_GiB_s": 7.550118,
+        "correct": true,
+        "checksum": 9472
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 12284318782,
+          "upper": 12327751718,
+          "per_op_lower": 4.0407827255118764,
+          "per_op_upper": 4.055069480896654
+        },
+        "LabDemandDRAMFill": {
+          "lower": 195931,
+          "upper": 200078,
+          "per_op_lower": 6.444920668717529e-05,
+          "per_op_upper": 6.581331374594454e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 877544,
+          "upper": 883341,
+          "per_op_lower": 0.00028865781644094377,
+          "per_op_upper": 0.0002905646716663321
+        },
+        "LabL2DTLBMiss": {
+          "lower": 124060,
+          "upper": 125338,
+          "per_op_lower": 4.08080833640974e-05,
+          "per_op_upper": 4.1228466489515065e-05
+        },
+        "TotalCycles": {
+          "lower": 12575042042,
+          "upper": 12621687693,
+          "per_op_lower": 4.136412735426129,
+          "per_op_upper": 4.151756275766131
+        }
+      }
+    },
+    {
+      "tag": "L2-candidate-1",
+      "group": "L2-candidate",
+      "ops": 988348416,
+      "scheduled_s": 2.9424398,
+      "window_s": 3.0000947,
+      "interior": 312,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 27220,
+        "qpc_start": 1032312708724,
+        "qpc_end": 1032342709671,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 262144,
+        "stride": 64,
+        "nodes": 4096,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.0000946,
+        "operations": 988348416,
+        "ns_per_op": 3.035463,
+        "useful_GiB_s": 2.454512,
+        "correct": true,
+        "checksum": 6144
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 4035296465,
+          "upper": 4051634852,
+          "per_op_lower": 4.082868348523766,
+          "per_op_upper": 4.0993993478510315
+        },
+        "LabDemandDRAMFill": {
+          "lower": 95960,
+          "upper": 98898,
+          "per_op_lower": 9.709126705374312e-05,
+          "per_op_upper": 0.0001000639029708325
+        },
+        "LabL1DTLBMiss": {
+          "lower": 746083,
+          "upper": 749018,
+          "per_op_lower": 0.0007548785306091896,
+          "per_op_upper": 0.0007578481311594473
+        },
+        "LabL2DTLBMiss": {
+          "lower": 73403,
+          "upper": 74437,
+          "per_op_lower": 7.426834384687272e-05,
+          "per_op_upper": 7.531453361483406e-05
+        },
+        "TotalCycles": {
+          "lower": 12446171225,
+          "upper": 12499089619,
+          "per_op_lower": 12.59289843896507,
+          "per_op_upper": 12.646440684941615
+        }
+      }
+    },
+    {
+      "tag": "LLC-candidate-1",
+      "group": "LLC-candidate",
+      "ops": 221052928,
+      "scheduled_s": 2.9851462,
+      "window_s": 3.0006973,
+      "interior": 275,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 22388,
+        "qpc_start": 1032343222476,
+        "qpc_end": 1032373229449,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 4194304,
+        "stride": 64,
+        "nodes": 65536,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.0006971,
+        "operations": 221052928,
+        "ns_per_op": 13.574564,
+        "useful_GiB_s": 0.548863,
+        "correct": true,
+        "checksum": 2843648
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1088636947,
+          "upper": 1096908513,
+          "per_op_lower": 4.924779584914614,
+          "per_op_upper": 4.962198523785218
+        },
+        "LabDemandDRAMFill": {
+          "lower": 1679467,
+          "upper": 1787851,
+          "per_op_lower": 0.007597578621532667,
+          "per_op_upper": 0.008087886535481674
+        },
+        "LabL1DTLBMiss": {
+          "lower": 169801492,
+          "upper": 170218362,
+          "per_op_lower": 0.7681485766160039,
+          "per_op_upper": 0.7700344145633755
+        },
+        "LabL2DTLBMiss": {
+          "lower": 263194,
+          "upper": 268064,
+          "per_op_lower": 0.0011906379272207605,
+          "per_op_upper": 0.0012126688500592943
+        },
+        "TotalCycles": {
+          "lower": 12606296359,
+          "upper": 12654701424,
+          "per_op_lower": 57.0284070564313,
+          "per_op_upper": 57.24738205684387
+        }
+      }
+    },
+    {
+      "tag": "DRAM-candidate-1",
+      "group": "DRAM-candidate",
+      "ops": 25165824,
+      "scheduled_s": 3.0263246,
+      "window_s": 3.0636248,
+      "interior": 375,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 14908,
+        "qpc_start": 1032386440910,
+        "qpc_end": 1032417077158,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 64,
+        "nodes": 1048576,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.0636245,
+        "operations": 25165824,
+        "ns_per_op": 121.7375,
+        "useful_GiB_s": 0.061202,
+        "correct": true,
+        "checksum": 2269120
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 287785104,
+          "upper": 307426307,
+          "per_op_lower": 11.435552597045898,
+          "per_op_upper": 12.216023882230123
+        },
+        "LabDemandDRAMFill": {
+          "lower": 24314910,
+          "upper": 24636557,
+          "per_op_lower": 0.9661877155303955,
+          "per_op_upper": 0.9789688189824423
+        },
+        "LabL1DTLBMiss": {
+          "lower": 25581003,
+          "upper": 25916906,
+          "per_op_lower": 1.0164977312088013,
+          "per_op_upper": 1.0298453172047932
+        },
+        "LabL2DTLBMiss": {
+          "lower": 15470677,
+          "upper": 15669923,
+          "per_op_lower": 0.6147494713465372,
+          "per_op_upper": 0.6226667960484823
+        },
+        "TotalCycles": {
+          "lower": 12782695289,
+          "upper": 12958747668,
+          "per_op_lower": 507.9386746486028,
+          "per_op_upper": 514.9343676567078
+        }
+      }
+    },
+    {
+      "tag": "packed-pages-1",
+      "group": "packed-pages",
+      "ops": 306249728,
+      "scheduled_s": 2.9837989,
+      "window_s": 3.0003146,
+      "interior": 335,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 31020,
+        "qpc_start": 1032424172990,
+        "qpc_end": 1032454176136,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 1048576,
+        "stride": 64,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.0003146,
+        "operations": 306249728,
+        "ns_per_op": 9.796954,
+        "useful_GiB_s": 0.7605,
+        "correct": true,
+        "checksum": 302336
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1338992558,
+          "upper": 1341921788,
+          "per_op_lower": 4.372224480800192,
+          "per_op_upper": 4.381789321948394
+        },
+        "LabDemandDRAMFill": {
+          "lower": 188431,
+          "upper": 193868,
+          "per_op_lower": 0.0006152854444331131,
+          "per_op_upper": 0.0006330389295888616
+        },
+        "LabL1DTLBMiss": {
+          "lower": 74043853,
+          "upper": 74118923,
+          "per_op_lower": 0.24177606126722828,
+          "per_op_upper": 0.2420211880155531
+        },
+        "LabL2DTLBMiss": {
+          "lower": 117062,
+          "upper": 118418,
+          "per_op_lower": 0.0003822436048008506,
+          "per_op_upper": 0.00038667136383546436
+        },
+        "TotalCycles": {
+          "lower": 12616336247,
+          "upper": 12630107713,
+          "per_op_lower": 41.19623657918808,
+          "per_op_upper": 41.24120467137199
+        }
+      }
+    },
+    {
+      "tag": "scattered-pages-1",
+      "group": "scattered-pages",
+      "ops": 142147584,
+      "scheduled_s": 2.9723265,
+      "window_s": 3.0003584,
+      "interior": 316,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 4504,
+        "qpc_start": 1032454738134,
+        "qpc_end": 1032484741718,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 4096,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4321,
+        "elapsed_s": 3.0003583,
+        "operations": 142147584,
+        "ns_per_op": 21.107346,
+        "useful_GiB_s": 0.352985,
+        "correct": true,
+        "checksum": 19349504
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 735341168,
+          "upper": 738198771,
+          "per_op_lower": 5.173082421154622,
+          "per_op_upper": 5.19318549234013
+        },
+        "LabDemandDRAMFill": {
+          "lower": 2685557,
+          "upper": 2790563,
+          "per_op_lower": 0.018892737564924073,
+          "per_op_upper": 0.019631448678016222
+        },
+        "LabL1DTLBMiss": {
+          "lower": 141010811,
+          "upper": 141342484,
+          "per_op_lower": 0.9920028679488495,
+          "per_op_upper": 0.9943361682460955
+        },
+        "LabL2DTLBMiss": {
+          "lower": 93981166,
+          "upper": 94202985,
+          "per_op_lower": 0.6611520460312572,
+          "per_op_upper": 0.6627125298168979
+        },
+        "TotalCycles": {
+          "lower": 12560130129,
+          "upper": 12631606797,
+          "per_op_lower": 88.35978618532131,
+          "per_op_upper": 88.86262039458933
+        }
+      }
+    },
+    {
+      "tag": "L1-candidate-2",
+      "group": "L1-candidate",
+      "ops": 2986672128,
+      "scheduled_s": 2.9708153,
+      "window_s": 3.0000453,
+      "interior": 270,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 15424,
+        "qpc_start": 1032495175933,
+        "qpc_end": 1032525176386,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 16384,
+        "stride": 64,
+        "nodes": 256,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.000045,
+        "operations": 2986672128,
+        "ns_per_op": 1.004478,
+        "useful_GiB_s": 7.417369,
+        "correct": true,
+        "checksum": 5632
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 12105297741,
+          "upper": 12153002607,
+          "per_op_lower": 4.053105671530879,
+          "per_op_upper": 4.069078253707801
+        },
+        "LabDemandDRAMFill": {
+          "lower": 288372,
+          "upper": 294824,
+          "per_op_lower": 9.655294844603713e-05,
+          "per_op_upper": 9.871321235298313e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 980240,
+          "upper": 993191,
+          "per_op_lower": 0.00032820475699701576,
+          "per_op_upper": 0.00033254102138927517
+        },
+        "LabL2DTLBMiss": {
+          "lower": 150370,
+          "upper": 154005,
+          "per_op_lower": 5.0347006151188755e-05,
+          "per_op_upper": 5.156407981853976e-05
+        },
+        "TotalCycles": {
+          "lower": 12550310341,
+          "upper": 12600868455,
+          "per_op_lower": 4.2021051535389695,
+          "per_op_upper": 4.2190330625404355
+        }
+      }
+    },
+    {
+      "tag": "L2-candidate-2",
+      "group": "L2-candidate",
+      "ops": 919863296,
+      "scheduled_s": 2.9608465,
+      "window_s": 3.000154,
+      "interior": 276,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 22028,
+        "qpc_start": 1032535661553,
+        "qpc_end": 1032565663093,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 262144,
+        "stride": 64,
+        "nodes": 4096,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.0001538,
+        "operations": 919863296,
+        "ns_per_op": 3.261521,
+        "useful_GiB_s": 2.284388,
+        "correct": true,
+        "checksum": 154304
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 3919200038,
+          "upper": 3928885282,
+          "per_op_lower": 4.260633134339127,
+          "per_op_upper": 4.271162137987948
+        },
+        "LabDemandDRAMFill": {
+          "lower": 321751,
+          "upper": 329636,
+          "per_op_lower": 0.00034978132228900236,
+          "per_op_upper": 0.00035835324817656383
+        },
+        "LabL1DTLBMiss": {
+          "lower": 2692948,
+          "upper": 2709187,
+          "per_op_lower": 0.0029275524001340304,
+          "per_op_upper": 0.002945206110278369
+        },
+        "LabL2DTLBMiss": {
+          "lower": 182896,
+          "upper": 187134,
+          "per_op_lower": 0.00019882954434133658,
+          "per_op_upper": 0.00020343675067126496
+        },
+        "TotalCycles": {
+          "lower": 12501085127,
+          "upper": 12527340168,
+          "per_op_lower": 13.590155386523868,
+          "per_op_upper": 13.61869771570927
+        }
+      }
+    },
+    {
+      "tag": "LLC-candidate-2",
+      "group": "LLC-candidate",
+      "ops": 212074496,
+      "scheduled_s": 2.9573635,
+      "window_s": 3.0004107,
+      "interior": 287,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 13168,
+        "qpc_start": 1032576204982,
+        "qpc_end": 1032606209089,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 4194304,
+        "stride": 64,
+        "nodes": 65536,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.0004105,
+        "operations": 212074496,
+        "ns_per_op": 14.147908,
+        "useful_GiB_s": 0.526621,
+        "correct": true,
+        "checksum": 1234880
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1040781937,
+          "upper": 1044764062,
+          "per_op_lower": 4.907624238795786,
+          "per_op_upper": 4.9264012491157825
+        },
+        "LabDemandDRAMFill": {
+          "lower": 2325641,
+          "upper": 2452651,
+          "per_op_lower": 0.010966151252812596,
+          "per_op_upper": 0.011565044577543166
+        },
+        "LabL1DTLBMiss": {
+          "lower": 163256101,
+          "upper": 163444359,
+          "per_op_lower": 0.7698054413860307,
+          "per_op_upper": 0.7706931388864411
+        },
+        "LabL2DTLBMiss": {
+          "lower": 244855,
+          "upper": 249242,
+          "per_op_lower": 0.0011545707033060685,
+          "per_op_upper": 0.0011752568305054465
+        },
+        "TotalCycles": {
+          "lower": 12494503270,
+          "upper": 12561780313,
+          "per_op_lower": 58.91563344797481,
+          "per_op_upper": 59.23286651592467
+        }
+      }
+    },
+    {
+      "tag": "DRAM-candidate-2",
+      "group": "DRAM-candidate",
+      "ops": 25165824,
+      "scheduled_s": 3.0126703,
+      "window_s": 3.0704248,
+      "interior": 639,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 14656,
+        "qpc_start": 1032619186291,
+        "qpc_end": 1032649890539,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 64,
+        "nodes": 1048576,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.0704241,
+        "operations": 25165824,
+        "ns_per_op": 122.007692,
+        "useful_GiB_s": 0.061066,
+        "correct": true,
+        "checksum": 8719616
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 256493606,
+          "upper": 259350904,
+          "per_op_lower": 10.192140181859335,
+          "per_op_upper": 10.305679003397623
+        },
+        "LabDemandDRAMFill": {
+          "lower": 24272399,
+          "upper": 24407846,
+          "per_op_lower": 0.9644984801610311,
+          "per_op_upper": 0.9698806603749593
+        },
+        "LabL1DTLBMiss": {
+          "lower": 25539736,
+          "upper": 25681153,
+          "per_op_lower": 1.0148579279581706,
+          "per_op_upper": 1.020477334658305
+        },
+        "LabL2DTLBMiss": {
+          "lower": 15682062,
+          "upper": 15768193,
+          "per_op_lower": 0.6231491565704346,
+          "per_op_upper": 0.6265716950098673
+        },
+        "TotalCycles": {
+          "lower": 12730160614,
+          "upper": 12801618308,
+          "per_op_lower": 505.8511342207591,
+          "per_op_upper": 508.69060786565143
+        }
+      }
+    },
+    {
+      "tag": "packed-pages-2",
+      "group": "packed-pages",
+      "ops": 284164096,
+      "scheduled_s": 2.9054899,
+      "window_s": 3.0000251,
+      "interior": 382,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 25080,
+        "qpc_start": 1032656902507,
+        "qpc_end": 1032686902758,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 1048576,
+        "stride": 64,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.0000248,
+        "operations": 284164096,
+        "ns_per_op": 10.557368,
+        "useful_GiB_s": 0.705723,
+        "correct": true,
+        "checksum": 644928
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 1313660079,
+          "upper": 1321755521,
+          "per_op_lower": 4.622892538119946,
+          "per_op_upper": 4.651381154781778
+        },
+        "LabDemandDRAMFill": {
+          "lower": 918594,
+          "upper": 929852,
+          "per_op_lower": 0.003232618099649014,
+          "per_op_upper": 0.003272236053354186
+        },
+        "LabL1DTLBMiss": {
+          "lower": 78093450,
+          "upper": 78278541,
+          "per_op_lower": 0.2748181459208696,
+          "per_op_upper": 0.2754694984407882
+        },
+        "LabL2DTLBMiss": {
+          "lower": 320175,
+          "upper": 325108,
+          "per_op_lower": 0.001126725735259672,
+          "per_op_upper": 0.0011440854230930005
+        },
+        "TotalCycles": {
+          "lower": 12245663248,
+          "upper": 12279264585,
+          "per_op_lower": 43.093632940876525,
+          "per_op_upper": 43.21187918476513
+        }
+      }
+    },
+    {
+      "tag": "scattered-pages-2",
+      "group": "scattered-pages",
+      "ops": 91095040,
+      "scheduled_s": 2.6682689,
+      "window_s": 3.0019321,
+      "interior": 1479,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 28268,
+        "qpc_start": 1032697673719,
+        "qpc_end": 1032727693040,
+        "qpc_frequency": 10000000,
+        "mode": "latency",
+        "pattern": "random",
+        "bytes": 67108864,
+        "stride": 4096,
+        "nodes": 16384,
+        "reads_percent": 100,
+        "cpu": 0,
+        "pinned": true,
+        "seed": 4322,
+        "elapsed_s": 3.0019317,
+        "operations": 91095040,
+        "ns_per_op": 32.953844,
+        "useful_GiB_s": 0.226091,
+        "correct": true,
+        "checksum": 41275392
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 518625148,
+          "upper": 522905095,
+          "per_op_lower": 5.693231464632981,
+          "per_op_upper": 5.740214780080232
+        },
+        "LabDemandDRAMFill": {
+          "lower": 8739647,
+          "upper": 8762610,
+          "per_op_lower": 0.09593987773648269,
+          "per_op_upper": 0.09619195512730441
+        },
+        "LabL1DTLBMiss": {
+          "lower": 90877301,
+          "upper": 90915033,
+          "per_op_lower": 0.9976097600923167,
+          "per_op_upper": 0.9980239648613141
+        },
+        "LabL2DTLBMiss": {
+          "lower": 61277098,
+          "upper": 61303829,
+          "per_op_lower": 0.6726721674418278,
+          "per_op_upper": 0.6729656082263096
+        },
+        "TotalCycles": {
+          "lower": 11255541976,
+          "upper": 11271514170,
+          "per_op_lower": 123.55823078841614,
+          "per_op_upper": 123.73356628417969
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-1024-0",
+      "group": "simd-float-scalar-1024",
+      "ops": 10338460672,
+      "scheduled_s": 2.9844832,
+      "window_s": 3.0000002,
+      "interior": 280,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 26848,
+        "qpc_start": 1032742818286,
+        "qpc_end": 1032772818288,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 10096153,
+        "ns_element": 0.290179,
+        "gflops": 6.892307,
+        "useful_GB_s": 41.353843,
+        "tsc_ticks_element": 1.042658,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 73334931448,
+          "upper": 73397800749,
+          "per_op_lower": 7.093409142292861,
+          "per_op_upper": 7.099490250786147
+        },
+        "LabDemandDRAMFill": {
+          "lower": 171684,
+          "upper": 174344,
+          "per_op_lower": 1.660634067748379e-05,
+          "per_op_upper": 1.686363236571395e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 894246,
+          "upper": 896148,
+          "per_op_lower": 8.649701617784516e-05,
+          "per_op_upper": 8.668098940754959e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 128392,
+          "upper": 129165,
+          "per_op_lower": 1.2418870088438636e-05,
+          "per_op_upper": 1.2493639439943114e-05
+        },
+        "TotalCycles": {
+          "lower": 12612761106,
+          "upper": 12624925777,
+          "per_op_lower": 1.2199844354159575,
+          "per_op_upper": 1.2211610777987976
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-1024-1",
+      "group": "simd-float-scalar-1024",
+      "ops": 9758961664,
+      "scheduled_s": 2.9088616,
+      "window_s": 3.0000001,
+      "interior": 414,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 12192,
+        "qpc_start": 1032773306841,
+        "qpc_end": 1032803306842,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 9530236,
+        "ns_element": 0.30741,
+        "gflops": 6.505974,
+        "useful_GB_s": 39.035847,
+        "tsc_ticks_element": 1.104572,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 69002073236,
+          "upper": 69274310915,
+          "per_op_lower": 7.070636775892145,
+          "per_op_upper": 7.098532948494632
+        },
+        "LabDemandDRAMFill": {
+          "lower": 266489,
+          "upper": 272281,
+          "per_op_lower": 2.7307105937617915e-05,
+          "per_op_upper": 2.790061170179836e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1063312,
+          "upper": 1078838,
+          "per_op_lower": 0.00010895749328767933,
+          "per_op_upper": 0.00011054844123220034
+        },
+        "LabL2DTLBMiss": {
+          "lower": 188386,
+          "upper": 192210,
+          "per_op_lower": 1.9303897943870435e-05,
+          "per_op_upper": 1.9695742909724377e-05
+        },
+        "TotalCycles": {
+          "lower": 12291596192,
+          "upper": 12342211844,
+          "per_op_lower": 1.2595188520252805,
+          "per_op_upper": 1.2647054337275856
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-1024-2",
+      "group": "simd-float-scalar-1024",
+      "ops": 10017266688,
+      "scheduled_s": 2.9463425,
+      "window_s": 3.0,
+      "interior": 302,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 30672,
+        "qpc_start": 1032813704534,
+        "qpc_end": 1032843704534,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 9782487,
+        "ns_element": 0.299483,
+        "gflops": 6.678178,
+        "useful_GB_s": 40.069067,
+        "tsc_ticks_element": 1.076089,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 70831781352,
+          "upper": 71159707939,
+          "per_op_lower": 7.070968913790788,
+          "per_op_upper": 7.103705048029165
+        },
+        "LabDemandDRAMFill": {
+          "lower": 417644,
+          "upper": 420842,
+          "per_op_lower": 4.169241101470414e-05,
+          "per_op_upper": 4.201165977782541e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1159500,
+          "upper": 1162672,
+          "per_op_lower": 0.0001157501378483815,
+          "per_op_upper": 0.00011606679109310342
+        },
+        "LabL2DTLBMiss": {
+          "lower": 198737,
+          "upper": 199739,
+          "per_op_lower": 1.983944385129262e-05,
+          "per_op_upper": 1.9939471137298727e-05
+        },
+        "TotalCycles": {
+          "lower": 12441190291,
+          "upper": 12496073013,
+          "per_op_lower": 1.2419745503934416,
+          "per_op_upper": 1.247453362499517
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-16777216-0",
+      "group": "simd-float-scalar-16777216",
+      "ops": 4093640704,
+      "scheduled_s": 2.9807959,
+      "window_s": 3.0047844,
+      "interior": 441,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 29936,
+        "qpc_start": 1032855484345,
+        "qpc_end": 1032885532189,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0047843,
+        "reps": 244,
+        "ns_element": 0.734013,
+        "gflops": 2.724748,
+        "useful_GB_s": 16.348491,
+        "tsc_ticks_element": 2.637424,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 28754357953,
+          "upper": 28995199068,
+          "per_op_lower": 7.024152834151612,
+          "per_op_upper": 7.082985822294579
+        },
+        "LabDemandDRAMFill": {
+          "lower": 17271673,
+          "upper": 17306521,
+          "per_op_lower": 0.0042191472698430545,
+          "per_op_upper": 0.00422765998566737
+        },
+        "LabL1DTLBMiss": {
+          "lower": 5039695,
+          "upper": 5062688,
+          "per_op_lower": 0.0012311034026693125,
+          "per_op_upper": 0.0012367201633140688
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4557565,
+          "upper": 4577827,
+          "per_op_lower": 0.0011133280445317752,
+          "per_op_upper": 0.0011182776728614432
+        },
+        "TotalCycles": {
+          "lower": 12573578176,
+          "upper": 12642472154,
+          "per_op_lower": 3.0714904128528033,
+          "per_op_upper": 3.088319925499744
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-16777216-1",
+      "group": "simd-float-scalar-16777216",
+      "ops": 4278190080,
+      "scheduled_s": 2.9564692,
+      "window_s": 3.0105939,
+      "interior": 344,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 8060,
+        "qpc_start": 1032895322479,
+        "qpc_end": 1032925428418,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0105933,
+        "reps": 255,
+        "ns_element": 0.703707,
+        "gflops": 2.842091,
+        "useful_GB_s": 17.052546,
+        "tsc_ticks_element": 2.528532,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 30000022685,
+          "upper": 30193142461,
+          "per_op_lower": 7.012316452521904,
+          "per_op_upper": 7.05745698447321
+        },
+        "LabDemandDRAMFill": {
+          "lower": 16194650,
+          "upper": 16278748,
+          "per_op_lower": 0.003785397492203058,
+          "per_op_upper": 0.0038050548703062767
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4382981,
+          "upper": 4407939,
+          "per_op_lower": 0.001024494217891319,
+          "per_op_upper": 0.0010303279932807473
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3744229,
+          "upper": 3764356,
+          "per_op_lower": 0.0008751899588341806,
+          "per_op_upper": 0.0008798945183847465
+        },
+        "TotalCycles": {
+          "lower": 12484012294,
+          "upper": 12559880864,
+          "per_op_lower": 2.918059286884233,
+          "per_op_upper": 2.935793087529201
+        }
+      }
+    },
+    {
+      "tag": "simd-float-scalar-16777216-2",
+      "group": "simd-float-scalar-16777216",
+      "ops": 3909091328,
+      "scheduled_s": 2.9512891,
+      "window_s": 3.0096387,
+      "interior": 457,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 11952,
+        "qpc_start": 1032936125793,
+        "qpc_end": 1032966222180,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0096379,
+        "reps": 233,
+        "ns_element": 0.769907,
+        "gflops": 2.597715,
+        "useful_GB_s": 15.586292,
+        "tsc_ticks_element": 2.766399,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 27401226782,
+          "upper": 27645386774,
+          "per_op_lower": 7.009615402364935,
+          "per_op_upper": 7.072074928508807
+        },
+        "LabDemandDRAMFill": {
+          "lower": 12399391,
+          "upper": 12501692,
+          "per_op_lower": 0.00317193689264453,
+          "per_op_upper": 0.003198106913095892
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4313434,
+          "upper": 4349487,
+          "per_op_lower": 0.0011034364864038295,
+          "per_op_upper": 0.0011126593458805985
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3500505,
+          "upper": 3525909,
+          "per_op_lower": 0.0008954779272939003,
+          "per_op_upper": 0.0009019766242719003
+        },
+        "TotalCycles": {
+          "lower": 12440031149,
+          "upper": 12558757362,
+          "per_op_lower": 3.1823332087164786,
+          "per_op_upper": 3.212705027391982
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-1024-0",
+      "group": "simd-float-auto-1024",
+      "ops": 25136966656,
+      "scheduled_s": 2.9107044,
+      "window_s": 3.0000003,
+      "interior": 509,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 13728,
+        "qpc_start": 1032976026384,
+        "qpc_end": 1033006026387,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 24547819,
+        "ns_element": 0.119346,
+        "gflops": 16.757978,
+        "useful_GB_s": 100.547867,
+        "tsc_ticks_element": 0.42883,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 52859876148,
+          "upper": 52874361248,
+          "per_op_lower": 2.102874100578192,
+          "per_op_upper": 2.103450347513561
+        },
+        "LabDemandDRAMFill": {
+          "lower": 610470,
+          "upper": 611881,
+          "per_op_lower": 2.4285746500534326e-05,
+          "per_op_upper": 2.4341878969471788e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1466575,
+          "upper": 1468736,
+          "per_op_lower": 5.8343356223927675e-05,
+          "per_op_upper": 5.8429325228444936e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 280427,
+          "upper": 281129,
+          "per_op_lower": 1.1155960217382244e-05,
+          "per_op_upper": 1.1183887214684938e-05
+        },
+        "TotalCycles": {
+          "lower": 12252565158,
+          "upper": 12257771348,
+          "per_op_lower": 0.4874321283739861,
+          "per_op_upper": 0.48763924127154634
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-1024-1",
+      "group": "simd-float-auto-1024",
+      "ops": 18932159488,
+      "scheduled_s": 2.5313198,
+      "window_s": 3.0000001,
+      "interior": 1401,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 15368,
+        "qpc_start": 1033016419141,
+        "qpc_end": 1033046419142,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 18488437,
+        "ns_element": 0.158461,
+        "gflops": 12.62144,
+        "useful_GB_s": 75.728638,
+        "tsc_ticks_element": 0.569374,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 39757109872,
+          "upper": 39876171328,
+          "per_op_lower": 2.09997754863621,
+          "per_op_upper": 2.1062663957207417
+        },
+        "LabDemandDRAMFill": {
+          "lower": 828867,
+          "upper": 831035,
+          "per_op_lower": 4.378090098624886e-05,
+          "per_op_upper": 4.389541512825016e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1684903,
+          "upper": 1689628,
+          "per_op_lower": 8.899687333967171e-05,
+          "per_op_upper": 8.924644867221604e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 416420,
+          "upper": 417332,
+          "per_op_lower": 2.1995377773145453e-05,
+          "per_op_upper": 2.2043549773839726e-05
+        },
+        "TotalCycles": {
+          "lower": 10640134556,
+          "upper": 10666617233,
+          "per_op_lower": 0.5620137820381328,
+          "per_op_upper": 0.5634126017035168
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-1024-2",
+      "group": "simd-float-auto-1024",
+      "ops": 27392296960,
+      "scheduled_s": 2.9493364,
+      "window_s": 3.0000002,
+      "interior": 380,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 31460,
+        "qpc_start": 1033057039171,
+        "qpc_end": 1033087039173,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 26750290,
+        "ns_element": 0.10952,
+        "gflops": 18.261531,
+        "useful_GB_s": 109.569188,
+        "tsc_ticks_element": 0.393522,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 57231369228,
+          "upper": 57571935234,
+          "per_op_lower": 2.0893234806695085,
+          "per_op_upper": 2.1017563922467057
+        },
+        "LabDemandDRAMFill": {
+          "lower": 348430,
+          "upper": 353648,
+          "per_op_lower": 1.2719999367296579e-05,
+          "per_op_upper": 1.2910490876921334e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1072974,
+          "upper": 1080590,
+          "per_op_lower": 3.917064719204913e-05,
+          "per_op_upper": 3.944868156102233e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 182011,
+          "upper": 184635,
+          "per_op_lower": 6.644605243064654e-06,
+          "per_op_upper": 6.74039859708063e-06
+        },
+        "TotalCycles": {
+          "lower": 12455794251,
+          "upper": 12540296035,
+          "per_op_lower": 0.4547188674680606,
+          "per_op_upper": 0.45780374144279135
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-16777216-0",
+      "group": "simd-float-auto-16777216",
+      "ops": 4546625536,
+      "scheduled_s": 2.9886171,
+      "window_s": 3.0077934,
+      "interior": 372,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 21768,
+        "qpc_start": 1033088500266,
+        "qpc_end": 1033118578200,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0077932,
+        "reps": 271,
+        "ns_element": 0.661544,
+        "gflops": 3.02323,
+        "useful_GB_s": 18.139381,
+        "tsc_ticks_element": 2.377032,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 9265650055,
+          "upper": 9354080057,
+          "per_op_lower": 2.037918007901674,
+          "per_op_upper": 2.057367597778785
+        },
+        "LabDemandDRAMFill": {
+          "lower": 39470922,
+          "upper": 39520392,
+          "per_op_lower": 0.008681366364454431,
+          "per_op_upper": 0.008692246961417674
+        },
+        "LabL1DTLBMiss": {
+          "lower": 10248332,
+          "upper": 10268702,
+          "per_op_lower": 0.0022540523557205484,
+          "per_op_upper": 0.002258532601528942
+        },
+        "LabL2DTLBMiss": {
+          "lower": 9704055,
+          "upper": 9723382,
+          "per_op_lower": 0.0021343422551876505,
+          "per_op_upper": 0.0021385931000938276
+        },
+        "TotalCycles": {
+          "lower": 12615712027,
+          "upper": 12645495419,
+          "per_op_lower": 2.774741822723093,
+          "per_op_upper": 2.781292481396031
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-16777216-1",
+      "group": "simd-float-auto-16777216",
+      "ops": 4093640704,
+      "scheduled_s": 2.9228441,
+      "window_s": 3.0011452,
+      "interior": 341,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 6668,
+        "qpc_start": 1033128788849,
+        "qpc_end": 1033158800301,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0011448,
+        "reps": 244,
+        "ns_element": 0.733124,
+        "gflops": 2.728053,
+        "useful_GB_s": 16.368317,
+        "tsc_ticks_element": 2.634229,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 8432498012,
+          "upper": 8510812900,
+          "per_op_lower": 2.0599018384198673,
+          "per_op_upper": 2.0790327035012792
+        },
+        "LabDemandDRAMFill": {
+          "lower": 31398272,
+          "upper": 31426566,
+          "per_op_lower": 0.007670011676725794,
+          "per_op_upper": 0.007676923372706429
+        },
+        "LabL1DTLBMiss": {
+          "lower": 8888198,
+          "upper": 8915562,
+          "per_op_lower": 0.002171220838046465,
+          "per_op_upper": 0.0021779053523892263
+        },
+        "LabL2DTLBMiss": {
+          "lower": 7994847,
+          "upper": 8011188,
+          "per_op_lower": 0.0019529918666745796,
+          "per_op_upper": 0.0019569836679052136
+        },
+        "TotalCycles": {
+          "lower": 12300810961,
+          "upper": 12333925808,
+          "per_op_lower": 3.0048584745067064,
+          "per_op_upper": 3.0129478134092738
+        }
+      }
+    },
+    {
+      "tag": "simd-float-auto-16777216-2",
+      "group": "simd-float-auto-16777216",
+      "ops": 3791650816,
+      "scheduled_s": 2.9708511,
+      "window_s": 3.0134335,
+      "interior": 437,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 22648,
+        "qpc_start": 1033170161799,
+        "qpc_end": 1033200296134,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.013433,
+        "reps": 226,
+        "ns_element": 0.794755,
+        "gflops": 2.516499,
+        "useful_GB_s": 15.098995,
+        "tsc_ticks_element": 2.85568,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 7886735491,
+          "upper": 8077981998,
+          "per_op_lower": 2.080026846807615,
+          "per_op_upper": 2.130465696870753
+        },
+        "LabDemandDRAMFill": {
+          "lower": 52357303,
+          "upper": 52644494,
+          "per_op_lower": 0.013808577197842894,
+          "per_op_upper": 0.013884320195797271
+        },
+        "LabL1DTLBMiss": {
+          "lower": 12620873,
+          "upper": 12799251,
+          "per_op_lower": 0.003328595804957162,
+          "per_op_upper": 0.003375640748876386
+        },
+        "LabL2DTLBMiss": {
+          "lower": 11522823,
+          "upper": 11583661,
+          "per_op_lower": 0.003038998989932305,
+          "per_op_upper": 0.0030550442438210005
+        },
+        "TotalCycles": {
+          "lower": 12516864040,
+          "upper": 12650962902,
+          "per_op_lower": 3.30116475577903,
+          "per_op_upper": 3.336531636461747
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-1024-0",
+      "group": "simd-float-native-1024",
+      "ops": 45945092096,
+      "scheduled_s": 2.9601659,
+      "window_s": 3.0,
+      "interior": 344,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 14464,
+        "qpc_start": 1033213533592,
+        "qpc_end": 1033243533592,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 44868254,
+        "ns_element": 0.065295,
+        "gflops": 30.630061,
+        "useful_GB_s": 183.780368,
+        "tsc_ticks_element": 0.234616,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 39037836962,
+          "upper": 39101443933,
+          "per_op_lower": 0.8496628297192738,
+          "per_op_upper": 0.851047242462796
+        },
+        "LabDemandDRAMFill": {
+          "lower": 302530,
+          "upper": 304874,
+          "per_op_lower": 6.5845988374096306e-06,
+          "per_op_upper": 6.635616256095011e-06
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1029764,
+          "upper": 1031700,
+          "per_op_lower": 2.2412927105431828e-05,
+          "per_op_upper": 2.245506435909006e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 177337,
+          "upper": 178138,
+          "per_op_lower": 3.859759376027871e-06,
+          "per_op_upper": 3.877193229426757e-06
+        },
+        "TotalCycles": {
+          "lower": 12501272136,
+          "upper": 12522028438,
+          "per_op_lower": 0.27209156768864906,
+          "per_op_upper": 0.2725433308923582
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-1024-1",
+      "group": "simd-float-native-1024",
+      "ops": 47177586688,
+      "scheduled_s": 2.9725427,
+      "window_s": 3.0000002,
+      "interior": 291,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 30976,
+        "qpc_start": 1033243980959,
+        "qpc_end": 1033273980961,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 46071862,
+        "ns_element": 0.06359,
+        "gflops": 31.451724,
+        "useful_GB_s": 188.710347,
+        "tsc_ticks_element": 0.228487,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 39908897611,
+          "upper": 40089643696,
+          "per_op_lower": 0.845929188259033,
+          "per_op_upper": 0.8497603737369026
+        },
+        "LabDemandDRAMFill": {
+          "lower": 173024,
+          "upper": 179973,
+          "per_op_lower": 3.6675042567196437e-06,
+          "per_op_upper": 3.814798777017087e-06
+        },
+        "LabL1DTLBMiss": {
+          "lower": 654052,
+          "upper": 667840,
+          "per_op_lower": 1.386361715204825e-05,
+          "per_op_upper": 1.41558745769815e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 119405,
+          "upper": 123252,
+          "per_op_lower": 2.5309688007074685e-06,
+          "per_op_upper": 2.6125117593467354e-06
+        },
+        "TotalCycles": {
+          "lower": 12564961402,
+          "upper": 12624857955,
+          "per_op_lower": 0.26633327993430406,
+          "per_op_upper": 0.2676028775802395
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-1024-2",
+      "group": "simd-float-native-1024",
+      "ops": 46220802048,
+      "scheduled_s": 2.9743282,
+      "window_s": 3.0000001,
+      "interior": 312,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 20348,
+        "qpc_start": 1033284291255,
+        "qpc_end": 1033314291256,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0,
+        "reps": 45137502,
+        "ns_element": 0.064906,
+        "gflops": 30.813868,
+        "useful_GB_s": 184.883208,
+        "tsc_ticks_element": 0.233217,
+        "max_error": 0,
+        "tolerance": 0.0006692578125,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 39174411852,
+          "upper": 39313012891,
+          "per_op_lower": 0.8475493742258654,
+          "per_op_upper": 0.8505480465305144
+        },
+        "LabDemandDRAMFill": {
+          "lower": 512865,
+          "upper": 521536,
+          "per_op_lower": 1.1095977942299509e-05,
+          "per_op_upper": 1.1283577456280145e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 953428,
+          "upper": 970812,
+          "per_op_lower": 2.0627681860861506e-05,
+          "per_op_upper": 2.1003789570588112e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 229625,
+          "upper": 234054,
+          "per_op_lower": 4.968001199146998e-06,
+          "per_op_upper": 5.063823854829184e-06
+        },
+        "TotalCycles": {
+          "lower": 12565278276,
+          "upper": 12614918302,
+          "per_op_lower": 0.27185331537412616,
+          "per_op_upper": 0.2729272912421444
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-16777216-0",
+      "group": "simd-float-native-16777216",
+      "ops": 4328521728,
+      "scheduled_s": 2.9161336,
+      "window_s": 3.0033996,
+      "interior": 513,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 28176,
+        "qpc_start": 1033325678228,
+        "qpc_end": 1033355712224,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.003399,
+        "reps": 258,
+        "ns_element": 0.693863,
+        "gflops": 2.882415,
+        "useful_GB_s": 17.294492,
+        "tsc_ticks_element": 2.493158,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 3361031783,
+          "upper": 3455729990,
+          "per_op_lower": 0.7764849050562511,
+          "per_op_upper": 0.7983626298202101
+        },
+        "LabDemandDRAMFill": {
+          "lower": 317099420,
+          "upper": 318338725,
+          "per_op_lower": 0.07325813289760619,
+          "per_op_upper": 0.07354444427083628
+        },
+        "LabL1DTLBMiss": {
+          "lower": 6360781,
+          "upper": 6400681,
+          "per_op_lower": 0.0014695042325544726,
+          "per_op_upper": 0.0014787221601767133
+        },
+        "LabL2DTLBMiss": {
+          "lower": 5987278,
+          "upper": 6024550,
+          "per_op_lower": 0.0013832154200058575,
+          "per_op_upper": 0.0013918262119441069
+        },
+        "TotalCycles": {
+          "lower": 12260703463,
+          "upper": 12330546406,
+          "per_op_lower": 2.832538273676421,
+          "per_op_upper": 2.8486737923104632
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-16777216-1",
+      "group": "simd-float-native-16777216",
+      "ops": 4630511616,
+      "scheduled_s": 2.9887677,
+      "window_s": 3.008628,
+      "interior": 391,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 29472,
+        "qpc_start": 1033366213651,
+        "qpc_end": 1033396299931,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0086274,
+        "reps": 276,
+        "ns_element": 0.64974,
+        "gflops": 3.078156,
+        "useful_GB_s": 18.468934,
+        "tsc_ticks_element": 2.334618,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 3608475682,
+          "upper": 3865186598,
+          "per_op_lower": 0.77928228697915,
+          "per_op_upper": 0.8347212832043136
+        },
+        "LabDemandDRAMFill": {
+          "lower": 294699992,
+          "upper": 294928654,
+          "per_op_lower": 0.06364307369011035,
+          "per_op_upper": 0.06369245527447134
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4583709,
+          "upper": 4605680,
+          "per_op_lower": 0.0009898925605027573,
+          "per_op_upper": 0.0009946373925692794
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4186221,
+          "upper": 4204906,
+          "per_op_lower": 0.0009040515060010164,
+          "per_op_upper": 0.0009080866972605387
+        },
+        "TotalCycles": {
+          "lower": 12622281328,
+          "upper": 12690169323,
+          "per_op_lower": 2.725893459458282,
+          "per_op_upper": 2.7405544733223706
+        }
+      }
+    },
+    {
+      "tag": "simd-float-native-16777216-2",
+      "group": "simd-float-native-16777216",
+      "ops": 4647288832,
+      "scheduled_s": 2.9830762,
+      "window_s": 3.00897,
+      "interior": 386,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 27008,
+        "qpc_start": 1033406730724,
+        "qpc_end": 1033436820424,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 4,
+        "seconds": 3.0089693,
+        "reps": 277,
+        "ns_element": 0.647468,
+        "gflops": 3.088957,
+        "useful_GB_s": 18.533744,
+        "tsc_ticks_element": 2.326454,
+        "max_error": 0,
+        "tolerance": 10.7444316602,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 3614410474,
+          "upper": 3842320032,
+          "per_op_lower": 0.7777460374556724,
+          "per_op_upper": 0.8267874390639983
+        },
+        "LabDemandDRAMFill": {
+          "lower": 298285474,
+          "upper": 298740756,
+          "per_op_lower": 0.06418483653223471,
+          "per_op_upper": 0.06428280375924782
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4580391,
+          "upper": 4601505,
+          "per_op_lower": 0.0009856049764887952,
+          "per_op_upper": 0.0009901482706035517
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4194228,
+          "upper": 4213185,
+          "per_op_lower": 0.0009025107221913251,
+          "per_op_upper": 0.0009065898747220366
+        },
+        "TotalCycles": {
+          "lower": 12601821260,
+          "upper": 12670008639,
+          "per_op_lower": 2.711650107311428,
+          "per_op_upper": 2.7263226145441353
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-1024-0",
+      "group": "simd-double-scalar-1024",
+      "ops": 10598955008,
+      "scheduled_s": 2.9817733,
+      "window_s": 3.0000002,
+      "interior": 314,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 30676,
+        "qpc_start": 1033453082960,
+        "qpc_end": 1033483082962,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0000001,
+        "reps": 10350542,
+        "ns_element": 0.283047,
+        "gflops": 7.06597,
+        "useful_GB_s": 84.791637,
+        "tsc_ticks_element": 1.017032,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 75118934262,
+          "upper": 75208224132,
+          "per_op_lower": 7.087390615895706,
+          "per_op_upper": 7.095815019049848
+        },
+        "LabDemandDRAMFill": {
+          "lower": 288293,
+          "upper": 291914,
+          "per_op_lower": 2.720013433233738e-05,
+          "per_op_upper": 2.754177178596058e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 632535,
+          "upper": 635387,
+          "per_op_lower": 5.96789966107572e-05,
+          "per_op_upper": 5.9948079741862794e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 136036,
+          "upper": 137135,
+          "per_op_lower": 1.2834850218471652e-05,
+          "per_op_upper": 1.2938539685892778e-05
+        },
+        "TotalCycles": {
+          "lower": 12607409357,
+          "upper": 12624022545,
+          "per_op_lower": 1.1894955066309874,
+          "per_op_upper": 1.1910629430421675
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-1024-1",
+      "group": "simd-double-scalar-1024",
+      "ops": 10369261568,
+      "scheduled_s": 2.9061509,
+      "window_s": 3.0000003,
+      "interior": 319,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 28624,
+        "qpc_start": 1033483485601,
+        "qpc_end": 1033513485604,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0000001,
+        "reps": 10126232,
+        "ns_element": 0.289317,
+        "gflops": 6.912841,
+        "useful_GB_s": 82.95409,
+        "tsc_ticks_element": 1.039561,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 73248127067,
+          "upper": 73581769855,
+          "per_op_lower": 7.063967533912633,
+          "per_op_upper": 7.0961436716069155
+        },
+        "LabDemandDRAMFill": {
+          "lower": 290218,
+          "upper": 294212,
+          "per_op_lower": 2.798829965825393e-05,
+          "per_op_upper": 2.8373476555741562e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 624324,
+          "upper": 629714,
+          "per_op_lower": 6.020910900026782e-05,
+          "per_op_upper": 6.0728914577999005e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 130326,
+          "upper": 131526,
+          "per_op_lower": 1.2568493826232699e-05,
+          "per_op_upper": 1.2684220485467843e-05
+        },
+        "TotalCycles": {
+          "lower": 12288027025,
+          "upper": 12345492057,
+          "per_op_lower": 1.1850435968286686,
+          "per_op_upper": 1.1905854603088357
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-1024-2",
+      "group": "simd-double-scalar-1024",
+      "ops": 10636173312,
+      "scheduled_s": 2.9698772,
+      "window_s": 3.0000002,
+      "interior": 312,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 18852,
+        "qpc_start": 1033513874822,
+        "qpc_end": 1033543874824,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0,
+        "reps": 10386888,
+        "ns_element": 0.282056,
+        "gflops": 7.090782,
+        "useful_GB_s": 85.089386,
+        "tsc_ticks_element": 1.013473,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 75087406326,
+          "upper": 75442702521,
+          "per_op_lower": 7.059626063189897,
+          "per_op_upper": 7.093030576690927
+        },
+        "LabDemandDRAMFill": {
+          "lower": 224928,
+          "upper": 230087,
+          "per_op_lower": 2.1147455330220176e-05,
+          "per_op_upper": 2.163249819748706e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 462499,
+          "upper": 473998,
+          "per_op_lower": 4.348359005002268e-05,
+          "per_op_upper": 4.456471195944348e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 90369,
+          "upper": 93591,
+          "per_op_lower": 8.496382801326056e-06,
+          "per_op_upper": 8.799311298773993e-06
+        },
+        "TotalCycles": {
+          "lower": 12563263744,
+          "upper": 12625925031,
+          "per_op_lower": 1.1811826843612832,
+          "per_op_upper": 1.1870740218904774
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-16777216-0",
+      "group": "simd-double-scalar-16777216",
+      "ops": 2298478592,
+      "scheduled_s": 2.9700777,
+      "window_s": 3.0108782,
+      "interior": 430,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 8164,
+        "qpc_start": 1033555780555,
+        "qpc_end": 1033585889337,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0108779,
+        "reps": 137,
+        "ns_element": 1.309944,
+        "gflops": 1.526783,
+        "useful_GB_s": 18.321396,
+        "tsc_ticks_element": 4.706836,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 16174861025,
+          "upper": 16293195991,
+          "per_op_lower": 7.037203253185662,
+          "per_op_upper": 7.088687294156012
+        },
+        "LabDemandDRAMFill": {
+          "lower": 19829824,
+          "upper": 19899228,
+          "per_op_lower": 0.00862736945604756,
+          "per_op_upper": 0.008657565082076692
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4342712,
+          "upper": 4364727,
+          "per_op_lower": 0.0018893854461447166,
+          "per_op_upper": 0.001898963520996762
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3943894,
+          "upper": 3964164,
+          "per_op_lower": 0.0017158715394291564,
+          "per_op_upper": 0.0017246904164335154
+        },
+        "TotalCycles": {
+          "lower": 12546803008,
+          "upper": 12606362844,
+          "per_op_lower": 5.458742601157975,
+          "per_op_upper": 5.484655322819731
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-16777216-1",
+      "group": "simd-double-scalar-16777216",
+      "ops": 2130706432,
+      "scheduled_s": 2.9040644,
+      "window_s": 3.0094765,
+      "interior": 474,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 32260,
+        "qpc_start": 1033596241778,
+        "qpc_end": 1033626336543,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0094756,
+        "reps": 127,
+        "ns_element": 1.412431,
+        "gflops": 1.415998,
+        "useful_GB_s": 16.991982,
+        "tsc_ticks_element": 5.075089,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 15018479323,
+          "upper": 15194604213,
+          "per_op_lower": 7.0485915363304255,
+          "per_op_upper": 7.131251863137943
+        },
+        "LabDemandDRAMFill": {
+          "lower": 20631190,
+          "upper": 20801986,
+          "per_op_lower": 0.009682793316878671,
+          "per_op_upper": 0.009762952646871251
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4564338,
+          "upper": 4614972,
+          "per_op_lower": 0.0021421712214552513,
+          "per_op_upper": 0.0021659351709320787
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3799005,
+          "upper": 3835486,
+          "per_op_lower": 0.001782979082873487,
+          "per_op_upper": 0.0018001006344171959
+        },
+        "TotalCycles": {
+          "lower": 12249801151,
+          "upper": 12382407025,
+          "per_op_lower": 5.749173591925404,
+          "per_op_upper": 5.811409229838003
+        }
+      }
+    },
+    {
+      "tag": "simd-double-scalar-16777216-2",
+      "group": "simd-double-scalar-16777216",
+      "ops": 2281701376,
+      "scheduled_s": 2.9831017,
+      "window_s": 3.0116203,
+      "interior": 431,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 17756,
+        "qpc_start": 1033636606444,
+        "qpc_end": 1033666722647,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0116199,
+        "reps": 136,
+        "ns_element": 1.319901,
+        "gflops": 1.515265,
+        "useful_GB_s": 18.183182,
+        "tsc_ticks_element": 4.742613,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 16090606333,
+          "upper": 16214080969,
+          "per_op_lower": 7.052021137493498,
+          "per_op_upper": 7.106136297916665
+        },
+        "LabDemandDRAMFill": {
+          "lower": 23942380,
+          "upper": 24041821,
+          "per_op_lower": 0.01049321363953983,
+          "per_op_upper": 0.010536795591606814
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4654638,
+          "upper": 4680091,
+          "per_op_lower": 0.0020399856216767255,
+          "per_op_upper": 0.002051140893908108
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3982263,
+          "upper": 4004059,
+          "per_op_lower": 0.0017453042023322161,
+          "per_op_upper": 0.0017548567231963662
+        },
+        "TotalCycles": {
+          "lower": 12595614598,
+          "upper": 12662954645,
+          "per_op_lower": 5.520273042952313,
+          "per_op_upper": 5.549786128103733
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-1024-0",
+      "group": "simd-double-auto-1024",
+      "ops": 16800768000,
+      "scheduled_s": 2.9872245,
+      "window_s": 3.0000002,
+      "interior": 290,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 16940,
+        "qpc_start": 1033681175728,
+        "qpc_end": 1033711175730,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0,
+        "reps": 16407000,
+        "ns_element": 0.178563,
+        "gflops": 11.200512,
+        "useful_GB_s": 134.406144,
+        "tsc_ticks_element": 0.641606,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 68859176659,
+          "upper": 68879058000,
+          "per_op_lower": 4.098573152072572,
+          "per_op_upper": 4.09975651113092
+        },
+        "LabDemandDRAMFill": {
+          "lower": 166335,
+          "upper": 167637,
+          "per_op_lower": 9.900440265587859e-06,
+          "per_op_upper": 9.977936722892668e-06
+        },
+        "LabL1DTLBMiss": {
+          "lower": 752536,
+          "upper": 753452,
+          "per_op_lower": 4.479176190040836e-05,
+          "per_op_upper": 4.4846283217529104e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 131233,
+          "upper": 131660,
+          "per_op_lower": 7.811131014963125e-06,
+          "per_op_upper": 7.836546519778144e-06
+        },
+        "TotalCycles": {
+          "lower": 12628656375,
+          "upper": 12633219691,
+          "per_op_lower": 0.7516713744871663,
+          "per_op_upper": 0.7519429880229285
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-1024-1",
+      "group": "simd-double-auto-1024",
+      "ops": 16280643584,
+      "scheduled_s": 2.9394725,
+      "window_s": 3.0000003,
+      "interior": 310,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 19348,
+        "qpc_start": 1033711578248,
+        "qpc_end": 1033741578251,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0000001,
+        "reps": 15899066,
+        "ns_element": 0.184268,
+        "gflops": 10.853762,
+        "useful_GB_s": 130.245144,
+        "tsc_ticks_element": 0.662104,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 66470824693,
+          "upper": 66817176442,
+          "per_op_lower": 4.082813087212658,
+          "per_op_upper": 4.104086923668386
+        },
+        "LabDemandDRAMFill": {
+          "lower": 250600,
+          "upper": 254258,
+          "per_op_lower": 1.5392511893465944e-05,
+          "per_op_upper": 1.5617195885909272e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1090821,
+          "upper": 1094804,
+          "per_op_lower": 6.700109822882048e-05,
+          "per_op_upper": 6.724574457707138e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 161771,
+          "upper": 162981,
+          "per_op_lower": 9.936400804141576e-06,
+          "per_op_upper": 1.0010722190378982e-05
+        },
+        "TotalCycles": {
+          "lower": 12415371897,
+          "upper": 12478527956,
+          "per_op_lower": 0.7625848347421202,
+          "per_op_upper": 0.7664640461918486
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-1024-2",
+      "group": "simd-double-auto-1024",
+      "ops": 16174927872,
+      "scheduled_s": 2.9707937,
+      "window_s": 3.0000001,
+      "interior": 269,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 28864,
+        "qpc_start": 1033751912328,
+        "qpc_end": 1033781912329,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0000001,
+        "reps": 15795828,
+        "ns_element": 0.185472,
+        "gflops": 10.783285,
+        "useful_GB_s": 129.399419,
+        "tsc_ticks_element": 0.666431,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 66109364188,
+          "upper": 66405910197,
+          "per_op_lower": 4.087150478268296,
+          "per_op_upper": 4.105484161815247
+        },
+        "LabDemandDRAMFill": {
+          "lower": 297976,
+          "upper": 300898,
+          "per_op_lower": 1.842209142186152e-05,
+          "per_op_upper": 1.8602741377343437e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1256566,
+          "upper": 1262050,
+          "per_op_lower": 7.768603420947607e-05,
+          "per_op_upper": 7.802507745241338e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 185341,
+          "upper": 186743,
+          "per_op_lower": 1.145853641306426e-05,
+          "per_op_upper": 1.1545213770211983e-05
+        },
+        "TotalCycles": {
+          "lower": 12548862429,
+          "upper": 12605257283,
+          "per_op_lower": 0.7758218477575416,
+          "per_op_upper": 0.7793084076016583
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-16777216-0",
+      "group": "simd-double-auto-16777216",
+      "ops": 2197815296,
+      "scheduled_s": 2.9907203,
+      "window_s": 3.0145577,
+      "interior": 414,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 17116,
+        "qpc_start": 1033793616581,
+        "qpc_end": 1033823762158,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0145572,
+        "reps": 131,
+        "ns_element": 1.371615,
+        "gflops": 1.458135,
+        "useful_GB_s": 17.497617,
+        "tsc_ticks_element": 4.928431,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 8968866614,
+          "upper": 9176044717,
+          "per_op_lower": 4.0808099890483245,
+          "per_op_upper": 4.175075464121258
+        },
+        "LabDemandDRAMFill": {
+          "lower": 34657622,
+          "upper": 34721537,
+          "per_op_lower": 0.015769124031066895,
+          "per_op_upper": 0.015798205182752538
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4463600,
+          "upper": 4493386,
+          "per_op_lower": 0.002030925896331554,
+          "per_op_upper": 0.0020444784455626976
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3850197,
+          "upper": 3878164,
+          "per_op_lower": 0.0017518291946585851,
+          "per_op_upper": 0.0017645541038221984
+        },
+        "TotalCycles": {
+          "lower": 12615241889,
+          "upper": 12687112966,
+          "per_op_lower": 5.739900851522693,
+          "per_op_upper": 5.772601996669333
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-16777216-1",
+      "group": "simd-double-auto-16777216",
+      "ops": 2164260864,
+      "scheduled_s": 2.9653208,
+      "window_s": 3.0215562,
+      "interior": 383,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 23364,
+        "qpc_start": 1033834159528,
+        "qpc_end": 1033864375090,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0215558,
+        "reps": 129,
+        "ns_element": 1.396114,
+        "gflops": 1.432547,
+        "useful_GB_s": 17.190568,
+        "tsc_ticks_element": 5.01646,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 8833619724,
+          "upper": 8980409651,
+          "per_op_lower": 4.081587331239567,
+          "per_op_upper": 4.149411838646083
+        },
+        "LabDemandDRAMFill": {
+          "lower": 30642898,
+          "upper": 30870829,
+          "per_op_lower": 0.014158597288205642,
+          "per_op_upper": 0.014263913150905638
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4823206,
+          "upper": 4880873,
+          "per_op_lower": 0.002228569614794827,
+          "per_op_upper": 0.0022552147392154664
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3892431,
+          "upper": 3925499,
+          "per_op_lower": 0.0017985036206799884,
+          "per_op_upper": 0.0018137827400089234
+        },
+        "TotalCycles": {
+          "lower": 12499501686,
+          "upper": 12633193444,
+          "per_op_lower": 5.775413626848265,
+          "per_op_upper": 5.837186105491579
+        }
+      }
+    },
+    {
+      "tag": "simd-double-auto-16777216-2",
+      "group": "simd-double-auto-16777216",
+      "ops": 2097152000,
+      "scheduled_s": 2.9477989,
+      "window_s": 3.0053638,
+      "interior": 281,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 25072,
+        "qpc_start": 1033874590956,
+        "qpc_end": 1033904644594,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0053633,
+        "reps": 125,
+        "ns_element": 1.433069,
+        "gflops": 1.395606,
+        "useful_GB_s": 16.747276,
+        "tsc_ticks_element": 5.149244,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 8548764255,
+          "upper": 8668966172,
+          "per_op_lower": 4.076368453502655,
+          "per_op_upper": 4.133685194015503
+        },
+        "LabDemandDRAMFill": {
+          "lower": 30017225,
+          "upper": 30286852,
+          "per_op_lower": 0.014313328266143798,
+          "per_op_upper": 0.014441896438598632
+        },
+        "LabL1DTLBMiss": {
+          "lower": 4544266,
+          "upper": 4601837,
+          "per_op_lower": 0.002166874885559082,
+          "per_op_upper": 0.0021943268775939944
+        },
+        "LabL2DTLBMiss": {
+          "lower": 3720761,
+          "upper": 3755786,
+          "per_op_lower": 0.0017741971015930176,
+          "per_op_upper": 0.001790898323059082
+        },
+        "TotalCycles": {
+          "lower": 12416784268,
+          "upper": 12550589809,
+          "per_op_lower": 5.920784124374389,
+          "per_op_upper": 5.9845875782966615
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-1024-0",
+      "group": "simd-double-native-1024",
+      "ops": 30662521856,
+      "scheduled_s": 2.9466925,
+      "window_s": 3.0000001,
+      "interior": 325,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 26388,
+        "qpc_start": 1033919875375,
+        "qpc_end": 1033949875376,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0,
+        "reps": 29943869,
+        "ns_element": 0.097839,
+        "gflops": 20.441681,
+        "useful_GB_s": 245.300175,
+        "tsc_ticks_element": 0.351552,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 48914479944,
+          "upper": 49120834524,
+          "per_op_lower": 1.595252998879754,
+          "per_op_upper": 1.6019828621626602
+        },
+        "LabDemandDRAMFill": {
+          "lower": 477655,
+          "upper": 482575,
+          "per_op_lower": 1.5577811970039677e-05,
+          "per_op_upper": 1.573826843944248e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 997579,
+          "upper": 1003319,
+          "per_op_lower": 3.253414721349135e-05,
+          "per_op_upper": 3.272134642779462e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 208123,
+          "upper": 209609,
+          "per_op_lower": 6.787536947463269e-06,
+          "per_op_upper": 6.836000019319481e-06
+        },
+        "TotalCycles": {
+          "lower": 12445673668,
+          "upper": 12499891256,
+          "per_op_lower": 0.40589204392412515,
+          "per_op_upper": 0.40766024773510395
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-1024-1",
+      "group": "simd-double-native-1024",
+      "ops": 23236929536,
+      "scheduled_s": 2.601106,
+      "window_s": 3.0,
+      "interior": 892,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 29076,
+        "qpc_start": 1033950349683,
+        "qpc_end": 1033980349683,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0,
+        "reps": 22692314,
+        "ns_element": 0.129105,
+        "gflops": 15.491286,
+        "useful_GB_s": 185.895436,
+        "tsc_ticks_element": 0.463894,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 36833512060,
+          "upper": 37253947217,
+          "per_op_lower": 1.5851281901481598,
+          "per_op_upper": 1.6032215942852528
+        },
+        "LabDemandDRAMFill": {
+          "lower": 746689,
+          "upper": 750104,
+          "per_op_lower": 3.213372054355056e-05,
+          "per_op_upper": 3.228068488299607e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1438957,
+          "upper": 1447283,
+          "per_op_lower": 6.192543630907364e-05,
+          "per_op_upper": 6.228374526667929e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 331666,
+          "upper": 333431,
+          "per_op_lower": 1.4273228288882307e-05,
+          "per_op_upper": 1.4349184967980788e-05
+        },
+        "TotalCycles": {
+          "lower": 10964610115,
+          "upper": 11071741553,
+          "per_op_lower": 0.4718614005354274,
+          "per_op_upper": 0.476471796148756
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-1024-2",
+      "group": "simd-double-native-1024",
+      "ops": 28622175232,
+      "scheduled_s": 2.9496859,
+      "window_s": 3.0000002,
+      "interior": 325,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 3184,
+        "qpc_start": 1033990609997,
+        "qpc_end": 1034020609999,
+        "qpc_frequency": 10000000,
+        "n": 1024,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0,
+        "reps": 27951343,
+        "ns_element": 0.104814,
+        "gflops": 19.08145,
+        "useful_GB_s": 228.977402,
+        "tsc_ticks_element": 0.376613,
+        "max_error": 0,
+        "tolerance": 6.692578125e-11,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 45730881148,
+          "upper": 45925923208,
+          "per_op_lower": 1.5977430358567655,
+          "per_op_upper": 1.604557404730517
+        },
+        "LabDemandDRAMFill": {
+          "lower": 786449,
+          "upper": 790671,
+          "per_op_lower": 2.7476912345947027e-05,
+          "per_op_upper": 2.7624420352091847e-05
+        },
+        "LabL1DTLBMiss": {
+          "lower": 1369953,
+          "upper": 1375301,
+          "per_op_lower": 4.7863343330676456e-05,
+          "per_op_upper": 4.8050191463519304e-05
+        },
+        "LabL2DTLBMiss": {
+          "lower": 320748,
+          "upper": 322232,
+          "per_op_lower": 1.1206276161757237e-05,
+          "per_op_upper": 1.1258124072964938e-05
+        },
+        "TotalCycles": {
+          "lower": 12443791176,
+          "upper": 12494646255,
+          "per_op_lower": 0.4347604986390994,
+          "per_op_upper": 0.4365372706205365
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-16777216-0",
+      "group": "simd-double-native-16777216",
+      "ops": 1795162112,
+      "scheduled_s": 2.7986184,
+      "window_s": 3.0061705,
+      "interior": 669,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 30300,
+        "qpc_start": 1034032611653,
+        "qpc_end": 1034062673358,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.00617,
+        "reps": 107,
+        "ns_element": 1.674595,
+        "gflops": 1.194318,
+        "useful_GB_s": 14.331821,
+        "tsc_ticks_element": 6.017086,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 2901088806,
+          "upper": 2931221426,
+          "per_op_lower": 1.6160595116214218,
+          "per_op_upper": 1.6328449706050838
+        },
+        "LabDemandDRAMFill": {
+          "lower": 197504928,
+          "upper": 198896815,
+          "per_op_lower": 0.11002066425073927,
+          "per_op_upper": 0.11079601873861294
+        },
+        "LabL1DTLBMiss": {
+          "lower": 5223836,
+          "upper": 5256426,
+          "per_op_lower": 0.002909952234999042,
+          "per_op_upper": 0.0029281065842815647
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4113700,
+          "upper": 4141667,
+          "per_op_lower": 0.00229154791787406,
+          "per_op_upper": 0.0023071270122706333
+        },
+        "TotalCycles": {
+          "lower": 11778472499,
+          "upper": 11849784490,
+          "per_op_lower": 6.5612305542018925,
+          "per_op_upper": 6.600955095246573
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-16777216-1",
+      "group": "simd-double-native-16777216",
+      "ops": 1845493760,
+      "scheduled_s": 2.8373676,
+      "window_s": 3.0367452,
+      "interior": 911,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 20828,
+        "qpc_start": 1034073240171,
+        "qpc_end": 1034103607623,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0367445,
+        "reps": 110,
+        "ns_element": 1.645492,
+        "gflops": 1.215442,
+        "useful_GB_s": 14.585307,
+        "tsc_ticks_element": 5.912513,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 3110793451,
+          "upper": 3208877826,
+          "per_op_lower": 1.6856158056042412,
+          "per_op_upper": 1.7387638449668885
+        },
+        "LabDemandDRAMFill": {
+          "lower": 244225325,
+          "upper": 244492102,
+          "per_op_lower": 0.1323360340161757,
+          "per_op_upper": 0.132480589909987
+        },
+        "LabL1DTLBMiss": {
+          "lower": 5760815,
+          "upper": 5788931,
+          "per_op_lower": 0.0031215575608340177,
+          "per_op_upper": 0.0031367925080386075
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4336672,
+          "upper": 4360192,
+          "per_op_lower": 0.0023498708551580256,
+          "per_op_upper": 0.0023626154119318183
+        },
+        "TotalCycles": {
+          "lower": 11916019028,
+          "upper": 11966147960,
+          "per_op_lower": 6.456818920915777,
+          "per_op_upper": 6.4839818044142286
+        }
+      }
+    },
+    {
+      "tag": "simd-double-native-16777216-2",
+      "group": "simd-double-native-16777216",
+      "ops": 1660944384,
+      "scheduled_s": 2.797499,
+      "window_s": 3.0536934,
+      "interior": 1348,
+      "edge": 2,
+      "benchmark": {
+        "thread_id": 17652,
+        "qpc_start": 1034114169831,
+        "qpc_end": 1034144706765,
+        "qpc_frequency": 10000000,
+        "n": 16777216,
+        "stride": 1,
+        "offset_elements": 0,
+        "kind": 0,
+        "dtype_bytes": 8,
+        "seconds": 3.0536926,
+        "reps": 99,
+        "ns_element": 1.838528,
+        "gflops": 1.087827,
+        "useful_GB_s": 13.053922,
+        "tsc_ticks_element": 6.606123,
+        "max_error": 0,
+        "tolerance": 1.07444316602e-06,
+        "correct": true
+      },
+      "counters": {
+        "InstructionRetired": {
+          "lower": 2787081696,
+          "upper": 2826675825,
+          "per_op_lower": 1.6780102469704368,
+          "per_op_upper": 1.7018485701445378
+        },
+        "LabDemandDRAMFill": {
+          "lower": 173042404,
+          "upper": 173211477,
+          "per_op_lower": 0.10418314163130943,
+          "per_op_upper": 0.10428493492531055
+        },
+        "LabL1DTLBMiss": {
+          "lower": 5512857,
+          "upper": 5535458,
+          "per_op_lower": 0.0033191099311366224,
+          "per_op_upper": 0.003332717250091861
+        },
+        "LabL2DTLBMiss": {
+          "lower": 4156130,
+          "upper": 4176391,
+          "per_op_lower": 0.002502269215053982,
+          "per_op_upper": 0.002514467696950893
+        },
+        "TotalCycles": {
+          "lower": 11746927782,
+          "upper": 11777541107,
+          "per_op_lower": 7.072438966144215,
+          "per_op_upper": 7.090870242528241
+        }
+      }
+    }
+  ]
+}

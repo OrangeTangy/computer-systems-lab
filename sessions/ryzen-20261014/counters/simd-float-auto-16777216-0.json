@@ -1,0 +1,1 @@
+{"thread_id":21768,"qpc_start":1033088500266,"qpc_end":1033118578200,"qpc_frequency":10000000,"n":16777216,"stride":1,"offset_elements":0,"kind":0,"dtype_bytes":4,"seconds":3.007793200,"reps":271,"ns_element":0.661544,"gflops":3.023230,"useful_GB_s":18.139381,"tsc_ticks_element":2.377032,"max_error":0,"tolerance":10.7444316602,"correct":true}

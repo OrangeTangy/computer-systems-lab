@@ -1,0 +1,43 @@
+{
+ "axpy": {
+  "instructions": 58,
+  "ymm": 8,
+  "xmm": 21,
+  "gather": 0,
+  "sample": [
+   "vbroadcastss 0x9c0f(%rip),%ymm2        # 14000b0d8 <.rdata+0xd8>",
+   "vmovaps %ymm2,%ymm1",
+   "vmulps (%r10,%rax,1),%ymm1,%ymm0",
+   "vaddps (%r8,%rax,1),%ymm0,%ymm0",
+   "vmovups %ymm0,(%rcx,%rax,1)"
+  ]
+ },
+ "stencil": {
+  "instructions": 87,
+  "ymm": 19,
+  "xmm": 58,
+  "gather": 0,
+  "sample": [
+   "vbroadcastss 0x9b06(%rip),%ymm5        # 14000b0e0 <.rdata+0xe0>",
+   "vbroadcastss 0x9af9(%rip),%ymm4        # 14000b0dc <.rdata+0xdc>",
+   "vmovaps %ymm4,%ymm1",
+   "vmovaps %ymm5,%ymm3",
+   "vmulps 0x4(%rdx,%rax,1),%ymm3,%ymm2",
+   "vmulps (%rdx,%rax,1),%ymm1,%ymm0"
+  ]
+ },
+ "gather": {
+  "instructions": 69,
+  "ymm": 0,
+  "xmm": 28,
+  "gather": 0,
+  "sample": [
+   "je     140001860 <gather+0xf0>",
+   "jne    1400017a0 <gather+0x30>",
+   "je     14000184a <gather+0xda>",
+   "jae    14000184a <gather+0xda>",
+   "jae    14000184a <gather+0xda>",
+   "jmp    140001813 <gather+0xa3>"
+  ]
+ }
+}

@@ -1,5 +1,6 @@
 import pathlib,subprocess,json,random,hashlib,datetime,os
 R=pathlib.Path(__file__).resolve().parents[1];out=R/'data/controlled';out.mkdir(exist_ok=True);exe=R/'build/loaded_controlled.exe'
+exe.parent.mkdir(exist_ok=True)
 cmd=['gcc','-O3','-Wall','-Wextra',str(R/'src/loaded_controlled.c'),'-o',str(exe)];subprocess.run(cmd,check=True)
 if 'Family 6 Model 154 ' not in os.environ.get('PROCESSOR_IDENTIFIER',''):
  raise SystemExit('This follow-up fixes Alder Lake P-core placement. Reconfigure and verify affinity for a different CPU before running.')

@@ -1,15 +1,22 @@
-import pathlib,subprocess,json,statistics,sys
-R=pathlib.Path(__file__).resolve().parents[1];exe=R/'build/bandwidth.exe';exe.parent.mkdir(exist_ok=True)
-cmd=['gcc','-O3','-mavx2','-ffp-contract=off',str(R/'src/bandwidth.c'),'-o',str(exe)]
-if '--reuse' in sys.argv:
- saved=json.loads((R/'data/bandwidth.json').read_text());rows=saved['trials'];cmd=saved['build_command']
+import pathlib, subprocess, json, statistics, sys
+
+R = pathlib.Path(__file__).resolve().parents[1]
+exe = R / "build/bandwidth.exe"
+exe.parent.mkdir(exist_ok=True)
+cmd = ["gcc", "-O3", "-mavx2", "-ffp-contract=off", str(R / "src/bandwidth.c"), "-o", str(exe)]
+if "--reuse" in sys.argv:
+    saved = json.loads((R / "data/bandwidth.json").read_text())
+    rows = saved["trials"]
+    cmd = saved["build_command"]
 else:
- subprocess.run(cmd,check=True)
- rows=[json.loads(subprocess.check_output([str(exe)],text=True)) for _ in range(5)]
-if '--reuse' not in sys.argv:
- (R/'data/bandwidth.json').write_text(json.dumps({'build_command':cmd,'trials':rows},indent=2))
-B=statistics.median(r['GB_s'] for r in rows)
-text=f'''# Quantitative roofline interpretation
+    subprocess.run(cmd, check=True)
+    rows = [json.loads(subprocess.check_output([str(exe)], text=True)) for _ in range(5)]
+if "--reuse" not in sys.argv:
+    (R / "data/bandwidth.json").write_text(
+        json.dumps({"build_command": cmd, "trials": rows}, indent=2)
+    )
+B = statistics.median(r["GB_s"] for r in rows)
+text = f"""# Quantitative roofline interpretation
 
 Five independent native executions read a 256 MiB array with four AVX2 accumulators on logical CPU 0. Every scan is consumed and an initial exact sum is validated. The footprint exceeds the reported 12 MiB LLC. Median useful read bandwidth: **{B:.2f} GB/s** (trial range {min(r['GB_s'] for r in rows):.2f}–{max(r['GB_s'] for r in rows):.2f} GB/s). This is effective sustained single-thread read bandwidth, not a memory-controller counter or socket maximum.
 
@@ -34,9 +41,26 @@ Measured native float32 large-N AXPY is about 3.03 GFLOP/s and multiply about 1.
 **Model mismatch to retain:** compare those observations directly with the table. An observation above `B * intensity` means this separately measured read bandwidth is not a valid universal roof for that workload/session. Read/write asymmetry, cached or deferred stores, differing footprints and frequency/device state can change effective bandwidth. The store-traffic estimate is especially uncertain without counters. Therefore the figure is a sensitivity model using a measured bandwidth proxy, not a verified hard upper envelope. The data-movement explanation is supported by several trends but not proved by this proxy alone.
 
 TSC ticks per element in the original data are **reference-clock ticks**, not core cycles; changing core frequency makes them different. Do not divide by a nominal GHz value and claim measured core cycles.
-'''
-(R/'ROOFLINE.md').write_text(text,encoding='utf-8')
-sys.path.insert(0,str(R.parent/'common'));from charts import plot
-xs=[.01,.025,.05,.083333,.125,.166667,.25,.5,1,2,4,8,16]
-plot(R/'figures/roofline.svg','FP32 roofline: measured read bandwidth, illustrative peak','Arithmetic intensity (FLOP/byte, log2)','GFLOP/s',[(f'{freq} GHz assumed',[(x,min(32*freq,B*x),min(32*freq,B*x),min(32*freq,B*x)) for x in xs]) for freq in [1,2,4]],True,'Clock values are scenarios, not measurements. Mixed stores can have a lower bandwidth ceiling.',subtitle='Sensitivity model: measured read-bandwidth proxy and assumed compute ceilings')
-print(f'Bandwidth median {B:.2f} GB/s')
+"""
+(R / "ROOFLINE.md").write_text(text, encoding="utf-8")
+sys.path.insert(0, str(R.parent / "common"))
+from charts import plot
+
+xs = [0.01, 0.025, 0.05, 0.083333, 0.125, 0.166667, 0.25, 0.5, 1, 2, 4, 8, 16]
+plot(
+    R / "figures/roofline.svg",
+    "FP32 roofline: measured read bandwidth, illustrative peak",
+    "Arithmetic intensity (FLOP/byte, log2)",
+    "GFLOP/s",
+    [
+        (
+            f"{freq} GHz assumed",
+            [(x, min(32 * freq, B * x), min(32 * freq, B * x), min(32 * freq, B * x)) for x in xs],
+        )
+        for freq in [1, 2, 4]
+    ],
+    True,
+    "Clock values are scenarios, not measurements. Mixed stores can have a lower bandwidth ceiling.",
+    subtitle="Sensitivity model: measured read-bandwidth proxy and assumed compute ceilings",
+)
+print(f"Bandwidth median {B:.2f} GB/s")

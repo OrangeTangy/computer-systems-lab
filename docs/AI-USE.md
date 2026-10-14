@@ -30,9 +30,18 @@ All numerical results come from actual executions on the documented machines. Un
 
 ## Specific examples of independent student work
 
-> Replace these with concrete instances.
+* **Validation I wrote:** The checks in `common/validate.py` and `common/validate-followup.py`. They enforce exact matrix coverage (e.g. 840 SIMD trials with five reps per condition, 65 SSD runs covering QD 1–256), unit consistency (`ns_element`/`gflops`/`latency_ns` recomputed from raw seconds and must match within 0.001–0.002), every trial marked `correct`, source SHA-256 hashes against the committed snapshots, distinct physical-core masks for the loaded-memory workers, SSD direct-I/O flags and post-run file deletion. The follow-up validator is what surfaced the stale October SSD tables: the processed report showed only four queue depths with identical min/max while the raw `index.jsonl` already contained all 65 runs; regenerating the report moved the knee from QD256 to QD64.
 
-- Validation I wrote: <which check, and what it caught or confirmed>
-- Result I verified by hand: <figure or calculation, and how>
-- AI output I changed or rejected: <code or claim, and why>
-- Anomaly I explained myself: <what it was, and my explanation>
+* **Result I verified by hand:** L1 dependent-load latency of 4.2 cycles (0.99 ns at the measured 4.22 GHz). Zen 3’s documented load-to-use latency is 4 cycles; 0.99 × 4.22 = 4.18 ≈ 4.2, so the timing method and the TotalCycles PMC agree independently of any AI claim. The same check confirmed the instruction-count drop for float32 AXPY (7.07 → 0.85 instructions/element, 8.3×) matches eight AVX2 lanes plus amortized loop overhead.
+
+* **AI output I changed or rejected:**
+  - PMC recording order: Windows returned query error 24, so the profile order could not be trusted. The analysis was rewritten to assert five physical invariants (only a clock is workload-independent at 2–5.5 G/s with <6 % spread; InstructionRetired is size-invariant and largest on L1-resident loads; L1/L2 DTLB and DRAM-fill counters separate by footprint and page-spacing experiments) and to fail if any invariant fails. The recovered order was not the profile order.
+  - Useful-byte bandwidth combined with a physical-traffic arithmetic intensity (earlier draft treated 12 useful bytes/element as if it were bus traffic). Rejected; tables now stay on a single useful-byte convention.
+  - Predictable pointer-chain “DRAM latency” (~30× faster than random at 128 MiB). Kept only as a documented pitfall; numbers used for DRAM come from the random dependent chain plus counters.
+  - Short SSD runs treated as steady-state. Rejected after the 40 GiB sustained-write log showed the SLC-cache cliff (≈312 MB/s → ≈79 MB/s).
+
+* **Anomaly I explained myself:**
+  - Capacity model for a 64 MiB random footprint predicts ~0.75 DRAM-fill rate (16 MiB L3); counters show 0.97. Left in the report with the hypotheses that Zen 3’s L3 is a non-inclusive victim cache, page-table lines compete for capacity, and the event may also count I/O or page-walk fills.
+  - Latency already rising at 4–8 MiB, well below the 16 MiB L3. Retained rather than force-fitted to an LLC boundary; competing occupancy, translation and boost state are noted as plausible contributors.
+  - Float64 AVX2 AXPY slower than scalar from DRAM (6.56 vs 5.52 cycles/element) with 11× more demand DRAM fills. Explained as the wider loop outrunning the hardware prefetcher.
+  - Small-N SIMD “no speedup” in the main tables. The timer-overhead sub-study showed each `QueryPerformanceCounter` call costs ≈21 ns; at N=16 that is ~60 % of a scalar repetition, hiding a real 3× AVX2 gain that appears once timing is batched.

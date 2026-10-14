@@ -193,6 +193,20 @@ Unloaded probe: **121.056 [116.233, 129.831] ns/load**. Maximum observed start l
 - 70% reads: first 90%-of-observed-maximum point is 2 workers; maximum median 19.07 GB/s. The last worker changes throughput by +1.7%. A threshold at the last sampled point does not establish saturation.
 - 100% reads: first 90%-of-observed-maximum point is 2 workers; maximum median 30.15 GB/s. The last worker changes throughput by +0.8%. A threshold at the last sampled point does not establish saturation.
 
+### Little's Law: how many cache lines are in flight?
+
+For the 100%-read mix, L = lambda x W with lambda in 64-byte lines per second. Using the unloaded probe latency (121 ns) as W gives a **lower bound** on lines in flight, because no request completes faster than an idle one. Using the loaded probe latency gives an **estimate**, assuming worker misses wait about as long as the probe's.
+
+| Workers | GB/s | Lines in flight, lower bound | Probe latency ns | Lines in flight, estimate | Estimate per worker |
+|---|---|---|---|---|---|
+| 1 | 17.8 | 34 | 138 | 38 | 38 |
+| 2 | 27.2 | 51 | 197 | 84 | 42 |
+| 3 | 29.6 | 56 | 260 | 120 | 40 |
+| 4 | 29.9 | 57 | 397 | 186 | 46 |
+| 5 | 30.1 | 57 | 483 | 228 | 46 |
+
+One core streaming alone keeps at least 34 lines in flight. A single thread's demand loads cannot do that by themselves; the hardware prefetchers supply most of the concurrency. The per-worker estimate stays nearly constant (38-46 lines): each core sustains about the same number of outstanding misses, its own miss-tracking capacity, whatever the other cores do. Past the knee, adding workers multiplies the estimated occupancy (about 228 lines with 5 workers) while throughput barely moves, so by Little's Law the extra requests can only turn into extra waiting time. That is the queueing knee: once the memory controller and DRAM banks are busy, more concurrency buys latency, not bandwidth.
+
 Little's Law applies to one request population: L=lambda*W. The background streamers and dependent probe are different populations, so their values cannot be combined into an exact in-flight request count. Their joint curve shows contention. AMAT requires actual conditional miss rates and incremental penalties; capacity labels or timing differences are not substitutes for those rates.
 
 ## Project 3: SSD queueing follow-up
@@ -238,6 +252,7 @@ Percentiles above are medians of per-run percentiles, not percentiles of a poole
 
 ## Companion reports for this session
 
+- [Measured roofline](ROOFLINE.md): kernel points on measured DRAM and in-cache roofs with a compute roof at the measured clock.
 - [Hardware counters](COUNTERS.md): measured core cycles per element, IPC, L1/L2 DTLB misses and demand DRAM fills per load, an AMAT-style fit and a page-walk cost estimate. Invariant TSC ticks are shown beside core cycles, never relabeled as them.
 - [SIMD extension](SIMD-EXTENSION.md): int32 versus float32/float64, a three-point stencil, and a gather-indexed loop (negative case) with a forced hardware-gather control.
 - [SSD extension](SSD-EXTENSION.md): block-size sweep, read/write mix, data pattern, buffered versus direct I/O (cold and warm cache), and a 40 GiB sustained write showing the SLC-cache sawtooth.

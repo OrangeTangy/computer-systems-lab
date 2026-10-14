@@ -94,7 +94,15 @@ if (P/'loaded.jsonl').exists():
   peak=max(bg[w,pct][0] for w in workers);k=next(w for w in workers if bg[w,pct][0]>=.9*peak)
   gain=100*(bg[workers[-1],pct][0]/bg[workers[-2],pct][0]-1)
   lines += [f'- {pct}% reads: first 90%-of-observed-maximum point is {k} workers; maximum median {peak:.2f} GB/s. The last worker changes throughput by {gain:+.1f}%. A threshold at the last sampled point does not establish saturation.']
- lines += ['',
+ idle=pg[0,100][0];ll=[]
+ for w in workers:
+  lam=bg[w,100][0]*1e9/64  # 64-byte cache lines per second
+  ll.append([w,f'{bg[w,100][0]:.1f}',f'{lam*idle*1e-9:.0f}',f'{pg[w,100][0]:.0f}',f'{lam*pg[w,100][0]*1e-9:.0f}',f'{lam*pg[w,100][0]*1e-9/w:.0f}'])
+ g1=bg[1,100][0]*1e9/64*idle*1e-9;gN=bg[workers[-1],100][0]*1e9/64*pg[workers[-1],100][0]*1e-9
+ lines += ['','### Little\'s Law: how many cache lines are in flight?','',
+ f'For the 100%-read mix, L = lambda x W with lambda in 64-byte lines per second. Using the unloaded probe latency ({idle:.0f} ns) as W gives a **lower bound** on lines in flight, because no request completes faster than an idle one. Using the loaded probe latency gives an **estimate**, assuming worker misses wait about as long as the probe\'s.','',
+ table(['Workers','GB/s','Lines in flight, lower bound','Probe latency ns','Lines in flight, estimate','Estimate per worker'],ll),'',
+ f'One core streaming alone keeps at least {g1:.0f} lines in flight. A single thread\'s demand loads cannot do that by themselves; the hardware prefetchers supply most of the concurrency. The per-worker estimate stays nearly constant ({min(float(r[5]) for r in ll):.0f}-{max(float(r[5]) for r in ll):.0f} lines): each core sustains about the same number of outstanding misses, its own miss-tracking capacity, whatever the other cores do. Past the knee, adding workers multiplies the estimated occupancy (about {gN:.0f} lines with {workers[-1]} workers) while throughput barely moves, so by Little\'s Law the extra requests can only turn into extra waiting time. That is the queueing knee: once the memory controller and DRAM banks are busy, more concurrency buys latency, not bandwidth.','',
  'Little\'s Law applies to one request population: L=lambda*W. The background streamers and dependent probe are different populations, so their values cannot be combined into an exact in-flight request count. Their joint curve shows contention. AMAT requires actual conditional miss rates and incremental penalties; capacity labels or timing differences are not substitutes for those rates.','']
  processed['load_trials']=len(rows)
 if (P/'ssd/index.jsonl').exists():
@@ -122,6 +130,7 @@ if (P/'ssd/index.jsonl').exists():
  'Percentiles above are medians of per-run percentiles, not percentiles of a pooled distribution. Five-second trials provide limited evidence about rare stalls. QD1 is a low-queue baseline including OS/engine/device latency, not raw NAND latency or a guarantee of no background queue. SATA host/controller limits and flash parallelism can constrain throughput. No temperature trend, SLC-cache exhaustion, durability or steady-state claim is inferred from these tests.','']
  processed['ssd_trials']=len(ss)
 lines += ['## Companion reports for this session','',
+'- [Measured roofline](ROOFLINE.md): kernel points on measured DRAM and in-cache roofs with a compute roof at the measured clock.',
 '- [Hardware counters](COUNTERS.md): measured core cycles per element, IPC, L1/L2 DTLB misses and demand DRAM fills per load, an AMAT-style fit and a page-walk cost estimate. Invariant TSC ticks are shown beside core cycles, never relabeled as them.',
 '- [SIMD extension](SIMD-EXTENSION.md): int32 versus float32/float64, a three-point stencil, and a gather-indexed loop (negative case) with a forced hardware-gather control.',
 '- [SSD extension](SSD-EXTENSION.md): block-size sweep, read/write mix, data pattern, buffered versus direct I/O (cold and warm cache), and a 40 GiB sustained write showing the SLC-cache sawtooth.',

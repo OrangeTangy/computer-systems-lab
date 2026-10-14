@@ -24,7 +24,7 @@ Main evidence for the Ryzen 5 5500 host: [session report](../sessions/ryzen-2026
 | Vectorization verification | 15 | Compiler reports (32-byte main loops, 16-byte epilogues), disassembly, **PMC instruction counts: 7.07 → 0.85 instructions/element (8.3x) for float32 AXPY**; FMA contraction off; gather study distinguishes GCC's emulated gather from forced hardware `vgatherdps` by disassembly |
 | Locality and memory-bound analysis | 20 | Size sweeps across L1/L2/L3/DRAM with cache markers; **measured cycles/element 0.27 in L1 vs 2.73 from DRAM, IPC 3.1 → 0.29** |
 | Alignment, tail, stride/gather | 20 | Aligned/shifted × divisible/remainder tables; stride 1/2/4/8; **gather with identity vs random index** and a no-gather control |
-| Roofline and quantitative insight | 20 | Traffic-matched two-read/one-write bandwidth reference; consistent useful-byte intensity; **compute ceiling from measured clock (4.22 GHz)**; store-port bound; stencil at 0.625 FLOP/B vs AXPY 1/6; bandwidth cross-check (18.6 GB/s from counters vs 16–18 GB/s reference) |
+| Roofline and quantitative insight | 20 | **[Measured roofline](../sessions/ryzen-20261014/ROOFLINE.md) with kernel points, measured roofs and a compute roof at the measured clock; dot product shown latency-bound (same GFLOP/s in L1 and DRAM, 3.3 cycles/add)**; traffic-matched two-read/one-write bandwidth reference; consistent useful-byte intensity; **compute ceiling from measured clock (4.22 GHz)**; store-port bound; stencil at 0.625 FLOP/B vs AXPY 1/6; bandwidth cross-check (18.6 GB/s from counters vs 16–18 GB/s reference) |
 | AI transparency and failure case | 10 | AI note; ordered dot, float64 DRAM slowdown explained by counters, gather |
 | Report quality | 10 | Tables with units and ranges, figures, limits sections |
 
@@ -36,7 +36,7 @@ Data types: float32/float64 throughout, **int32 added** in the extension. Kernel
 |---|---:|---|
 | Zero-queue baselines | 25 | Dense dependent-chain sweep (210 runs); **cycles per load from PMCs: L1 4.2, L2 13.0, L3 region 58.5, DRAM ~508** with ns and GHz conversion |
 | Pattern/granularity/RW sweeps | 35 | Sequential/random, 64/256/1024 B strides, 100/70/50/0% read mixes (Intel session); Ryzen loaded study for all four mixes |
-| Throughput–latency knee | 35 | 0–5 physical-core workers × 4 mixes, 105 runs; 90%-of-max threshold at 2 workers; Little's Law discussion with population caveat |
+| Throughput–latency knee | 35 | 0–5 physical-core workers × 4 mixes, 105 runs; 90%-of-max threshold at 2 workers; **Little's Law table: ≥34 lines in flight per streaming core, ~40 per core constant, ~228 total past the knee while bandwidth is flat**; population caveat kept |
 | Working-set/cache/TLB analysis | 35 | **Measured L1/L2 DTLB misses and demand DRAM fills per load across footprints; AMAT-style fit (t_hit 53 cycles, DRAM+translation penalty 470 cycles); same-node page-spacing experiment isolating ~56–83 cycles per page walk** |
 | Experimental rigor | 25 | CPU0 pinning, distinct physical cores for workers, five repetitions, timing-window lag/overhang measured, counter attribution bounds and zero event loss |
 | AI transparency and pitfall | 15 | AI note; predictable-chain pitfall; timing-only TLB attribution rejected until counters existed |

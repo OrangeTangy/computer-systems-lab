@@ -1,0 +1,3 @@
+# Predictions before the timer-overhead runs (written before collection)
+
+`simd.c` reads the clock after every kernel call, and its `now()` makes two system calls (QueryPerformanceCounter and QueryPerformanceFrequency). If one `now()` costs tens of nanoseconds, then at N=16 (one repetition is about 30 ns of total time) the timer is a large share of every measured repetition. Prediction: batched timing will report much lower ns/element at N=16-64 than per-repetition timing, the difference per repetition will match the measured cost of one `now()` call, and the native/scalar speedup at small N will be considerably larger than the main suite reported. At N=65,536 the two methods should agree within a few percent.

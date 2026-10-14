@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="570">
+<rect width="1040" height="570" fill="#fff"/>
+<g font-family="Arial,sans-serif" fill="#172033">
+<text x="40" y="35" font-size="23">Native AVX2 speedup: per-repetition vs batched timing</text>
+<text x="40" y="65" font-size="13">Measured Windows results | medians; whiskers = trial min-max, not confidence intervals</text>
+<text x="90" y="95" font-size="13">Scalar time / native time</text>
+<path d="M90 440.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="444.0" text-anchor="end" font-size="12">0</text>
+<path d="M90 374.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="378.0" text-anchor="end" font-size="12">2.24</text>
+<path d="M90 308.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="312.0" text-anchor="end" font-size="12">4.49</text>
+<path d="M90 242.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="246.0" text-anchor="end" font-size="12">6.73</text>
+<path d="M90 176.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="180.0" text-anchor="end" font-size="12">8.97</text>
+<path d="M90 110.0 H780" stroke="#e2e8f0"/>
+<text x="78" y="114.0" text-anchor="end" font-size="12">11.2</text>
+<text x="90.0" y="463" font-size="12" text-anchor="middle">16</text>
+<text x="104.25583202300615" y="463" font-size="12" text-anchor="middle">19</text>
+<text x="205.0" y="463" font-size="12" text-anchor="middle">64</text>
+<text x="320.0" y="463" font-size="12" text-anchor="middle">256</text>
+<text x="435.0" y="463" font-size="12" text-anchor="middle">1.02e+03</text>
+<text x="780.0" y="463" font-size="12" text-anchor="middle">6.55e+04</text>
+<polyline points="90.0,407.1818758157873 104.25583202300615,408.8379570637024 205.0,396.8911300151277 320.0,362.01348321491474 435.0,322.34954803299706 780.0,365.7390178505209" stroke="#2563eb" fill="none" stroke-width="2"/>
+<path d="M90.0 411.416613391334 V398.2160580478838 M87.0 411.416613391334 H93.0 M87.0 398.2160580478838 H93.0" stroke="#2563eb"/>
+<circle cx="90.0" cy="407.1818758157873" r="3" fill="#2563eb"/>
+<path d="M104.25583202300615 415.11371940538635 V405.87979553021864 M101.25583202300615 415.11371940538635 H107.25583202300615 M101.25583202300615 405.87979553021864 H107.25583202300615" stroke="#2563eb"/>
+<circle cx="104.25583202300615" cy="408.8379570637024" r="3" fill="#2563eb"/>
+<path d="M205.0 402.55013285013916 V376.36166476295176 M202.0 402.55013285013916 H208.0 M202.0 376.36166476295176 H208.0" stroke="#2563eb"/>
+<circle cx="205.0" cy="396.8911300151277" r="3" fill="#2563eb"/>
+<path d="M320.0 379.8708883136386 V350.6984829366335 M317.0 379.8708883136386 H323.0 M317.0 350.6984829366335 H323.0" stroke="#2563eb"/>
+<circle cx="320.0" cy="362.01348321491474" r="3" fill="#2563eb"/>
+<path d="M435.0 354.45230216179584 V242.3937021685679 M432.0 354.45230216179584 H438.0 M432.0 242.3937021685679 H438.0" stroke="#2563eb"/>
+<circle cx="435.0" cy="322.34954803299706" r="3" fill="#2563eb"/>
+<path d="M780.0 370.18011917239295 V248.3171396326295 M777.0 370.18011917239295 H783.0 M777.0 248.3171396326295 H783.0" stroke="#2563eb"/>
+<circle cx="780.0" cy="365.7390178505209" r="3" fill="#2563eb"/>
+<text x="800" y="115" font-size="12" fill="#2563eb">perrep timing</text>
+<polyline points="90.0,352.87088918057185 104.25583202300615,373.53368253940755 205.0,293.70513074362714 320.0,219.5617366994166 435.0,241.63398448470795 780.0,343.22168586245414" stroke="#dc2626" fill="none" stroke-width="2"/>
+<path d="M90.0 367.0252922362034 V202.89458119214058 M87.0 367.0252922362034 H93.0 M87.0 202.89458119214058 H93.0" stroke="#dc2626"/>
+<circle cx="90.0" cy="352.87088918057185" r="3" fill="#dc2626"/>
+<path d="M104.25583202300615 379.75708544094687 V301.05510085078095 M101.25583202300615 379.75708544094687 H107.25583202300615 M101.25583202300615 301.05510085078095 H107.25583202300615" stroke="#dc2626"/>
+<circle cx="104.25583202300615" cy="373.53368253940755" r="3" fill="#dc2626"/>
+<path d="M205.0 335.9226372108376 V247.283936823396 M202.0 335.9226372108376 H208.0 M202.0 247.283936823396 H208.0" stroke="#dc2626"/>
+<circle cx="205.0" cy="293.70513074362714" r="3" fill="#dc2626"/>
+<path d="M320.0 261.68377274631086 V145.3571428571429 M317.0 261.68377274631086 H323.0 M317.0 145.3571428571429 H323.0" stroke="#dc2626"/>
+<circle cx="320.0" cy="219.5617366994166" r="3" fill="#dc2626"/>
+<path d="M435.0 295.79715589214163 V222.0852606160775 M432.0 295.79715589214163 H438.0 M432.0 222.0852606160775 H438.0" stroke="#dc2626"/>
+<circle cx="435.0" cy="241.63398448470795" r="3" fill="#dc2626"/>
+<path d="M780.0 373.0764032428781 V319.16143391382366 M777.0 373.0764032428781 H783.0 M777.0 319.16143391382366 H783.0" stroke="#dc2626"/>
+<circle cx="780.0" cy="343.22168586245414" r="3" fill="#dc2626"/>
+<text x="800" y="138" font-size="12" fill="#dc2626">batch timing</text>
+<text x="435" y="500" text-anchor="middle" font-size="14">Elements N (log2)</text>
+<text x="40" y="540" font-size="12">Same float32 AXPY kernel and builds; perrep reads the clock after every call as simd.c does, batch every 4,096 calls.</text>
+</g></svg>

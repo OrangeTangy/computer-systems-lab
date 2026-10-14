@@ -1,0 +1,11 @@
+{
+  "start_utc": "2026-10-14T22:25:20.240403+00:00",
+  "compiler": "gcc.EXE (GCC) 16.2.0",
+  "source_sha256": "1cec28db7d565b306e5c7e86b65a377fdf033323885dc70f4520316db7d6c3cb",
+  "builds": {
+    "scalar": "-std=c11 -O3 -Wall -Wextra -fno-tree-vectorize -ffp-contract=off -DTYPE=float -o",
+    "auto": "-std=c11 -O3 -Wall -Wextra -ffp-contract=off -DTYPE=float -o",
+    "native": "-std=c11 -O3 -Wall -Wextra -march=native -ffp-contract=off -DTYPE=float -o"
+  },
+  "finished_utc": "2026-10-14T22:26:04.733802+00:00"
+}

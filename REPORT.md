@@ -22,7 +22,7 @@ CPU benchmarks are single-threaded and pinned to CPU0 (load workers on distinct 
 
 **Locality.** In L1 native float32 AXPY needs **0.27 core cycles/element versus 1.24 scalar (4.6x)**; from DRAM it needs 2.73 versus 3.07 (1.1x), and the native build's IPC falls from 3.1 to 0.29. The speedup compresses because the core is waiting for data. 2.73 cycles/element at 4.22 GHz is 18.6 GB/s of useful traffic, matching the separately measured two-read/one-write stream reference (16–18 GB/s). The scalar baseline runs at about 6 IPC in L1, the 6-wide dispatch limit, so in cache SIMD wins by issuing fewer instructions.
 
-**Alignment, tails, stride, gather.** Shifted-by-one and remainder cases change native time by less than 10% at 65K elements; at 16–19 elements timer and call overhead dominate. Stride 2/4/8 multiplies time per useful element as cache-line utilization falls, and the vector advantage disappears by stride 4. The gather loop `x[idx[i]]` is the clearest negative case: GCC emits an emulated gather that gains only 1.4x even with a perfectly local index, a **forced hardware `vgatherdps` is slower than scalar code** on Zen 3, and with a random index over 64 MiB every build takes about 6–7 ns/element.
+**Alignment, tails, stride, gather.** Shifted-by-one and remainder cases change native time by less than 10% at 65K elements. At 16–19 elements the timer dominates, and a [timer-overhead sub-study](project-1-simd/timer-overhead/README.md) quantifies this. One `now()` call costs 21 ns, about 60% of a scalar repetition at N=16. Timing the same kernel in batches reveals a 3.0x AVX2 speedup at N=16, where the per-repetition method shows 1.1x, and 6.7x at N=1,024, where it shows 4.0x. The main suite's in-cache speedups are therefore conservative, and only the 65K rows can resolve alignment and tail costs. Stride 2/4/8 multiplies time per useful element as cache-line utilization falls, and the vector advantage disappears by stride 4. The gather loop `x[idx[i]]` is the clearest negative case: GCC emits an emulated gather that gains only 1.4x even with a perfectly local index, a **forced hardware `vgatherdps` is slower than scalar code** on Zen 3, and with a random index over 64 MiB every build takes about 6–7 ns/element.
 
 **Data types.** In L1 int32 and float32 run at the same speed (both 8 lanes) and float64 is 1.5x slower. From DRAM float64 takes 1.9x as long, close to its 2x bytes per element.
 
@@ -72,6 +72,7 @@ python common/analyze-followup.py ryzen-20261014
 python common/analyze-pmc.py ryzen-20261014
 python project-1-simd/scripts/analyze_ext.py ryzen-20261014
 python project-1-simd/scripts/roofline_measured.py ryzen-20261014
+python project-1-simd/timer-overhead/run.py analyze
 python project-2-memory/scripts/run_large_pages.py analyze ryzen-20261014
 python common/analyze-ssd-extension.py ryzen-20261014
 python project-1-simd/scripts/gpu_axpy.py analyze ryzen-20261014

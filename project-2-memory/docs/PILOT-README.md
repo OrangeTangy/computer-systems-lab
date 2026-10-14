@@ -51,4 +51,4 @@ The C implementation is intended for 64-bit GCC targets. Native Windows smoke/pi
 - perf event availability: https://www.man7.org/linux/man-pages/man1/perf-list.1.html
 - perf permissions: https://www.man7.org/linux/man-pages/man2/perf_event_open.2.html
 
-See `docs/ai-use.md` for the AI disclosure. No data is synthetic.
+See [the AI-use note](../../docs/AI-USE.md) for the AI disclosure. No data is synthetic.

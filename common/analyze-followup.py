@@ -137,5 +137,5 @@ lines += ['## Companion reports for this session','',
 '- [Optional GPU comparison](GPU.md): kernel-only versus end-to-end AXPY on a GTX 1660 Ti.','',
 '- [Large pages](LARGE-PAGES.md): 4 KiB versus 2 MiB pages for the same chains (the main timing session had no lock-pages privilege; it was granted afterwards), plus the same study on a busy machine as a benchmark pitfall.','',
 '## Student review','',
-'The original [rubric audit](../../docs/RUBRIC.md) and [submission gates](../../docs/SUBMISSION-GATES.md) distinguish conditional features from required evidence. The student must independently review, test and understand the work before submission. AI assistance is described in [the disclosure](../../docs/AI-USE.md); no independent student checks are inferred from AI-executed runs.']
+'The original [rubric audit](../../docs/archive/RUBRIC.md) and [submission gates](../../docs/archive/SUBMISSION-GATES.md) distinguish conditional features from required evidence. The student must independently review, test and understand the work before submission. AI assistance is described in [the disclosure](../../docs/AI-USE.md); no independent student checks are inferred from AI-executed runs.']
 (P/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf-8');(P/'summary.json').write_text(json.dumps(processed,indent=2));print(processed)

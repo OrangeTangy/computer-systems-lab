@@ -1,6 +1,6 @@
 # What must be true before claiming full rubric coverage
 
-> **Superseded.** This is the September checklist for the Intel session. Gates it lists as open (hardware counters, huge pages, roofline, SSD device state) were closed later. The current, authoritative mapping is [OCTOBER-AUDIT.md](OCTOBER-AUDIT.md).
+> **Archived September checklist for the Intel session; superseded by [OCTOBER-AUDIT.md](../OCTOBER-AUDIT.md).**
 
 This is a completion checklist, not a prediction of the instructor's grade. Lecture integration improves architectural interpretation; it does not replace measurements.
 
@@ -18,7 +18,7 @@ This is a completion checklist, not a prediction of the instructor's grade. Lect
 
 ## Counter workflow
 
-The user indicated Administrator PowerShell is available. `project-2-memory/scripts/collect-counters.ps1` builds the benchmark, starts a strict profile, runs the matched conditions, and saves per-process IDs, commands and traces. The base cache profile and Alder Lake P-core TLB profile are separate so an unsupported custom event does not get silently substituted.
+Counter collection needs an Administrator PowerShell. `project-2-memory/scripts/collect-counters.ps1` builds the benchmark, starts a strict profile, runs the matched conditions, and saves per-process IDs, commands and traces. The base cache profile and Alder Lake P-core TLB profile are separate so an unsupported custom event does not get silently substituted.
 
 The custom TLB event is model-specific: **Alder Lake P-core DTLB_LOAD_MISSES.WALK_COMPLETED, EventSel 0x12, UMask 0x0E**. It counts completed demand-load page walks, not every L1-TLB miss; a miss satisfied by a second-level TLB need not cause this event. The authoritative definition is in [Intel's Alder Lake P-core event documentation](https://perfmon-events.intel.com/platforms/alderlake/core-events/p-core/). A different CPU/core type needs its own definitions.
 

@@ -262,4 +262,4 @@ Percentiles above are medians of per-run percentiles, not percentiles of a poole
 
 ## Student review
 
-The original [rubric audit](../../docs/RUBRIC.md) and [submission gates](../../docs/SUBMISSION-GATES.md) distinguish conditional features from required evidence. The student must independently review, test and understand the work before submission. AI assistance is described in [the disclosure](../../docs/AI-USE.md); no independent student checks are inferred from AI-executed runs.
+The original [rubric audit](../../docs/archive/RUBRIC.md) and [submission gates](../../docs/archive/SUBMISSION-GATES.md) distinguish conditional features from required evidence. The student must independently review, test and understand the work before submission. AI assistance is described in [the disclosure](../../docs/AI-USE.md); no independent student checks are inferred from AI-executed runs.

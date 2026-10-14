@@ -1,10 +1,10 @@
 # Rubric audit — evidence, not a self-assigned grade
 
-> **Superseded.** This is the September audit of the Intel session. Gaps it lists (hardware counters, huge pages, roofline, SSD device state) were closed later. The current, authoritative mapping is [OCTOBER-AUDIT.md](OCTOBER-AUDIT.md).
+> **Archived September audit of the Intel session; superseded by [OCTOBER-AUDIT.md](../OCTOBER-AUDIT.md).**
 
 This maps the assignment's categories to evidence and explicitly identifies remaining requirements. A populated repository is not proof of full credit. Point values are copied from the assignment, not estimated scores.
 
-**Lecture integration update:** [Lecture connections](LECTURE-CONNECTIONS.md) map all three supplied decks to code and observations. The [controlled memory follow-up](../project-2-memory/CONTROLLED-RESULTS.md) adds 85 trials on fixed P-cores and measures timing-window mismatch. Administrator counter collection is prepared but must be validated before the missing-counter rows can change. Use [submission gates](SUBMISSION-GATES.md) to decide what remains; no perfect-score claim is made.
+**Lecture integration update:** [Lecture connections](../LECTURE-CONNECTIONS.md) map all three supplied decks to code and observations. The [controlled memory follow-up](../../project-2-memory/CONTROLLED-RESULTS.md) adds 85 trials on fixed P-cores and measures timing-window mismatch. Administrator counter collection is prepared but must be validated before the missing-counter rows can change. Use [submission gates](SUBMISSION-GATES.md) to decide what remains; no perfect-score claim is made.
 
 ## Common requirements
 

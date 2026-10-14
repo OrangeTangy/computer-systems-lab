@@ -60,4 +60,4 @@ python project-2-memory/scripts/run_extended.py
 python common/analyze_all.py
 ```
 
-The original runner is Windows/Linux portable; the extension uses native Windows threading. Linux execution of the original source has not been validated here. See `docs/learning-guide.md` for the first lesson and `../docs/RUBRIC.md` for exact remaining requirements.
+The original runner is Windows/Linux portable; the extension uses native Windows threading. Linux execution of the original source has not been validated here. See `docs/learning-guide.md` for the first lesson and `../docs/OCTOBER-AUDIT.md` for how each rubric requirement is covered.

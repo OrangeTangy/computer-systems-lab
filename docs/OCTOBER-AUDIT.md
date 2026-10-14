@@ -1,6 +1,6 @@
 # Rubric audit — current (October 14 revision)
 
-This maps every requirement in the assignment to the evidence that addresses it. Point values are the assignment's category weights (110 + 185 + 185 = 480), not predicted scores. Older audits ([RUBRIC.md](RUBRIC.md), [SUBMISSION-GATES.md](SUBMISSION-GATES.md)) are kept for history; where they say a counter or study is missing, this page supersedes them.
+This maps every requirement in the assignment to the evidence that addresses it. Point values are the assignment's category weights (110 + 185 + 185 = 480), not predicted scores. Older audits ([RUBRIC.md](archive/RUBRIC.md), [SUBMISSION-GATES.md](archive/SUBMISSION-GATES.md)) are kept in `docs/archive/` for history; where they say a counter or study is missing, this page supersedes them.
 
 Main evidence for the Ryzen 5 5500 host: [session report](../sessions/ryzen-20261014/REPORT.md), [hardware counters](../sessions/ryzen-20261014/COUNTERS.md), [SIMD extension](../sessions/ryzen-20261014/SIMD-EXTENSION.md), [SSD extension](../sessions/ryzen-20261014/SSD-EXTENSION.md), [optional GPU](../sessions/ryzen-20261014/GPU.md). The original Intel i5-1240P studies remain in the project folders as a separate session.
 

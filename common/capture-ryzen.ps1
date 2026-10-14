@@ -7,7 +7,7 @@ if (Test-Path (Join-Path $compilerBin 'gcc.exe')) { $env:PATH = $compilerBin + '
 Write-Host 'Waiting for the timing suites to finish so the captures do not overlap.'
 $deadline = (Get-Date).AddMinutes(40)
 while (-not (Test-Path (Join-Path $repo 'sessions\ryzen-20261014\timing-complete.flag'))) {
-    if ((Get-Date) -gt $deadline) { throw 'Timing-suite marker is absent. Ask Codex to confirm collection completed.' }
+    if ((Get-Date) -gt $deadline) { throw 'timing-complete.flag is absent. Create it in the session folder once the timing suites have finished.' }
     Start-Sleep -Seconds 5
 }
 & (Join-Path $repo 'project-2-memory\scripts\collect-counters.ps1') -Profile Zen3

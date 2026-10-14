@@ -114,5 +114,5 @@ try {
     }
 }
 Write-Host "Saved $outputDir"
-Write-Host 'Trace capture is not yet validated counter analysis. Return to Codex with this path.'
+Write-Host 'This is a raw trace, not validated counter data. Export and analyze it from this folder (see project-2-memory/docs/ZEN3-COUNTERS.md).'
 Write-Host 'Keep ETL local: it contains system process/module metadata. Git ignores this capture directory.'

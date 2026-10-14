@@ -1,6 +1,6 @@
 # What must be true before claiming full rubric coverage
 
-> **October revision:** This is the historical audit. Read the [current evidence update](OCTOBER-AUDIT.md) and [new measured report](../sessions/ryzen-20261014/REPORT.md) alongside it.
+> **Superseded.** This is the September checklist for the Intel session. Gates it lists as open (hardware counters, huge pages, roofline, SSD device state) were closed later. The current, authoritative mapping is [OCTOBER-AUDIT.md](OCTOBER-AUDIT.md).
 
 This is a completion checklist, not a prediction of the instructor's grade. Lecture integration improves architectural interpretation; it does not replace measurements.
 

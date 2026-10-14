@@ -1,6 +1,6 @@
 # Rubric audit — evidence, not a self-assigned grade
 
-> **October revision:** This is the historical audit. Read the [current evidence update](OCTOBER-AUDIT.md) and [new measured report](../sessions/ryzen-20261014/REPORT.md) alongside it.
+> **Superseded.** This is the September audit of the Intel session. Gaps it lists (hardware counters, huge pages, roofline, SSD device state) were closed later. The current, authoritative mapping is [OCTOBER-AUDIT.md](OCTOBER-AUDIT.md).
 
 This maps the assignment's categories to evidence and explicitly identifies remaining requirements. A populated repository is not proof of full credit. Point values are copied from the assignment, not estimated scores.
 

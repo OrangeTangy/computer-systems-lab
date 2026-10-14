@@ -1,6 +1,8 @@
 # Project 2: Cache & Memory Performance Profiling
 
-An ECSE 4320/6320 project and learning repository. Status: validated portable baseline and preliminary Windows pilot; final required experiments remain open. The assignment lists October 16 as the deadline.
+> **Historical pilot README (September 10).** The required experiments it lists as open were completed later; start from the [submission report](../../REPORT.md) and the [rubric audit](../../docs/OCTOBER-AUDIT.md).
+
+An ECSE 4320/6320 project and learning repository. Status at the time: validated portable baseline and preliminary Windows pilot.
 
 ## Start here
 

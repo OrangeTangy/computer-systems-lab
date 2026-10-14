@@ -1,5 +1,7 @@
 # Extended memory results
 
+> **Intel i5-1240P session (September 14).** Statements here about unavailable counters refer to that laptop. Hardware cache/TLB counters and a large-page comparison were later measured on the Ryzen host: see [COUNTERS.md](../sessions/ryzen-20261014/COUNTERS.md) and [LARGE-PAGES.md](../sessions/ryzen-20261014/LARGE-PAGES.md).
+
 90 validated trials; three per condition.
 
 | Read % | Load workers | Useful GB/s | Probe ns/load |
